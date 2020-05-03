@@ -1,0 +1,153 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{partial_int}{
+\begin{question}{pint01}
+\luaexec{
+  a=math.random(2, 7);
+  f='x*exp('..a..'*x)';
+  formula=execMaxima(f);
+  correct=execMaxima('integrate('..f..', x)');
+  wrong1=formula;
+  wrong2=execMaxima(a..'^2*integrate('..f..', x)');
+  wrong3=execMaxima('x*exp('..a..'*x)/'..a);
+  wrong4=execMaxima('ratsimp(integrate('..f..', x)+2*exp('..a..'*x)/'..a..'^2)');
+}
+不定積分$\displaystyle\int\var{formula}\, dx$を求めなさい．
+ただし，積分定数$C$は省略している．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{partial_int}{
+\begin{question}{pint02}
+\luaexec{
+  a=math.random(2, 9);
+  table={'sin', 'cos'};
+  i=math.random(1, 2);
+  if i==1 then j=2 else j=1 end;
+  trig1=table[i];
+  trig2=table[j];
+  f='x*'..trig1..'('..a..'*x)';
+  formula=execMaxima(f);
+  correct=execMaxima('integrate('..f..',x)');
+  wrong1=execMaxima('x*sin('..a..'*x)/'..a);
+  wrong2=execMaxima('-x*cos('..a..'*x)/'..a);
+  wrong3=execMaxima('('..a..'*x*'..trig1..'('..a..'*x)+(-1)^'..i..'*'..trig2..'('..a..'*x))/'..a..'^2');
+  wrong4=execMaxima('('..a..'*x*'..trig1..'('..a..'*x)+(-1)^('..i..'+1)*'..trig2..'('..a..'*x))/'..a..'^2');
+ }
+不定積分$\displaystyle\int\var{formula}\, dx$を求めなさい．
+ただし，積分定数$C$は省略している．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{partial_int}{
+\begin{question}{pint03}
+\luaexec{
+  a=math.random(2, 9);
+  f='x^'..a..'*log(x)';
+  g='x^('..a..'-1)*log(x)';
+  formula=execMaxima(f);
+  correct=execMaxima('integrate('..f..',x)');
+  wrong1=execMaxima('diff('..f..', x)');
+  wrong2=execMaxima('integrate('..g..',x)');
+  wrong3=execMaxima('1/('..a..'+1)*x^('..a..'+1)*log(x)+(1/('..a..'+1)^2)*x^('..a..'+1)')
+  wrong4=execMaxima('1/('..a..')*x^('..a..')*log(x)+(1/('..a..')^2)*x^('..a..')')
+}
+不定積分$\displaystyle\int\var{formula}\, dx$を求めなさい．
+ただし，積分定数$C$は省略している．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{partial_int}{
+\begin{question}{pint04}
+\luaexec{
+  f='x^2*cos(x)';
+  formula=execMaxima(f);
+  correct=execMaxima('integrate('..f..',x)');
+  wrong1=execMaxima('diff('..f..', x)');
+  wrong2=execMaxima('(x^2+2)*sin(x)-2*x*cos(x)')
+  wrong3=execMaxima('(x^2+2)*sin(x)+2*x*cos(x)')
+  wrong4=execMaxima('(x^2-2)*sin(x)-2*x*cos(x)')
+}
+不定積分$\displaystyle\int\var{formula}\, dx$を求めなさい．
+ただし，積分定数$C$は省略している．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{partial_int}{
+\begin{question}{pint05}
+\luaexec{
+  f='x^2*sin(x)';
+  formula=execMaxima(f);
+  correct=execMaxima('integrate('..f..',x)');
+  wrong1=execMaxima('diff('..f..', x)');
+  wrong2=execMaxima('-2*x*sin(x)+(2-x^2)*cos(x)')
+  wrong3=execMaxima('-2*x*sin(x)-(x^2+2)*cos(x)')
+  wrong4=execMaxima('2*x*sin(x)+(x^2+2)*cos(x)')
+}
+不定積分$\displaystyle\int\var{formula}\, dx$を求めなさい．
+ただし，積分定数$C$は省略している．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{partial_int}{
+\begin{question}{pint06}
+\luaexec{
+  a=math.random(2, 9);
+  f='x*(log(x))^2';
+  formula=execMaxima(f);
+  correct=execMaxima('integrate('..f..', x)');
+  wrong1=formula;
+  wrong2=execMaxima('x^2*(2*(log(x))^2+2*log(x)-1)/4')
+  wrong3=execMaxima('diff('..f..', x)')
+  wrong4=execMaxima('x^2*(2*(log(x))^2-2*log(x)-1)/4')
+}
+不定積分$\displaystyle\int\var{formula}\, dx$を求めなさい．
+ただし，積分定数$C$は省略している．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+}

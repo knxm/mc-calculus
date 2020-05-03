@@ -1,0 +1,225 @@
+\documentclass[a4paper]{ltjsarticle}
+\usepackage{amsmath, amssymb}
+\usepackage{tikz}
+\usepackage{luacode}
+\usepackage[box,completemulti,lang=JA]{automultiplechoice}
+\newcommand*{\var}[1]{\luaexec{tex.print(#1)}}
+\begin{document}
+\AMCboxDimensions{shape=oval,width=1.8ex,height=2.5ex}
+\luadirect{math.randomseed(190515)} % \onecopy{} の外に配置
+
+\begin{luacode*}
+function execSage(command)
+  local sage_command="sage -c 'print(latex("..command.."))'"
+  local handle=io.popen(sage_command, "r")
+  local content=string.gsub(handle:read("*all"), "\n", "")
+  handle:close()
+  return content
+end
+function execMaxima(command)
+  local maxima_command="echo 'tex1("..command..");' | maxima --very-quiet "
+  local handle=io.popen(maxima_command, "r")
+  local content=string.gsub(handle:read("*all"), "\n", "")
+  handle:close()
+  return content
+end
+\end{luacode*}
+
+\onecopy{2}{
+
+%%% ヘッダー開始: %%%   
+\noindent{\bf 応用数学 演習06 \hfill 2019年5月15日}
+
+\vspace{3ex}
+
+{\small
+  \setlength{\parindent}{0pt}\hspace*{\fill}\AMCcodeGridInt{学生番号}{8}\hspace*{\fill}
+\begin{minipage}[b]{6.5cm}$\longleftarrow{}$\hspace{0ptplus1cm}
+学生番号を左にマークし、下に氏名を記入してください。
+
+\vspace{3ex}
+
+\hfill\namefield{
+  \fbox{
+    \begin{minipage}{.9\linewidth}
+      氏名\vspace*{.5cm}%\dotfill\vspace*{.5cm}\dotfill
+      \vspace*{1mm}
+    \end{minipage}
+  }
+}
+\hfill\vspace{5ex}
+\end{minipage}
+\hspace*{\fill}
+}
+
+\vspace{1ex}
+%計算は自分のノートに書くこと．答案用紙に書いてはいけません．
+%\multiSymbole{}の記号のある設問の正解は1個とは限りません。 0個の場合や複数の場合があります。
+
+\vspace{1ex}
+\hrulefill
+\vspace{1ex}
+
+%%% ヘッダー終了 %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{int01}
+\luaexec{
+  a=math.random(3, 9)
+  f='1/x^'..a
+  formula=execMaxima(f)
+  correct=execMaxima('integrate('..f..', x)')
+  wrong1=formula
+  wrong2=execMaxima('diff('..f..', x)')
+  wrong3=execMaxima('integrate('..f..'*('..a..'-1), x)')
+  wrong4=execMaxima('-1*integrate('..f..', x)')
+}
+不定積分$\displaystyle\int \var{formula}\, dx$を求めなさい．
+ただし，積分定数$C$は省略している．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{int02}
+\luaexec{
+  a=math.random(2, 9)
+  f='e^{'..a..'x}'
+  formula=execMaxima(f)
+  correct='\\frac{'..f..'}{'..a..'}'
+%  correct=execMaxima('integrate('..f..', x)')
+  wrong1=f
+  wrong2=a..'e^{'..a..'x}'
+  wrong3='\\frac{'..f..'}{'..a..'x}'
+  wrong4='\\frac{e^{'..a..'x+1}}{'..a..'x}'
+}
+不定積分$\displaystyle\int \var{f} dx$を求めなさい．
+ただし，積分定数$C$は省略している．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{int03}
+\luaexec{
+  a=math.random(2, 5)
+  table={7, 11, 13}
+  i=math.random(1, 3)
+  f='e^{-'..a..'x+'..table[i]..'}'
+  correct='-\\frac{'..f..'}{'..a..'}'
+  wrong1=f
+  wrong2=-a..'e^{-'..a..'x+'..table[i]..'}'
+  wrong3='\\frac{'..f..'}{-'..a..'x+'..table[i]..'}'
+}
+不定積分$\displaystyle\int \var{f} dx$を求めなさい．
+ただし，積分定数$C$は省略している．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+  \end{choiceshoriz}
+\end{question}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{int04}
+\luaexec{
+  table={5, 7, 11, 13}
+  i=math.random(1, 4)
+  a=table[i]
+  b=math.random(1, 4)
+  g=a..'*x-'..b
+  f='1/('..g..')'
+  formula=execMaxima(f)
+  correct='{\\log \\left|'..a..'\\,x-'..b..'\\right|}\\over{'..a..'}'
+  wrong1='\\log \\left|'..a..'\\,x-'..b..'\\right|'
+  wrong2=execMaxima('diff('..f..', x)')
+  wrong3=execMaxima('integrate('..f..', x)')
+}
+不定積分$\displaystyle\int \var{formula}\, dx$を求めなさい．
+ただし，積分定数$C$は省略している．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+  \end{choiceshoriz}
+\end{question}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{int05}
+\luaexec{
+  a=math.random(2, 5)
+  g='sqrt('..a..'^2-x^2)'
+  gformula=execMaxima(g)
+  f='1/('..g..')'
+  formula=execMaxima(f)
+  correct=execMaxima('integrate('..f..', x)')
+  wrong1='\\log'..gformula
+  wrong2=execMaxima('diff('..f..', x)')
+  wrong3=execMaxima(a..'*integrate('..f..', x)')
+}
+不定積分$\displaystyle\int \var{formula}\, dx$を求めなさい．
+ただし，積分定数$C$は省略している．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+  \end{choiceshoriz}
+\end{question}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{int06}
+\luaexec{
+  a=math.random(3, 9)
+  b=math.random(3, 9)
+  f='cos('..a..'*x+'..b..')'
+  formula=execMaxima(f)
+  correct=execMaxima('integrate('..f..', x)')
+  wrong1=formula
+  wrong2=execMaxima('diff('..f..', x)')
+  wrong3=execMaxima('-1*integrate('..f..', x)')
+}
+不定積分$\displaystyle\int \var{formula}\, dx$を求めなさい．
+ただし，積分定数$C$は省略している．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+  \end{choiceshoriz}
+\end{question}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{int07}
+\luaexec{
+  a=math.random(3, 9)
+  b=math.random(3, 9)
+  f='sin('..a..'*x+'..b..')'
+  formula=execMaxima(f)
+  correct=execMaxima('integrate('..f..', x)')
+  wrong1=formula
+  wrong2=execMaxima('diff('..f..', x)')
+  wrong3=execMaxima('-1*integrate('..f..', x)')
+}
+不定積分$\displaystyle\int \var{formula}\, dx$を求めなさい．
+ただし，積分定数$C$は省略している．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+  \end{choiceshoriz}
+\end{question}
+
+} % end of \onecopy{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

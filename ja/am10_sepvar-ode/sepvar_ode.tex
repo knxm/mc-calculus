@@ -1,0 +1,26 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{sepvar_ode}{
+\begin{question}{svode02}
+\luaexec{
+  a=math.random(2, 9);
+  f='-(t+'..a..')*x^2';
+  formula=execMaxima(f);
+}
+微分方程式 \(\displaystyle\frac{dx}{dt} = \var{formula}\) の一般解を求めなさい．
+
+\AMCOpen{lines=4, dots=false, framerule=0pt}{\wrongchoice[W]{誤}\scoring{0}\wrongchoice[P]{部}\scoring{1}\correctchoice[C]{正}\scoring{2}}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{sepvar_ode}{
+\begin{question}{svode01}
+\luaexec{
+  a=math.random(2, 9);
+  f='t^'..a..'*x/('..a..'+1)';
+  formula=execMaxima(f);
+}
+微分方程式 \(\displaystyle\frac{dx}{dt} = \var{formula}\) の一般解を求めなさい．
+
+\AMCOpen{lines=4, dots=false, framerule=0pt}{\wrongchoice[W]{誤}\scoring{0}\wrongchoice[P]{部}\scoring{1}\correctchoice[C]{正}\scoring{2}}
+\end{question}
+}

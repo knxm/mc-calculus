@@ -1,0 +1,74 @@
+\documentclass[a4paper]{ltjsarticle}
+\usepackage{amsmath, amssymb}
+\usepackage{tikz}
+\usepackage{luacode}
+\usepackage[box,completemulti,lang=JA]{automultiplechoice}
+\newcommand*{\var}[1]{\luaexec{tex.print(#1)}}
+\begin{document}
+\AMCboxDimensions{shape=oval,width=1.8ex,height=2.5ex}
+\luaexec{math.randomseed(190529)} % \onecopy{} の外に配置
+
+\begin{luacode*}
+function execMaxima(command)
+  local maxima_command="echo 'tex1("..command..");' | maxima --very-quiet "
+  local handle=io.popen(maxima_command, "r")
+  local content=string.gsub(handle:read("*all"), "\n", "")
+  handle:close()
+  return content
+end
+function execSage(command)
+  local sage_command="sage -c 'print(latex("..command.."))'"
+  local handle=io.popen(sage_command, "r")
+  local content=string.gsub(handle:read("*all"), "\n", "")
+  handle:close()
+  return content
+end
+\end{luacode*}
+
+\input{subst_int}
+\input{partial_int}
+
+\onecopy{2}{
+
+%%% ヘッダー開始: %%%   
+\noindent{\bf 応用数学 演習08 \hfill 2019年5月29日}
+
+\vspace{3ex}
+
+{\small
+  \setlength{\parindent}{0pt}\hspace*{\fill}\AMCcodeGridInt{学生番号}{8}\hspace*{\fill}
+\begin{minipage}[b]{6.5cm}$\longleftarrow{}$\hspace{0ptplus1cm}
+学生番号を左にマークし、下に氏名を記入してください。
+
+\vspace{3ex}
+
+\hfill\namefield{
+  \fbox{
+    \begin{minipage}{.9\linewidth}
+      氏名\vspace*{.5cm}%\dotfill\vspace*{.5cm}\dotfill
+      \vspace*{1mm}
+    \end{minipage}
+  }
+}
+\hfill\vspace{5ex}
+\end{minipage}
+\hspace*{\fill}
+}
+
+% \multiSymbole{}の記号のある設問の正解は1個とは限りません。 0個の場合や複数の場合があります。
+
+\vspace{1ex}
+\hrulefill
+\vspace{1ex}
+
+%%% ヘッダー終了 %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cleargroup{all}
+\copygroup[3]{subst_int}{all}
+\copygroup[3]{partial_int}{all}
+\shufflegroup{all}
+\insertgroup{all}
+
+} % End of \onecopy{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

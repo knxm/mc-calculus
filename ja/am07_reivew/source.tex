@@ -1,0 +1,857 @@
+\documentclass[a4paper]{ltjsarticle}
+\usepackage{amsmath, amssymb}
+\usepackage{tikz}
+\usepackage{luacode}
+\usepackage[box,completemulti,lang=JA]{automultiplechoice}
+\newcommand*{\var}[1]{\luaexec{tex.print(#1)}}
+\begin{document}
+\AMCboxDimensions{shape=oval,width=1.8ex,height=2.5ex}
+\luaexec{math.randomseed(190522)} % \onecopy{} の外に配置
+
+\begin{luacode*}
+function execSage(command)
+  local sage_command="sage -c 'print(latex("..command.."))'"
+  local handle=io.popen(sage_command, "r")
+  local content=string.gsub(handle:read("*all"), "\n", "")
+  handle:close()
+  return content
+end
+function execMaxima(command)
+  local maxima_command="echo 'tex1("..command..");' | maxima --very-quiet "
+  local handle=io.popen(maxima_command, "r")
+  local content=string.gsub(handle:read("*all"), "\n", "")
+  handle:close()
+  return content
+end
+\end{luacode*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{sinp}{
+ \begin{questionmult}{sinp01}
+  方程式\(\sin x = 0\, (0 \leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+  \begin{choiceshoriz}
+    \correctchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \correctchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \correctchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{sinp}{
+ \begin{questionmult}{sinp02}
+  方程式\(\sin x = \frac{1}{2}\, (0 \leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \correctchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \correctchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{sinp}{
+ \begin{questionmult}{sinp03}
+  方程式\(\sin x = \frac{1}{\sqrt{2}}\, (0 \leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \correctchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \correctchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{sinp}{
+ \begin{questionmult}{sinp04}
+  方程式\(\sin x = \frac{\sqrt{3}}{2}\, (0 \leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \correctchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \correctchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{sinp}{
+ \begin{questionmult}{sinp05}
+  方程式\(\sin x = 1\, (0 \leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \correctchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{sinm}{
+ \begin{questionmult}{sinm02}
+  方程式\(\sin x = -\frac{1}{2}\, (0 \leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \correctchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \correctchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{sinm}{
+ \begin{questionmult}{sinm03}
+  方程式\(\sin x = -\frac{1}{\sqrt{2}}\, (0 \leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \correctchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \correctchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{sinm}{
+ \begin{questionmult}{sinm04}
+  方程式\(\sin x = -\frac{\sqrt{3}}{2}\, (0 \leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \correctchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \correctchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{sinm}{
+ \begin{questionmult}{sinm05}
+  方程式\(\sin x = -1\, (0 \leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \correctchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{cosp}{
+ \begin{questionmult}{cosp01}
+  方程式\(\cos x = 1\, (0 \leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+  \begin{choiceshoriz}
+    \correctchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \correctchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{cosp}{
+ \begin{questionmult}{cosp02}
+  方程式\(\cos x = \frac{\sqrt{3}}{2}\, (0 \leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \correctchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \correctchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{cosp}{
+ \begin{questionmult}{cosp03}
+  方程式\(\cos x = \frac{1}{\sqrt{2}}\, (0 \leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \correctchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \correctchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{cosp}{
+ \begin{questionmult}{cosp04}
+  方程式\(\cos x = \frac{1}{2}\, (0 \leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \correctchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \correctchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{cosp}{
+ \begin{questionmult}{cosp05}
+  方程式\(\cos x = 0\, (0 \leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \correctchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \correctchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{cosm}{
+ \begin{questionmult}{cosm01}
+  方程式\(\cos x = -\frac{1}{2}\, (0 \leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \correctchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \correctchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{cosm}{
+ \begin{questionmult}{cosm02}
+  方程式\(\cos x = -\frac{1}{\sqrt{2}}\, (0 \leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \correctchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \correctchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{cosm}{
+ \begin{questionmult}{cosm03}
+  方程式\(\cos x = -\frac{\sqrt{3}}{2}\, (0 \leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \correctchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \correctchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+\element{tan}{
+\begin{questionmult}{tan01}
+ 方程式\(\tan x = 0, (0\leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+ \begin{choiceshoriz}
+    \correctchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \correctchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \correctchoice{\(2\pi\)}
+ \end{choiceshoriz}
+\end{questionmult}
+}
+\element{tan}{
+\begin{questionmult}{tan02}
+ 方程式\(\tan x = \frac{1}{\sqrt{3}}, (0\leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+ \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \correctchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \correctchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+ \end{choiceshoriz}
+\end{questionmult}
+}
+\element{tan}{
+\begin{questionmult}{tan03}
+ 方程式\(\tan x = 1, (0\leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+ \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \correctchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \correctchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+ \end{choiceshoriz}
+\end{questionmult}
+}
+\element{tan}{
+\begin{questionmult}{tan04}
+ 方程式\(\tan x = \sqrt{3}, (0\leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+ \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \correctchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \correctchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+ \end{choiceshoriz}
+\end{questionmult}
+}
+\element{tan}{
+\begin{questionmult}{tan05}
+ 方程式\(\tan x = -\sqrt{3}, (0\leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+ \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \correctchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \correctchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+ \end{choiceshoriz}
+\end{questionmult}
+}
+\element{tan}{
+\begin{questionmult}{tan06}
+ 方程式\(\tan x = -1, (0\leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+ \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \correctchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \correctchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+ \end{choiceshoriz}
+\end{questionmult}
+}
+\element{tan}{
+\begin{questionmult}{tan07}
+ 方程式\(\tan x = -\frac{1}{\sqrt{3}}, (0\leqq x \leqq 2\pi)\)の解を全て選択しなさい。
+ \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \correctchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \correctchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+ \end{choiceshoriz}
+\end{questionmult}
+}
+
+\element{itrig}{
+\begin{question}{itrig01}
+\luaexec{
+  table={'-2*\%pi', '-11*\%pi/6', '-7*\%pi/4', '-5*\%pi/3', '-3*\%pi/2', '-4*\%pi/3', '-5*\%pi/4', '-7*\%pi/6', '-\%pi', '-5*\%pi/6', '-3*\%pi/4', '-2*\%pi/3', '-\%pi/2', '-\%pi/3', '-\%pi/4', '-\%pi/6', '0', '\%pi/6', '\%pi/4', '\%pi/3', '\%pi/2', '2*\%pi/3', '3*\%pi/4', '5*\%pi/6', '\%pi', '7*\%pi/6', '5*\%pi/4', '4*\%pi/3', '3*\%pi/2', '5*\%pi/3', '7*\%pi/4', '11*\%pi/6', '2*\%pi'}
+  i=math.random(13, 21);
+  angle=table[i];
+  y=execMaxima('sin('..angle..')');
+  correct=execMaxima(angle);
+  wrong={}
+  if i>16 then for k=0, 7 do wrong[k+1]=execMaxima(table[math.fmod(i+k, 33)+1]) end;
+  else for k=0, 7 do wrong[k+1]=execMaxima(table[math.fmod(i-k, 33)-1]) end; end;
+}
+$\arcsin(x)$は逆正弦函数とする．
+$\arcsin\left(\var{y}\right)$の主値を求めなさい．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct}\)}
+    \wrongchoice{\(\var{wrong[1]}\)}
+    \wrongchoice{\(\var{wrong[2]}\)}
+    \wrongchoice{\(\var{wrong[3]}\)}
+    \wrongchoice{\(\var{wrong[4]}\)}
+    \wrongchoice{\(\var{wrong[5]}\)}
+    \wrongchoice{\(\var{wrong[6]}\)}
+    \wrongchoice{\(\var{wrong[7]}\)}
+    \wrongchoice{\(\var{wrong[8]}\)}
+  \end{choiceshoriz}
+\end{question}
+}
+\element{itrig}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{itrig02}
+\luaexec{
+  table={'-2*\%pi', '-11*\%pi/6', '-7*\%pi/4', '-5*\%pi/3', '-3*\%pi/2', '-4*\%pi/3', '-5*\%pi/4', '-7*\%pi/6', '-\%pi', '-5*\%pi/6', '-3*\%pi/4', '-2*\%pi/3', '-\%pi/2', '-\%pi/3', '-\%pi/4', '-\%pi/6', '0', '\%pi/6', '\%pi/4', '\%pi/3', '\%pi/2', '2*\%pi/3', '3*\%pi/4', '5*\%pi/6', '\%pi', '7*\%pi/6', '5*\%pi/4', '4*\%pi/3', '3*\%pi/2', '5*\%pi/3', '7*\%pi/4', '11*\%pi/6', '2*\%pi'}
+  i=math.random(17, 25); % 0 <= x <= pi
+  angle=table[i];
+  y=execMaxima('cos('..angle..')');
+  correct=execMaxima(angle);
+  wrong={}
+  if i>20 then for k=0, 7 do wrong[k+1]=execMaxima(table[math.fmod(i+k, 33)+1]) end;
+  else for k=0, 7 do wrong[k+1]=execMaxima(table[math.fmod(i-k, 33)-1]) end; end;
+}
+$\arccos(x)$は逆余弦函数とする．
+$\arccos\left(\var{y}\right)$の主値を求めなさい．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct}\)}
+    \wrongchoice{\(\var{wrong[1]}\)}
+    \wrongchoice{\(\var{wrong[2]}\)}
+    \wrongchoice{\(\var{wrong[3]}\)}
+    \wrongchoice{\(\var{wrong[4]}\)}
+    \wrongchoice{\(\var{wrong[5]}\)}
+    \wrongchoice{\(\var{wrong[6]}\)}
+    \wrongchoice{\(\var{wrong[7]}\)}
+    \wrongchoice{\(\var{wrong[8]}\)}
+  \end{choiceshoriz}
+\end{question}
+}
+
+\onecopy{2}{
+
+%%% ヘッダー開始: %%%   
+\noindent{\bf 応用数学 演習07 \hfill 2019年5月22日}
+
+\vspace{3ex}
+
+{\small
+  \setlength{\parindent}{0pt}\hspace*{\fill}\AMCcodeGridInt{学生番号}{8}\hspace*{\fill}
+\begin{minipage}[b]{6.5cm}$\longleftarrow{}$\hspace{0ptplus1cm}
+学生番号を左にマークし、下に氏名を記入してください。
+
+\vspace{3ex}
+
+\hfill\namefield{
+  \fbox{
+    \begin{minipage}{.9\linewidth}
+      氏名\vspace*{.5cm}%\dotfill\vspace*{.5cm}\dotfill
+      \vspace*{1mm}
+    \end{minipage}
+  }
+}
+\hfill\vspace{5ex}
+\end{minipage}
+\hspace*{\fill}
+}
+
+%\vspace{1ex}
+%計算は自分のノートに書くこと．答案用紙に書いてはいけません．
+%\multiSymbole{}の記号のある設問の正解は1個とは限りません。 0個の場合や複数の場合があります。
+\hrulefill
+\vspace{1ex}
+
+%%% ヘッダー終了 %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{log03}
+  \luaexec{
+    a=math.random(2, 5);
+    b=math.random(2, 10);
+    c=math.random(2, 4);
+    d=math.random(1, 8);
+    e=a^c;
+    table={-3, -2, -1, 1, 2, 3};
+    r=math.random(1, 3);
+    correct=(b-d)/2;
+    wrong1=correct+table[r];
+    wrong2=correct+table[r+1];
+    wrong3=correct+table[r+2];
+    wrong4=correct+table[r+3];
+  }
+  方程式\(\log_{\var{a}}(\var{b}-x)=\var{c}\log_{\var{e}}(x+\var{d})\)の解を求めよ．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}   
+\end{question}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 三角函数
+\cleargroup{all}
+\copygroup{sinp}{all}
+\copygroup{sinm}{all}
+\copygroup{cosp}{all}
+\copygroup{cosm}{all}
+\copygroup{tan}{all}
+\shufflegroup{all}
+\insertgroup[1]{all}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 導函数
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{diff07}
+\luaexec{
+    array1={2, 4, 8};
+    array2={3, 5, 7, 11};
+    i=math.random(1, 3);
+    j=math.random(1, 4);
+    k=math.random(1, 4);
+    l=math.random(1, 3);
+    a=array1[i];
+    b=array2[j];
+    c=array2[k];
+    d=array1[l];
+}
+函数\(f(x)=\frac{\var{a}x+\var{b}}{\var{c}x+\var{d}}\)の導函数\(f'(x)\)を求めなさい。
+
+  \begin{choiceshoriz}
+    \correctchoice{\(\frac{\var{a*d-b*c}}{(\var{c}x+\var{d})^{2}}\)}
+    \wrongchoice{\(\frac{\var{a}}{\var{c}x+\var{d}}\)}
+    \wrongchoice{\(\frac{\var{a}}{(\var{c}x+\var{d})^{2}}\)}
+    \wrongchoice{\(\frac{\var{(a+1)*d-b*c}}{\var{c}x+\var{d}}\)}
+    \wrongchoice{\(\frac{\var{a*d-b*c}}{\var{c}x+\var{d}}\)}
+  \end{choiceshoriz}
+\end{question}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{diff08}
+\luaexec{
+  a=math.random(2, 9);
+  b=math.random(2, 9);
+  c=math.random(2, 9);
+  d=math.random(5, 12);
+  g=a..'*x^2+'..b..'*x+'..c;
+  f='('..a..'*x^2+'..b..'*x+'..c..')^'..d;
+  formula=execMaxima(f);
+  correct=execMaxima('diff('..f..', x)');
+  wrong1=execMaxima(d..'*('..g..')^('..d..'-1)');
+  wrong2=execMaxima(a..'*'..d..'*('..g..')^('..d..'-1)');
+  wrong3=execMaxima(d..'*('..a..'*x+'..b..')*('..g..')^('..d..'-1)');
+  wrong4=execMaxima(d..'*(diff('..g..', x)+'..c..')*('..g..')^('..d..'-1)');
+}
+函数\(f(x)=\var{formula}\)の導函数\(f'(x)\)を求めなさい。
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{diff11}
+\luaexec{
+  a=math.random(2, 9);
+  b=math.random(2, 9);
+  trig={'sin', 'cos'};
+  t=math.random(1, 2);
+  s=(-1)^(math.random(0,1));
+  g=a..'*x+'..s..'*'..b;
+  f=trig[t]..'('..g..')';
+  formula=execMaxima(f);
+  correct1=execMaxima('diff('..f..', x)');
+  wrong1=execMaxima('diff((-1)*'..f..', x)');
+  wrong2=execMaxima('diff(2*'..f..', x)');
+  wrong3=execMaxima('diff((-2)*'..f..', x)');
+  wrong4=execMaxima('diff('..f..', x)/diff('..g..', x)');
+}
+函数 \(f(x)=\var{formula}\)の導函数\(f'(x)\)を求めなさい．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct1}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{diff14}
+\luaexec{
+  a=math.random(2, 5);
+  b=math.random(2, 9);
+  b=math.random(1, 3);
+  f='exp('..a..'*x+'..b..')';
+  formula=execMaxima(f);
+  correct=execMaxima('diff('..f..', x)');
+  wrong1=execMaxima('('..a..'*x+'..b..')*exp('..a..'*x+'..b..'-1)');
+  wrong2=execMaxima('('..a..'*x+'..b..')*exp('..a..'*x+'..b..')');
+  wrong3=execMaxima(f);
+}
+函数 \(f(x)=\var{formula}\)の導函数\(f'(x)\)を求めなさい．
+  \begin{choiceshoriz}
+   \correctchoice{\(\var{correct}\)}
+   \wrongchoice{\(\var{wrong1}\)}
+   \wrongchoice{\(\var{wrong2}\)}
+   \wrongchoice{\(\var{wrong3}\)}
+  \end{choiceshoriz}
+\end{question}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\shufflegroup{itrig}
+\insertgroup[1]{itrig}
+
+} % end of \onecopy{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
