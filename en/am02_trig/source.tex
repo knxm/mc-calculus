@@ -1,0 +1,659 @@
+\documentclass[a4paper]{ltjsarticle}
+\usepackage{luacode,amsmath,amssymb,tikz}
+%\usepackage{sagetex}
+\usepackage[box,completemulti,noshuffle]{automultiplechoice}
+%\AMCboxStyle{size=3ex,down=.2ex}    
+\begin{luacode}
+  math.randomseed(190410)
+\end{luacode}
+\newcommand*{\myluatexd}[1]{\luadirect{tex.print(#1)}}
+\begin{document}
+\AMCboxDimensions{shape=oval,width=1.8ex,height=2.5ex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{sinp}{
+ \begin{questionmult}{sinp01}
+  Solve the equation \(\sin x = 0\, (0 \leq x \leq 2\pi)\).
+  \begin{choiceshoriz}
+    \correctchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \correctchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \correctchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{sinp}{
+ \begin{questionmult}{sinp02}
+  Solve the equation \(\sin x = \frac{1}{2}\, (0 \leq x \leq 2\pi)\).
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \correctchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \correctchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{sinp}{
+ \begin{questionmult}{sinp03}
+  Solve the equation \(\sin x = \frac{1}{\sqrt{2}}\, (0 \leq x \leq 2\pi)\).
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \correctchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \correctchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{sinp}{
+ \begin{questionmult}{sinp04}
+  Solve the equation \(\sin x = \frac{\sqrt{3}}{2}\, (0 \leq x \leq 2\pi)\).
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \correctchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \correctchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{sinp}{
+ \begin{questionmult}{sinp05}
+  Solve the equation\(\sin x = 1\, (0 \leq x \leq 2\pi)\).
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \correctchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{sinm}{
+ \begin{questionmult}{sinm02}
+  Solve the equation \(\sin x = -\frac{1}{2}\, (0 \leq x \leq 2\pi)\).
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \correctchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \correctchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{sinm}{
+ \begin{questionmult}{sinm03}
+  Solve the equation \(\sin x = -\frac{1}{\sqrt{2}}\, (0 \leq x \leq 2\pi)\).
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \correctchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \correctchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{sinm}{
+ \begin{questionmult}{sinm04}
+  Solve the equation \(\sin x = -\frac{\sqrt{3}}{2}\, (0 \leq x \leq 2\pi)\).
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \correctchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \correctchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{sinm}{
+ \begin{questionmult}{sinm05}
+  Solve the equation \(\sin x = -1\, (0 \leq x \leq 2\pi)\).
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \correctchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{cosp}{
+ \begin{questionmult}{cosp01}
+  Solve the equation \(\cos x = 1\, (0 \leq x \leq 2\pi)\).
+  \begin{choiceshoriz}
+    \correctchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \correctchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{cosp}{
+ \begin{questionmult}{cosp02}
+  Solve the equation \(\cos x = \frac{\sqrt{3}}{2}\, (0 \leq x \leq 2\pi)\).
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \correctchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \correctchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{cosp}{
+ \begin{questionmult}{cosp03}
+  Solve the equation \(\cos x = \frac{1}{\sqrt{2}}\, (0 \leq x \leq 2\pi)\).
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \correctchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \correctchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{cosp}{
+ \begin{questionmult}{cosp04}
+  Solve the equation \(\cos x = \frac{1}{2}\, (0 \leq x \leq 2\pi)\).
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \correctchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \correctchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{cosp}{
+ \begin{questionmult}{cosp05}
+  Solve the equation \(\cos x = 0\, (0 \leq x \leq 2\pi)\).
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \correctchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \correctchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{cosm}{
+ \begin{questionmult}{cosm01}
+  Solve the equation \(\cos x = -\frac{1}{2}\, (0 \leq x \leq 2\pi)\).
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \correctchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \correctchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{cosm}{
+ \begin{questionmult}{cosm02}
+  Solve the equation \(\cos x = -\frac{1}{\sqrt{2}}\, (0 \leq x \leq 2\pi)\).
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \correctchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \correctchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{cosm}{
+ \begin{questionmult}{cosm03}
+  Solve the equation \(\cos x = -\frac{\sqrt{3}}{2}\, (0 \leq x \leq 2\pi)\).
+  \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \correctchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \correctchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+  \end{choiceshoriz}
+ \end{questionmult}
+}
+\element{tan}{
+\begin{questionmult}{tan01}
+ Solve the equation \(\tan x = 0, (0\leq x \leq 2\pi)\).
+ \begin{choiceshoriz}
+    \correctchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \correctchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \correctchoice{\(2\pi\)}
+ \end{choiceshoriz}
+\end{questionmult}
+}
+\element{tan}{
+\begin{questionmult}{tan02}
+ Solve the equation \(\tan x = \frac{1}{\sqrt{3}}, (0\leq x \leq 2\pi)\).
+ \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \correctchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \correctchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+ \end{choiceshoriz}
+\end{questionmult}
+}
+\element{tan}{
+\begin{questionmult}{tan03}
+ Solve the equation \(\tan x = 1, (0\leq x \leq 2\pi)\).
+ \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \correctchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \correctchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+ \end{choiceshoriz}
+\end{questionmult}
+}
+\element{tan}{
+\begin{questionmult}{tan04}
+ Solve the equation \(\tan x = \sqrt{3}, (0\leq x \leq 2\pi)\).
+ \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \correctchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \correctchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+ \end{choiceshoriz}
+\end{questionmult}
+}
+\element{tan}{
+\begin{questionmult}{tan05}
+ Solve the equation \(\tan x = -\sqrt{3}, (0\leq x \leq 2\pi)\).
+ \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \correctchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \correctchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+ \end{choiceshoriz}
+\end{questionmult}
+}
+\element{tan}{
+\begin{questionmult}{tan06}
+ Solve the equation \(\tan x = -1, (0\leq x \leq 2\pi)\).
+ \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \correctchoice{\(\frac{3}{4}\pi\)}
+    \wrongchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \correctchoice{\(\frac{7}{4}\pi\)}
+    \wrongchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+ \end{choiceshoriz}
+\end{questionmult}
+}
+\element{tan}{
+\begin{questionmult}{tan07}
+ Solve the equation \(\tan x = -\frac{1}{\sqrt{3}}, (0\leq x \leq 2\pi)\).
+ \begin{choiceshoriz}
+    \wrongchoice{\(0\)}
+    \wrongchoice{\(\frac{\pi}{6}\)}
+    \wrongchoice{\(\frac{\pi}{4}\)}
+    \wrongchoice{\(\frac{\pi}{3}\)}
+    \wrongchoice{\(\frac{\pi}{2}\)}
+    \wrongchoice{\(\frac{2}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{4}\pi\)}
+    \correctchoice{\(\frac{5}{6}\pi\)}
+    \wrongchoice{\(\pi\)}
+    \wrongchoice{\(\frac{7}{6}\pi\)}
+    \wrongchoice{\(\frac{5}{4}\pi\)}
+    \wrongchoice{\(\frac{4}{3}\pi\)}
+    \wrongchoice{\(\frac{3}{2}\pi\)}
+    \wrongchoice{\(\frac{5}{3}\pi\)}
+    \wrongchoice{\(\frac{7}{4}\pi\)}
+    \correctchoice{\(\frac{11}{6}\pi\)}
+    \wrongchoice{\(2\pi\)}
+ \end{choiceshoriz}
+\end{questionmult}
+}
+
+\onecopy{2}{    
+
+%%% 
+
+\noindent{\bf Calculus ex02 \hfill 10 Apr. 2019}
+
+\vspace{3ex}
+
+{\small
+  \setlength{\parindent}{0pt}\hspace*{\fill}\AMCcodeGridInt{id.}{8}\hspace*{\fill}
+\begin{minipage}[b]{6.5cm}$\longleftarrow{}$\hspace{0ptplus1cm}
+Please encode your student number,
+and write your first and last names below.
+
+\vspace{3ex}
+
+\hfill\namefield{
+  \fbox{
+    \begin{minipage}{.9\linewidth}
+      First name and last name:\vspace*{.5cm}\dotfill\vspace*{.5cm}\dotfill
+      \vspace*{1mm}
+    \end{minipage}
+  }
+}
+\hfill\vspace{5ex}
+\end{minipage}
+\hspace*{\fill}
+}
+
+\vspace{1ex}
+\hrulefill
+\vspace{1ex}
+
+
+%%% 
+\shufflegroup{sinp}
+\shufflegroup{sinm}
+\shufflegroup{cosp}
+\shufflegroup{cosm}
+\shufflegroup{tan}
+\cleargroup{all}
+\copygroup[1]{sinp}{all}
+\copygroup[1]{sinm}{all}
+\copygroup[1]{cosp}{all}
+\copygroup[1]{cosm}{all}
+\copygroup[1]{tan}{all}
+\insertgroup{all}
+%\insertgroup{cosp}
+%\insertgroup{cosm}
+%\insertgroup{tan}
+}
+
+\end{document}
