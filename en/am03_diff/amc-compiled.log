@@ -1,7 +1,7 @@
-This is LuaTeX, Version 1.07.0 (TeX Live 2019/dev/Debian)  (format=lualatex 2019.3.28)  28 MAY 2020 16:20
+This is LuaTeX, Version 1.07.0 (TeX Live 2019/dev/Debian)  (format=lualatex 2019.3.28)  28 MAY 2020 16:32
  restricted system commands enabled.
-**\nonstopmode\def\NoHyperRef{1}\def\NoWatermarkExterne{1}\def\CorrigeIndivExte
-rne{1}\def\AMCNombreCopies{10}\input{"source.tex"}
+**\nonstopmode\def\NoHyperRef{1}\def\AMCNombreCopies{10}\def\CorrigeIndivExtern
+e{1}\def\NoWatermarkExterne{1}\input{"source.tex"}
 Lua module: luaotfload-main 2019-02-14 2.96 luaotfload entry point
 Lua module: luaotfload-init 2019-02-14 2.96 luaotfload submodule / initialization
 Lua module: lualibs 2019-02-14 2.64 ConTeXt Lua standard libraries.
@@ -32,371 +32,57 @@ Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
 Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_font_unsafe'.
 Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'.
-luaotfload | main : initialization completed in 0.115 seconds
+luaotfload | main : initialization completed in 0.110 seconds
 
-(./source.tex
-(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/ltjsarticle.cls
-Document Class: ltjsarticle 2018/10/08 ltjsclasses 
-(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/luatexja.sty
-Package: luatexja 2019/01/28 Japanese Typesetting with Lua(La)TeX
+(./source.tex (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+luaotfload | db : Font names database loaded from /home/hamada/.texlive2018/texm
+f-var/luatex-cache/generic/names/luaotfload-names.luc)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/lualatex/luacode/luacode.sty
+Package: luacode 2012/01/23 v1.2a lua-in-tex helpers (mpg)
 
-(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/luatexja-core.sty
-Package: luatexja-core 2017/11/12 Core of LuaTeX-ja
-
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX detected.
+)
 (/usr/share/texlive/texmf-dist/tex/luatex/luatexbase/luatexbase.sty
 Package: luatexbase 2015/10/04 v1.3 luatexbase interface to LuaTeX 
 
 (/usr/share/texlive/texmf-dist/tex/luatex/ctablestack/ctablestack.sty
 Package: ctablestack 2015/10/01 v1.0 Catcode table stable support
-\@catcodetablestackcnt=\count80
+\@catcodetablestackcnt=\count88
 )
 \CatcodeTableOther=\catcodetable5
 \CatcodeTableExpl=\catcodetable6
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO)
-
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX detected.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-\pdftexcmds@toks=\toks14
-)
-(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
-
-(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks15
-\XKV@tempa@toks=\toks16
-
-(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/keyval.tex))
-\XKV@depth=\count81
-File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-))
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/atbegshi.sty
-Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count82
-)
-\AtBeginShipoutBox=\box27
-
-(/usr/share/texlive/texmf-dist/tex/latex/everyhook/everyhook.sty
-(/usr/share/texlive/texmf-dist/tex/latex/svn-prov/svn-prov.sty
-Package: svn-prov 2010/04/24 v3.1862 Package Date/Version from SVN Keywords
-)
-Package: everyhook 2014/11/26 v1.2 (SVN Rev: 12)\ Hooks for low level TeX everyX
- primitives.
-\everypar=\toks17
-\frozen@everymath=\toks18
-\frozen@everydisplay=\toks19
-\everyhbox=\toks20
-\everyvbox=\toks21
-\everycr=\toks22
-)
-\ltjlineendcomment=\count83
-\ltj@zw=\dimen102
-\ltj@zh=\dimen103
-\jQ=\dimen104
-\ltj@icflag=\attribute5
-\ltj@curjfnt=\attribute6
-\ltj@curtfnt=\attribute7
-\ltj@origchar=\attribute8
-\ltj@charclass=\attribute9
-\ltj@charcode=\attribute10
-\ltj@autospc=\attribute11
-\ltj@autoxspc=\attribute12
-\ltj@yablshift=\attribute13
-\ltj@ykblshift=\attribute14
-\ltj@tablshift=\attribute15
-\ltj@tkblshift=\attribute16
-\jfam=\attribute17
-\ltj@dir=\attribute18
-\ltj@@japanese=\language2
-\ltj@tempcnta=\count84
-\ltj@kcat0=\attribute19
-\ltj@kcat1=\attribute20
-\ltj@kcat2=\attribute21
-\ltj@kcat3=\attribute22
-\ltj@kcat4=\attribute23
-\ltj@kcat5=\attribute24
-\ltj@kcat6=\attribute25
-Custom whatsit inhibitglue = 1
-Custom whatsit stack_marker = 2
-Custom whatsit begin_par = 3
-Custom whatsit direction = 4
-Custom whatsit box_boundary = 5(load cache: /home/hamada/.texlive2018/texmf-var/
-luatexja/ltj-cid-auto-adobe-japan1.luc)
-Lua module: luatexja.charrange 2018/02/18 Handling the range of Japanese charact
-ers
-Lua module: luatexja.stack 2018/02/18 LuaTeX-ja stack system
-Inserting `ltj.create_dir_whatsit' at position 2 in `hpack_filter'.
-Inserting `ltj.create_dir_whatsit' at position 1 in `post_linebreak_filter'.
-Inserting `ltj.direction' at position 1 in `vpack_filter'.
-Inserting `ltj.direction' at position 1 in `pre_output_filter'.
-Inserting `ltj.lineskip' at position 2 in `post_linebreak_filter'.
-Inserting `ltj.lineskip' at position 1 in `append_to_vlist_filter'.
-Lua module: luatexja.jfont 2019/02/11 Loader for Japanese fonts
-Removing  `luaotfload.define_font' from `define_font'.
-Inserting `luatexja.font_callback' at position 1 in `define_font'.
-Removing  `luaotfload.aux.set_sscale_dimens' from `luaotfload.patch_font'.
-Removing  `luaotfload.aux.patch_cambria_domh' from `luaotfload.patch_font'.
-Removing  `luaotfload.aux.set_capheight' from `luaotfload.patch_font'.
-Removing  `luaotfload.rewrite_fontname' from `luaotfload.patch_font'.
-Inserting `ltj.prepare_extra_data' at position 1 in `luaotfload.patch_font'.
-Inserting `luaotfload.aux.set_sscale_dimens' at position 2 in `luaotfload.patch_
-font'.
-Inserting `luaotfload.aux.patch_cambria_domh' at position 3 in `luaotfload.patch
-_font'.
-Inserting `luaotfload.aux.set_capheight' at position 4 in `luaotfload.patch_font
-'.
-Inserting `luaotfload.rewrite_fontname' at position 5 in `luaotfload.patch_font'
-.
-Inserting `ltj.prepare_extra_data' at position 1 in `luatexja.define_font'.
-Inserting `ltj.v_advance' at position 1 in `luatexja.define_jfont'.
-Removing  `ltj.v_advance' from `luatexja.define_jfont'.
-Inserting `ltj.get_vert_form' at position 1 in `luatexja.define_jfont'.
-Inserting `ltj.v_advance' at position 2 in `luatexja.define_jfont'.
-Removing  `ltj.prepare_extra_data' from `luaotfload.patch_font'.
-Removing  `luaotfload.aux.set_sscale_dimens' from `luaotfload.patch_font'.
-Removing  `luaotfload.aux.patch_cambria_domh' from `luaotfload.patch_font'.
-Removing  `luaotfload.aux.set_capheight' from `luaotfload.patch_font'.
-Removing  `luaotfload.rewrite_fontname' from `luaotfload.patch_font'.
-Inserting `ltj.supply_tounicode' at position 1 in `luaotfload.patch_font'.
-Inserting `ltj.prepare_extra_data' at position 2 in `luaotfload.patch_font'.
-Inserting `luaotfload.aux.set_sscale_dimens' at position 3 in `luaotfload.patch_
-font'.
-Inserting `luaotfload.aux.patch_cambria_domh' at position 4 in `luaotfload.patch
-_font'.
-Inserting `luaotfload.aux.set_capheight' at position 5 in `luaotfload.patch_font
-'.
-Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'
-.
-Inserting `ltj.process_input_buffer' at position 1 in `process_input_buffer'.
-Inserting `ltj.hyphenate' at position 1 in `hyphenate'.
-Removing  `luaotfload.node_processor' from `hpack_filter'.
-Removing  `ltj.create_dir_whatsit' from `hpack_filter'.
-Inserting `ltj.set_stack_level' at position 1 in `hpack_filter'.
-Inserting `luaotfload.node_processor' at position 2 in `hpack_filter'.
-Inserting `ltj.create_dir_whatsit' at position 3 in `hpack_filter'.
-Removing  `luaotfload.node_processor' from `pre_linebreak_filter'.
-Inserting `ltj.set_stack_level' at position 1 in `pre_linebreak_filter'.
-Inserting `luaotfload.node_processor' at position 2 in `pre_linebreak_filter'.
-Lua module: luatexja.jfmglue 2018/08/11 Insertion process of JFM glues, [x]kanji
-skip and others
-Inserting `luatexja.beginpar.np_info' at position 1 in `luatexja.jfmglue.whatsit
-_getinfo'.
-Inserting `luatexja.beginpar.np_info_after' at position 1 in `luatexja.jfmglue.w
-hatsit_after'.
-Inserting `ltj.mlist_to_hlist' at position 1 in `mlist_to_hlist'.
-Inserting `ltj.main' at position 3 in `pre_linebreak_filter'.
-Removing  `ltj.create_dir_whatsit' from `hpack_filter'.
-Inserting `ltj.main' at position 3 in `hpack_filter'.
-Inserting `ltj.create_dir_whatsit' at position 4 in `hpack_filter'.
-Removing  `ltj.set_stack_level' from `pre_linebreak_filter'.
-Removing  `luaotfload.node_processor' from `pre_linebreak_filter'.
-Removing  `ltj.main' from `pre_linebreak_filter'.
-Inserting `ltj.adjust_icflag' at position 1 in `pre_linebreak_filter'.
-Inserting `ltj.set_stack_level' at position 2 in `pre_linebreak_filter'.
-Inserting `luaotfload.node_processor' at position 3 in `pre_linebreak_filter'.
-Inserting `ltj.main' at position 4 in `pre_linebreak_filter'.
-Removing  `ltj.set_stack_level' from `hpack_filter'.
-Removing  `luaotfload.node_processor' from `hpack_filter'.
-Removing  `ltj.main' from `hpack_filter'.
-Removing  `ltj.create_dir_whatsit' from `hpack_filter'.
-Inserting `ltj.adjust_icflag' at position 1 in `hpack_filter'.
-Inserting `ltj.set_stack_level' at position 2 in `hpack_filter'.
-Inserting `luaotfload.node_processor' at position 3 in `hpack_filter'.
-Inserting `ltj.main' at position 4 in `hpack_filter'.
-Inserting `ltj.create_dir_whatsit' at position 5 in `hpack_filter'.
-(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/ltj-base.sty
-Package: ltj-base 2017/05/05
-\ltj@tempcntb=\count85
-\ltj@tempcntc=\count86
-\ltj@tempdima=\dimen105
-\ltj@afbox=\box28
-)
-\ltj@@italic@inner=\luafunction1
-\ltj@@jfont@inner=\luafunction2
-\ltj@zw@inner=\luafunction3
-\ltj@zh@inner=\luafunction4
-\ltj@reset@globaldefs@inner=\luafunction5
-\ltj@restore@globaldefs@inner=\luafunction6
-\ltj@@ihb@inner=\luafunction7
-\ltj@@fakeparbegin@inner=\luafunction8
-\ltj@@fakeboxbdd@inner=\luafunction9
-\ltj@@stack=\count87
-\ltj@@group@level=\count88
-\ltjsetkanjiskip@inner=\luafunction10
-\ltjsetxkanjiskip@inner=\luafunction11
-\ltj@@box@dirhook=\luafunction12
-\ltj@@reset@badness@inner=\luafunction13
-
-(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/ltj-latex.sty
-Package: ltj-latex 2018/08/24 LaTeX support of LuaTeX-ja
-
-(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/patches/lltjfont.sty
-Package: lltjfont 2019/01/29 Patch to NFSS2 for LuaTeX-ja
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/tuenc.def
-File: tuenc.def 2018/08/11 v2.0j Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding TU on input line 82.
-)
-\Cht=\dimen106
-\cht=\dimen107
-\Cdp=\dimen108
-\cdp=\dimen109
-\Cwd=\dimen110
-\cwd=\dimen111
-\Cvs=\dimen112
-\cvs=\dimen113
-\Chs=\dimen114
-\chs=\dimen115
-\cHT=\dimen116
-\dstrutbox=\box29
-\tstrutbox=\box30
-\zstrutbox=\box31
-
-(/usr/share/texlive/texmf-dist/tex/latex/ms/everysel.sty
-Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
-)
-ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 322.
-\ltj@@adjust@baseline@inner=\luafunction14
-LaTeX Info: Redefining \fontencoding on input line 498.
-LaTeX Info: Redefining \fontfamily on input line 543.
-LaTeX Info: Redefining \fontseries on input line 577.
-LaTeX Info: Redefining \fontshape on input line 580.
-LaTeX Info: Redefining \normalfont on input line 592.
-)
-(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/patches/lltjdefs.sty
-Package: lltjdefs 2019/02/11 Default font settings of LuaTeX-ja
-luaotfload | db : Font names database loaded from /home/hamada/.texlive2018/texm
-f-var/luatex-cache/generic/names/luaotfload-names.luc
-LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 9.24713pt on input line 61.
-
-(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/jfm-ujisv.lua)
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 9.24713pt on input line 61.
-luaotfload | cache : Lookup cache loaded from /home/hamada/.texlive2018/texmf-va
-r/luatex-cache/generic/names/luaotfload-lookup-cache.luc.(load cache: /home/hama
-da/.texlive2018/texmf-var/luatexja/extra_ipaexmincho.luc)
-(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/jfm-ujis.lua)
-\symmincho=\mathgroup4
-LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
-(Font)                  JY3/mc/m/n --> JY3/gt/m/n on input line 71.
-LaTeX Info: Redefining \rmfamily on input line 79.
-LaTeX Info: Redefining \sffamily on input line 83.
-LaTeX Info: Redefining \ttfamily on input line 87.
-LaTeX Info: Redefining \em on input line 92.
-)
-(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/patches/lltjcore.sty
-Package: lltjcore 2018/06/15 Patch to LaTeX2e Kernel for LuaTeX-ja
-\@tombowwidth=\dimen117
-\@TL=\box32
-\@Tl=\box33
-\@TC=\box34
-\@TR=\box35
-\@Tr=\box36
-\@BL=\box37
-\@Bl=\box38
-\@BC=\box39
-\@BR=\box40
-\@Br=\box41
-\@CL=\box42
-\@CR=\box43
-\@bannertoken=\toks23
-\@@paperheight=\dimen118
-\@@paperwidth=\dimen119
-\@@topmargin=\dimen120
-)
-(/usr/share/texlive/texmf-dist/tex/latex/filehook/filehook.sty
-Package: filehook 2011/10/12 v0.5d Hooks for input files
-)
-(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/patches/lltjp-geometry.sty
-Package: lltjp-geometry 2018/01/19 Patch to geometry for LuaTeX-ja with vertical
- writing mode
-))
-\ltj@temp@cctb=\catcodetable7
-) (/usr/share/texlive/texmf-dist/tex/luatex/luatexja/luatexja-compat.sty
-Package: luatexja-compat 2018/03/29 Compatibility with pTeX
-(load cache: /home/hamada/.texlive2018/texmf-var/luatexja/ltj-jisx0208.luc)
-\hour=\count89
-\minute=\count90
-))
-\jsc@mpt=\dimen121
-\jsc@mmm=\dimen122
-\jsc@smallskipamount=\skip41
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 9.24713pt on input line 413.
-\fullwidth=\dimen123
-LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 7.3977pt on input line 554.
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 7.3977pt on input line 554.
-\c@part=\count91
-\c@section=\count92
-\c@subsection=\count93
-\c@subsubsection=\count94
-\c@paragraph=\count95
-\c@subparagraph=\count96
-\@abstractbox=\box44
-\c@figure=\count97
-\c@table=\count98
-\abovecaptionskip=\skip42
-\belowcaptionskip=\skip43
-LaTeX Info: Redefining \mc on input line 1207.
-LaTeX Info: Redefining \gt on input line 1208.
-\jsc@tocl@width=\dimen124
-\@lnumwidth=\dimen125
-\bibindent=\dimen126
-
-(/usr/share/texlive/texmf-dist/tex/platex/jsclasses/jslogo.sty
-Package: jslogo 2017/02/24 okumura, texjporg
-LaTeX Info: Redefining \TeX on input line 94.
-LaTeX Info: Redefining \LaTeX on input line 147.
-LaTeX Info: Redefining \LaTeXe on input line 200.
-)
-\heisei=\count99
-
-(/usr/share/texlive/texmf-dist/tex/latex/sttools/stfloats.sty
-Package: stfloats 2017/03/27 v3.3 Improve float mechanism and baselineskip setti
-ngs
-\@dblbotnum=\count100
-\c@dblbotnumber=\count101
-)
-(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/patches/lltjp-stfloats.sty)) (/usr/share/texlive/texmf-dist/tex/lualatex/luacode/luacode.sty
-Package: luacode 2012/01/23 v1.2a lua-in-tex helpers (mpg)
-\luacode@lines=\toks24
-\luacode@table@soft=\catcodetable8
+\luacode@lines=\toks14
+\luacode@table@soft=\catcodetable7
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks25
-\pgfutil@tempdima=\dimen127
-\pgfutil@tempdimb=\dimen128
+\pgfutil@everybye=\toks15
+\pgfutil@tempdima=\dimen103
+\pgfutil@tempdimb=\dimen104
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
 ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box45
+\pgfutil@abb=\box27
 (/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
@@ -410,6 +96,10 @@ Package: pgf 2019/02/02 v3.1.1 (3.1.1)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
@@ -424,39 +114,39 @@ Package graphics Info: Driver file: luatex.def on input line 99.
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/luatex.def
 File: luatex.def 2018/01/08 v1.0l Graphics/color driver for luatex
 ))
-\Gin@req@height=\dimen129
-\Gin@req@width=\dimen130
+\Gin@req@height=\dimen105
+\Gin@req@width=\dimen106
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2019/02/02 v3.1.1 (3.1.1)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks26
-\pgfkeys@temptoks=\toks27
+\pgfkeys@pathtoks=\toks17
+\pgfkeys@temptoks=\toks18
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
 ex
-\pgfkeys@tmptoks=\toks28
+\pgfkeys@tmptoks=\toks19
 ))
-\pgf@x=\dimen131
-\pgf@y=\dimen132
-\pgf@xa=\dimen133
-\pgf@ya=\dimen134
-\pgf@xb=\dimen135
-\pgf@yb=\dimen136
-\pgf@xc=\dimen137
-\pgf@yc=\dimen138
+\pgf@x=\dimen107
+\pgf@y=\dimen108
+\pgf@xa=\dimen109
+\pgf@ya=\dimen110
+\pgf@xb=\dimen111
+\pgf@yb=\dimen112
+\pgf@xc=\dimen113
+\pgf@yc=\dimen114
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count102
-\c@pgf@countb=\count103
-\c@pgf@countc=\count104
-\c@pgf@countd=\count105
-\t@pgf@toka=\toks29
-\t@pgf@tokb=\toks30
-\t@pgf@tokc=\toks31
-\pgf@sys@id@count=\count106
+\c@pgf@counta=\count89
+\c@pgf@countb=\count90
+\c@pgf@countc=\count91
+\c@pgf@countd=\count92
+\t@pgf@toka=\toks20
+\t@pgf@tokb=\toks21
+\t@pgf@tokc=\toks22
+\pgf@sys@id@count=\count93
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2019/02/02 v3.1.1 (3.1.1)
 )
@@ -472,8 +162,8 @@ File: pgfsys-common-pdf.def 2019/02/02 v3.1.1 (3.1.1)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
 File: pgfsyssoftpath.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgfsyssoftpath@smallbuffer@items=\count107
-\pgfsyssoftpath@bigbuffer@items=\count108
+\pgfsyssoftpath@smallbuffer@items=\count94
+\pgfsyssoftpath@bigbuffer@items=\count95
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
@@ -502,12 +192,12 @@ Package: pgfcore 2019/02/02 v3.1.1 (3.1.1)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen139
-\pgfmath@count=\count109
-\pgfmath@box=\box46
-\pgfmath@toks=\toks32
-\pgfmath@stack@operand=\toks33
-\pgfmath@stack@operation=\toks34
+\pgfmath@dimen=\dimen115
+\pgfmath@count=\count96
+\pgfmath@box=\box28
+\pgfmath@toks=\toks23
+\pgfmath@stack@operand=\toks24
+\pgfmath@stack@operation=\toks25
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
@@ -527,57 +217,57 @@ tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
 thmetics.code.tex)))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count110
+\c@pgfmathroundto@lastzeros=\count97
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
 File: pgfcorepoints.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgf@picminx=\dimen140
-\pgf@picmaxx=\dimen141
-\pgf@picminy=\dimen142
-\pgf@picmaxy=\dimen143
-\pgf@pathminx=\dimen144
-\pgf@pathmaxx=\dimen145
-\pgf@pathminy=\dimen146
-\pgf@pathmaxy=\dimen147
-\pgf@xx=\dimen148
-\pgf@xy=\dimen149
-\pgf@yx=\dimen150
-\pgf@yy=\dimen151
-\pgf@zx=\dimen152
-\pgf@zy=\dimen153
+\pgf@picminx=\dimen116
+\pgf@picmaxx=\dimen117
+\pgf@picminy=\dimen118
+\pgf@picmaxy=\dimen119
+\pgf@pathminx=\dimen120
+\pgf@pathmaxx=\dimen121
+\pgf@pathminy=\dimen122
+\pgf@pathmaxy=\dimen123
+\pgf@xx=\dimen124
+\pgf@xy=\dimen125
+\pgf@yx=\dimen126
+\pgf@yy=\dimen127
+\pgf@zx=\dimen128
+\pgf@zy=\dimen129
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
 File: pgfcorepathconstruct.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgf@path@lastx=\dimen154
-\pgf@path@lasty=\dimen155
+\pgf@path@lastx=\dimen130
+\pgf@path@lasty=\dimen131
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
 File: pgfcorepathusage.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgf@shorten@end@additional=\dimen156
-\pgf@shorten@start@additional=\dimen157
+\pgf@shorten@end@additional=\dimen132
+\pgf@shorten@start@additional=\dimen133
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
 File: pgfcorescopes.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgfpic=\box47
-\pgf@hbox=\box48
-\pgf@layerbox@main=\box49
-\pgf@picture@serial@count=\count111
+\pgfpic=\box29
+\pgf@hbox=\box30
+\pgf@layerbox@main=\box31
+\pgf@picture@serial@count=\count98
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
 File: pgfcoregraphicstate.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgflinewidth=\dimen158
+\pgflinewidth=\dimen134
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
 File: pgfcoretransformations.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgf@pt@x=\dimen159
-\pgf@pt@y=\dimen160
-\pgf@pt@temp=\dimen161
+\pgf@pt@x=\dimen135
+\pgf@pt@y=\dimen136
+\pgf@pt@temp=\dimen137
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2019/02/02 v3.1.1 (3.1.1)
@@ -593,12 +283,12 @@ File: pgfcorepathprocessing.code.tex 2019/02/02 v3.1.1 (3.1.1)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
 File: pgfcorearrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgfarrowsep=\dimen162
+\pgfarrowsep=\dimen138
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgf@max=\dimen163
-\pgf@sys@shading@range@num=\count112
+\pgf@max=\dimen139
+\pgf@sys@shading@range@num=\count99
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2019/02/02 v3.1.1 (3.1.1)
@@ -606,7 +296,7 @@ File: pgfcoreimage.code.tex 2019/02/02 v3.1.1 (3.1.1)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
 tex
 File: pgfcoreexternal.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgfexternal@startupbox=\box50
+\pgfexternal@startupbox=\box32
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
 x
@@ -625,15 +315,15 @@ File: pgfcorerdf.code.tex 2019/02/02 v3.1.1 (3.1.1)
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgfnodeparttextbox=\box51
+\pgfnodeparttextbox=\box33
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2019/02/02 v3.1.1 (3.1.1)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
 Package: pgfcomp-version-0-65 2019/02/02 v3.1.1 (3.1.1)
-\pgf@nodesepstart=\dimen164
-\pgf@nodesepend=\dimen165
+\pgf@nodesepstart=\dimen140
+\pgf@nodesepend=\dimen141
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
@@ -647,10 +337,10 @@ Package: pgfcomp-version-1-18 2019/02/02 v3.1.1 (3.1.1)
 Package: pgffor 2019/02/02 v3.1.1 (3.1.1)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen166
-\pgffor@skip=\dimen167
-\pgffor@stack=\toks35
-\pgffor@toks=\toks36
+\pgffor@iter=\dimen142
+\pgffor@skip=\dimen143
+\pgffor@stack=\toks26
+\pgffor@toks=\toks27
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2019/02/02 v3.1.1 (3.1.1)
@@ -658,31 +348,31 @@ Package: tikz 2019/02/02 v3.1.1 (3.1.1)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgf@plot@mark@count=\count113
-\pgfplotmarksize=\dimen168
+\pgf@plot@mark@count=\count100
+\pgfplotmarksize=\dimen144
 )
-\tikz@lastx=\dimen169
-\tikz@lasty=\dimen170
-\tikz@lastxsaved=\dimen171
-\tikz@lastysaved=\dimen172
-\tikzleveldistance=\dimen173
-\tikzsiblingdistance=\dimen174
-\tikz@figbox=\box52
-\tikz@figbox@bg=\box53
-\tikz@tempbox=\box54
-\tikz@tempbox@bg=\box55
-\tikztreelevel=\count114
-\tikznumberofchildren=\count115
-\tikznumberofcurrentchild=\count116
-\tikz@fig@count=\count117
+\tikz@lastx=\dimen145
+\tikz@lasty=\dimen146
+\tikz@lastxsaved=\dimen147
+\tikz@lastysaved=\dimen148
+\tikzleveldistance=\dimen149
+\tikzsiblingdistance=\dimen150
+\tikz@figbox=\box34
+\tikz@figbox@bg=\box35
+\tikz@tempbox=\box36
+\tikz@tempbox@bg=\box37
+\tikztreelevel=\count101
+\tikznumberofchildren=\count102
+\tikznumberofcurrentchild=\count103
+\tikz@fig@count=\count104
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgfmatrixcurrentrow=\count118
-\pgfmatrixcurrentcolumn=\count119
-\pgf@matrix@numberofcolumns=\count120
+\pgfmatrixcurrentrow=\count105
+\pgfmatrixcurrentcolumn=\count106
+\pgf@matrix@numberofcolumns=\count107
 )
-\tikz@expandcount=\count121
+\tikz@expandcount=\count108
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -694,42 +384,53 @@ Package: automultiplechoice 2018/12/29 v1.4.0 r:c6041a1
 (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
 
-\f@nch@headwidth=\skip44
-\f@nch@O@elh=\skip45
-\f@nch@O@erh=\skip46
-\f@nch@O@olh=\skip47
-\f@nch@O@orh=\skip48
-\f@nch@O@elf=\skip49
-\f@nch@O@erf=\skip50
-\f@nch@O@olf=\skip51
-\f@nch@O@orf=\skip52
+\f@nch@headwidth=\skip43
+\f@nch@O@elh=\skip44
+\f@nch@O@erh=\skip45
+\f@nch@O@olh=\skip46
+\f@nch@O@orh=\skip47
+\f@nch@O@elf=\skip48
+\f@nch@O@erf=\skip49
+\f@nch@O@olf=\skip50
+\f@nch@O@orf=\skip51
 )
 (/usr/share/texlive/texmf-dist/tex/latex/bophook/bophook.sty
 Package: bophook 2001/03/29 v0.02 beginning-of-page hook, K. Tinnefeld
 )
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks28
+\XKV@tempa@toks=\toks29
+)
+\XKV@depth=\count109
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count122
-\rotFPtop=\skip53
-\rotFPbot=\skip54
-\rot@float@box=\box56
-\rot@mess@toks=\toks37
+\c@r@tfl@t=\count110
+\rotFPtop=\skip52
+\rotFPbot=\skip53
+\rot@float@box=\box38
+\rot@mess@toks=\toks30
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fancybox/fancybox.sty
 Package: fancybox 2010/05/15 1.4
 
 Style option: `fancybox' v1.4 <2010/05/15> (tvz)
-\@fancybox=\box57
-\shadowsize=\dimen175
-\@Sbox=\box58
-\do@VerbBox=\toks38
-\the@fancyput=\toks39
-\this@fancyput=\toks40
-\EndVerbatimTokens=\toks41
+\@fancybox=\box39
+\shadowsize=\dimen151
+\@Sbox=\box40
+\do@VerbBox=\toks31
+\the@fancyput=\toks32
+\this@fancyput=\toks33
+\EndVerbatimTokens=\toks34
 \Verbatim@Outfile=\write4
 \Verbatim@Infile=\read2
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
@@ -737,447 +438,447 @@ Package: expl3 2019-02-15 L3 programming layer (loader)
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3-code.tex
 Package: expl3 2019-02-15 L3 programming layer (code)
-\ucharcat@table=\catcodetable9
-\c_max_int=\count123
-\l_tmpa_int=\count124
-\l_tmpb_int=\count125
-\g_tmpa_int=\count126
-\g_tmpb_int=\count127
-\g__kernel_prg_map_int=\count128
-\c_log_iow=\count129
-\l_iow_line_count_int=\count130
-\l__iow_line_target_int=\count131
-\l__iow_one_indent_int=\count132
-\l__iow_indent_int=\count133
-\c_zero_dim=\dimen176
-\c_max_dim=\dimen177
-\l_tmpa_dim=\dimen178
-\l_tmpb_dim=\dimen179
-\g_tmpa_dim=\dimen180
-\g_tmpb_dim=\dimen181
-\c_zero_skip=\skip55
-\c_max_skip=\skip56
-\l_tmpa_skip=\skip57
-\l_tmpb_skip=\skip58
-\g_tmpa_skip=\skip59
-\g_tmpb_skip=\skip60
+\ucharcat@table=\catcodetable8
+\c_max_int=\count111
+\l_tmpa_int=\count112
+\l_tmpb_int=\count113
+\g_tmpa_int=\count114
+\g_tmpb_int=\count115
+\g__kernel_prg_map_int=\count116
+\c_log_iow=\count117
+\l_iow_line_count_int=\count118
+\l__iow_line_target_int=\count119
+\l__iow_one_indent_int=\count120
+\l__iow_indent_int=\count121
+\c_zero_dim=\dimen152
+\c_max_dim=\dimen153
+\l_tmpa_dim=\dimen154
+\l_tmpb_dim=\dimen155
+\g_tmpa_dim=\dimen156
+\g_tmpb_dim=\dimen157
+\c_zero_skip=\skip54
+\c_max_skip=\skip55
+\l_tmpa_skip=\skip56
+\l_tmpb_skip=\skip57
+\g_tmpa_skip=\skip58
+\g_tmpb_skip=\skip59
 \c_zero_muskip=\muskip10
 \c_max_muskip=\muskip11
 \l_tmpa_muskip=\muskip12
 \l_tmpb_muskip=\muskip13
 \g_tmpa_muskip=\muskip14
 \g_tmpb_muskip=\muskip15
-\l_keys_choice_int=\count134
-\l__intarray_loop_int=\count135
-\c__intarray_sp_dim=\dimen182
-\g__intarray_font_int=\count136
-\c__fp_leading_shift_int=\count137
-\c__fp_middle_shift_int=\count138
-\c__fp_trailing_shift_int=\count139
-\c__fp_big_leading_shift_int=\count140
-\c__fp_big_middle_shift_int=\count141
-\c__fp_big_trailing_shift_int=\count142
-\c__fp_Bigg_leading_shift_int=\count143
-\c__fp_Bigg_middle_shift_int=\count144
-\c__fp_Bigg_trailing_shift_int=\count145
-\g__fp_array_int=\count146
-\l__fp_array_loop_int=\count147
-\l__sort_length_int=\count148
-\l__sort_min_int=\count149
-\l__sort_top_int=\count150
-\l__sort_max_int=\count151
-\l__sort_true_max_int=\count152
-\l__sort_block_int=\count153
-\l__sort_begin_int=\count154
-\l__sort_end_int=\count155
-\l__sort_A_int=\count156
-\l__sort_B_int=\count157
-\l__sort_C_int=\count158
-\l__tl_analysis_normal_int=\count159
-\l__tl_analysis_index_int=\count160
-\l__tl_analysis_nesting_int=\count161
-\l__tl_analysis_type_int=\count162
-\l__regex_internal_a_int=\count163
-\l__regex_internal_b_int=\count164
-\l__regex_internal_c_int=\count165
-\l__regex_balance_int=\count166
-\l__regex_group_level_int=\count167
-\l__regex_mode_int=\count168
-\c__regex_cs_in_class_mode_int=\count169
-\c__regex_cs_mode_int=\count170
-\l__regex_catcodes_int=\count171
-\l__regex_default_catcodes_int=\count172
-\c__regex_catcode_L_int=\count173
-\c__regex_catcode_O_int=\count174
-\c__regex_catcode_A_int=\count175
-\c__regex_all_catcodes_int=\count176
-\l__regex_show_lines_int=\count177
-\l__regex_min_state_int=\count178
-\l__regex_max_state_int=\count179
-\l__regex_left_state_int=\count180
-\l__regex_right_state_int=\count181
-\l__regex_capturing_group_int=\count182
-\l__regex_min_pos_int=\count183
-\l__regex_max_pos_int=\count184
-\l__regex_curr_pos_int=\count185
-\l__regex_start_pos_int=\count186
-\l__regex_success_pos_int=\count187
-\l__regex_curr_char_int=\count188
-\l__regex_curr_catcode_int=\count189
-\l__regex_last_char_int=\count190
-\l__regex_case_changed_char_int=\count191
-\l__regex_curr_state_int=\count192
-\l__regex_step_int=\count193
-\l__regex_min_active_int=\count194
-\l__regex_max_active_int=\count195
-\l__regex_replacement_csnames_int=\count196
-\l__regex_match_count_int=\count197
-\l__regex_min_submatch_int=\count198
-\l__regex_submatch_int=\count199
-\l__regex_zeroth_submatch_int=\count266
-\g__regex_trace_regex_int=\count267
-\c_empty_box=\box59
-\l_tmpa_box=\box60
-\l_tmpb_box=\box61
-\g_tmpa_box=\box62
-\g_tmpb_box=\box63
-\l__box_top_dim=\dimen183
-\l__box_bottom_dim=\dimen184
-\l__box_left_dim=\dimen185
-\l__box_right_dim=\dimen186
-\l__box_top_new_dim=\dimen187
-\l__box_bottom_new_dim=\dimen188
-\l__box_left_new_dim=\dimen189
-\l__box_right_new_dim=\dimen190
-\l__box_internal_box=\box64
-\l__coffin_internal_box=\box65
-\l__coffin_internal_dim=\dimen191
-\l__coffin_offset_x_dim=\dimen192
-\l__coffin_offset_y_dim=\dimen193
-\l__coffin_x_dim=\dimen194
-\l__coffin_y_dim=\dimen195
-\l__coffin_x_prime_dim=\dimen196
-\l__coffin_y_prime_dim=\dimen197
-\c_empty_coffin=\box66
-\l__coffin_aligned_coffin=\box67
-\l__coffin_aligned_internal_coffin=\box68
-\l_tmpa_coffin=\box69
-\l_tmpb_coffin=\box70
-\g_tmpa_coffin=\box71
-\g_tmpb_coffin=\box72
-\c__coffin_empty_coffin=\box73
-\l__coffin_display_coffin=\box74
-\l__coffin_display_coord_coffin=\box75
-\l__coffin_display_pole_coffin=\box76
-\l__coffin_display_offset_dim=\dimen198
-\l__coffin_display_x_dim=\dimen199
-\l__coffin_display_y_dim=\dimen256
+\l_keys_choice_int=\count122
+\l__intarray_loop_int=\count123
+\c__intarray_sp_dim=\dimen158
+\g__intarray_font_int=\count124
+\c__fp_leading_shift_int=\count125
+\c__fp_middle_shift_int=\count126
+\c__fp_trailing_shift_int=\count127
+\c__fp_big_leading_shift_int=\count128
+\c__fp_big_middle_shift_int=\count129
+\c__fp_big_trailing_shift_int=\count130
+\c__fp_Bigg_leading_shift_int=\count131
+\c__fp_Bigg_middle_shift_int=\count132
+\c__fp_Bigg_trailing_shift_int=\count133
+\g__fp_array_int=\count134
+\l__fp_array_loop_int=\count135
+\l__sort_length_int=\count136
+\l__sort_min_int=\count137
+\l__sort_top_int=\count138
+\l__sort_max_int=\count139
+\l__sort_true_max_int=\count140
+\l__sort_block_int=\count141
+\l__sort_begin_int=\count142
+\l__sort_end_int=\count143
+\l__sort_A_int=\count144
+\l__sort_B_int=\count145
+\l__sort_C_int=\count146
+\l__tl_analysis_normal_int=\count147
+\l__tl_analysis_index_int=\count148
+\l__tl_analysis_nesting_int=\count149
+\l__tl_analysis_type_int=\count150
+\l__regex_internal_a_int=\count151
+\l__regex_internal_b_int=\count152
+\l__regex_internal_c_int=\count153
+\l__regex_balance_int=\count154
+\l__regex_group_level_int=\count155
+\l__regex_mode_int=\count156
+\c__regex_cs_in_class_mode_int=\count157
+\c__regex_cs_mode_int=\count158
+\l__regex_catcodes_int=\count159
+\l__regex_default_catcodes_int=\count160
+\c__regex_catcode_L_int=\count161
+\c__regex_catcode_O_int=\count162
+\c__regex_catcode_A_int=\count163
+\c__regex_all_catcodes_int=\count164
+\l__regex_show_lines_int=\count165
+\l__regex_min_state_int=\count166
+\l__regex_max_state_int=\count167
+\l__regex_left_state_int=\count168
+\l__regex_right_state_int=\count169
+\l__regex_capturing_group_int=\count170
+\l__regex_min_pos_int=\count171
+\l__regex_max_pos_int=\count172
+\l__regex_curr_pos_int=\count173
+\l__regex_start_pos_int=\count174
+\l__regex_success_pos_int=\count175
+\l__regex_curr_char_int=\count176
+\l__regex_curr_catcode_int=\count177
+\l__regex_last_char_int=\count178
+\l__regex_case_changed_char_int=\count179
+\l__regex_curr_state_int=\count180
+\l__regex_step_int=\count181
+\l__regex_min_active_int=\count182
+\l__regex_max_active_int=\count183
+\l__regex_replacement_csnames_int=\count184
+\l__regex_match_count_int=\count185
+\l__regex_min_submatch_int=\count186
+\l__regex_submatch_int=\count187
+\l__regex_zeroth_submatch_int=\count188
+\g__regex_trace_regex_int=\count189
+\c_empty_box=\box41
+\l_tmpa_box=\box42
+\l_tmpb_box=\box43
+\g_tmpa_box=\box44
+\g_tmpb_box=\box45
+\l__box_top_dim=\dimen159
+\l__box_bottom_dim=\dimen160
+\l__box_left_dim=\dimen161
+\l__box_right_dim=\dimen162
+\l__box_top_new_dim=\dimen163
+\l__box_bottom_new_dim=\dimen164
+\l__box_left_new_dim=\dimen165
+\l__box_right_new_dim=\dimen166
+\l__box_internal_box=\box46
+\l__coffin_internal_box=\box47
+\l__coffin_internal_dim=\dimen167
+\l__coffin_offset_x_dim=\dimen168
+\l__coffin_offset_y_dim=\dimen169
+\l__coffin_x_dim=\dimen170
+\l__coffin_y_dim=\dimen171
+\l__coffin_x_prime_dim=\dimen172
+\l__coffin_y_prime_dim=\dimen173
+\c_empty_coffin=\box48
+\l__coffin_aligned_coffin=\box49
+\l__coffin_aligned_internal_coffin=\box50
+\l_tmpa_coffin=\box51
+\l_tmpb_coffin=\box52
+\g_tmpa_coffin=\box53
+\g_tmpb_coffin=\box54
+\c__coffin_empty_coffin=\box55
+\l__coffin_display_coffin=\box56
+\l__coffin_display_coord_coffin=\box57
+\l__coffin_display_pole_coffin=\box58
+\l__coffin_display_offset_dim=\dimen174
+\l__coffin_display_x_dim=\dimen175
+\l__coffin_display_y_dim=\dimen176
 \g__file_internal_ior=\read3
-\l__coffin_bounding_shift_dim=\dimen257
-\l__coffin_left_corner_dim=\dimen258
-\l__coffin_right_corner_dim=\dimen259
-\l__coffin_bottom_corner_dim=\dimen260
-\l__coffin_top_corner_dim=\dimen261
-\l__coffin_scaled_total_height_dim=\dimen262
-\l__coffin_scaled_width_dim=\dimen263
-\l__seq_internal_a_int=\count268
-\l__seq_internal_b_int=\count269
+\l__coffin_bounding_shift_dim=\dimen177
+\l__coffin_left_corner_dim=\dimen178
+\l__coffin_right_corner_dim=\dimen179
+\l__coffin_bottom_corner_dim=\dimen180
+\l__coffin_top_corner_dim=\dimen181
+\l__coffin_scaled_total_height_dim=\dimen182
+\l__coffin_scaled_width_dim=\dimen183
+\l__seq_internal_a_int=\count190
+\l__seq_internal_b_int=\count191
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
 File: l3pdfmode.def 2019-02-15 v L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count270
+\l__driver_color_stack_int=\count192
 ))
 \AMC@logfile=\write5
 
 \openout5 = amc-compiled.amc
-\AMCload@counter=\count271
-\AMCid@quest=\count272
-\AMCid@check=\count273
-\AMCid@etud=\count274
-\AMCid@etudstart=\count275
-\AMCid@etudfin=\count276
-\AMCnum@copies=\count277
-\AMCformVSpace=\dimen264
-\AMCformHSpace=\dimen265
-\AMCinterIrep=\dimen266
-\AMCinterBrep=\dimen267
-\AMCinterIquest=\dimen268
-\AMCinterBquest=\dimen269
-\AMCpostOquest=\dimen270
-\AMCids@width=\dimen271
-\AMCids@height=\dimen272
-\AMC@SR=\count278
-\AMC@SR@count=\count279
-\AMC@SRnum=\count280
-\AMC@sti=\count281
-\AMC@stil=\count282
-\AMCsw@p@=\toks42
-\AMC@numerotation=\count283
+\AMCload@counter=\count193
+\AMCid@quest=\count194
+\AMCid@check=\count195
+\AMCid@etud=\count196
+\AMCid@etudstart=\count197
+\AMCid@etudfin=\count198
+\AMCnum@copies=\count199
+\AMCformVSpace=\dimen184
+\AMCformHSpace=\dimen185
+\AMCinterIrep=\dimen186
+\AMCinterBrep=\dimen187
+\AMCinterIquest=\dimen188
+\AMCinterBquest=\dimen189
+\AMCpostOquest=\dimen190
+\AMCids@width=\dimen191
+\AMCids@height=\dimen192
+\AMC@SR=\count266
+\AMC@SR@count=\count267
+\AMC@SRnum=\count268
+\AMC@sti=\count269
+\AMC@stil=\count270
+\AMCsw@p@=\toks35
+\AMC@numerotation=\count271
 \AMC@XYspecial=\write6
 \AMC@tmpXY=\write7
-\AMC@smashbox=\box77
-\AMC@smashboxheight=\dimen273
-\c@AMC@ncase=\count284
-\AMC@boxedrule=\skip61
-\AMC@crossrule=\skip62
-\AMC@boxeddown=\skip63
-\AMC@boxedwidth=\skip64
-\AMC@boxedheight=\skip65
-\AMC@oval@radius=\skip66
-\AMC@outside@sep=\skip67
-\AMC@CBtaille=\skip68
-\AMCbin@sequence=\toks43
-\AMCbin@number=\count285
-\AMCbin@ndigits=\count286
-\AMCbin@id=\count287
-\AMCbin@digit=\count288
-\AMCtok@k=\count289
-\AMCtok@max=\count290
-\AMCtok@size=\count291
-\AMC@imax=\count292
-\AMCtok@ik=\count293
-\AMCloop@k=\count294
-\AMCrep@count=\count295
-\reponse@cxcix=\toks44
-\reponse@cxcviii=\toks45
-\reponse@cxcvii=\toks46
-\reponse@cxcvi=\toks47
-\reponse@cxcv=\toks48
-\reponse@cxciv=\toks49
-\reponse@cxciii=\toks50
-\reponse@cxcii=\toks51
-\reponse@cxci=\toks52
-\reponse@cxc=\toks53
-\reponse@clxxxix=\toks54
-\reponse@clxxxviii=\toks55
-\reponse@clxxxvii=\toks56
-\reponse@clxxxvi=\toks57
-\reponse@clxxxv=\toks58
-\reponse@clxxxiv=\toks59
-\reponse@clxxxiii=\toks60
-\reponse@clxxxii=\toks61
-\reponse@clxxxi=\toks62
-\reponse@clxxx=\toks63
-\reponse@clxxix=\toks64
-\reponse@clxxviii=\toks65
-\reponse@clxxvii=\toks66
-\reponse@clxxvi=\toks67
-\reponse@clxxv=\toks68
-\reponse@clxxiv=\toks69
-\reponse@clxxiii=\toks70
-\reponse@clxxii=\toks71
-\reponse@clxxi=\toks72
-\reponse@clxx=\toks73
-\reponse@clxix=\toks74
-\reponse@clxviii=\toks75
-\reponse@clxvii=\toks76
-\reponse@clxvi=\toks77
-\reponse@clxv=\toks78
-\reponse@clxiv=\toks79
-\reponse@clxiii=\toks80
-\reponse@clxii=\toks81
-\reponse@clxi=\toks82
-\reponse@clx=\toks83
-\reponse@clix=\toks84
-\reponse@clviii=\toks85
-\reponse@clvii=\toks86
-\reponse@clvi=\toks87
-\reponse@clv=\toks88
-\reponse@cliv=\toks89
-\reponse@cliii=\toks90
-\reponse@clii=\toks91
-\reponse@cli=\toks92
-\reponse@cl=\toks93
-\reponse@cxlix=\toks94
-\reponse@cxlviii=\toks95
-\reponse@cxlvii=\toks96
-\reponse@cxlvi=\toks97
-\reponse@cxlv=\toks98
-\reponse@cxliv=\toks99
-\reponse@cxliii=\toks100
-\reponse@cxlii=\toks101
-\reponse@cxli=\toks102
-\reponse@cxl=\toks103
-\reponse@cxxxix=\toks104
-\reponse@cxxxviii=\toks105
-\reponse@cxxxvii=\toks106
-\reponse@cxxxvi=\toks107
-\reponse@cxxxv=\toks108
-\reponse@cxxxiv=\toks109
-\reponse@cxxxiii=\toks110
-\reponse@cxxxii=\toks111
-\reponse@cxxxi=\toks112
-\reponse@cxxx=\toks113
-\reponse@cxxix=\toks114
-\reponse@cxxviii=\toks115
-\reponse@cxxvii=\toks116
-\reponse@cxxvi=\toks117
-\reponse@cxxv=\toks118
-\reponse@cxxiv=\toks119
-\reponse@cxxiii=\toks120
-\reponse@cxxii=\toks121
-\reponse@cxxi=\toks122
-\reponse@cxx=\toks123
-\reponse@cxix=\toks124
-\reponse@cxviii=\toks125
-\reponse@cxvii=\toks126
-\reponse@cxvi=\toks127
-\reponse@cxv=\toks128
-\reponse@cxiv=\toks129
-\reponse@cxiii=\toks130
-\reponse@cxii=\toks131
-\reponse@cxi=\toks132
-\reponse@cx=\toks133
-\reponse@cix=\toks134
-\reponse@cviii=\toks135
-\reponse@cvii=\toks136
-\reponse@cvi=\toks137
-\reponse@cv=\toks138
-\reponse@civ=\toks139
-\reponse@ciii=\toks140
-\reponse@cii=\toks141
-\reponse@ci=\toks142
-\reponse@c=\toks143
-\reponse@xcix=\toks144
-\reponse@xcviii=\toks145
-\reponse@xcvii=\toks146
-\reponse@xcvi=\toks147
-\reponse@xcv=\toks148
-\reponse@xciv=\toks149
-\reponse@xciii=\toks150
-\reponse@xcii=\toks151
-\reponse@xci=\toks152
-\reponse@xc=\toks153
-\reponse@lxxxix=\toks154
-\reponse@lxxxviii=\toks155
-\reponse@lxxxvii=\toks156
-\reponse@lxxxvi=\toks157
-\reponse@lxxxv=\toks158
-\reponse@lxxxiv=\toks159
-\reponse@lxxxiii=\toks160
-\reponse@lxxxii=\toks161
-\reponse@lxxxi=\toks162
-\reponse@lxxx=\toks163
-\reponse@lxxix=\toks164
-\reponse@lxxviii=\toks165
-\reponse@lxxvii=\toks166
-\reponse@lxxvi=\toks167
-\reponse@lxxv=\toks168
-\reponse@lxxiv=\toks169
-\reponse@lxxiii=\toks170
-\reponse@lxxii=\toks171
-\reponse@lxxi=\toks172
-\reponse@lxx=\toks173
-\reponse@lxix=\toks174
-\reponse@lxviii=\toks175
-\reponse@lxvii=\toks176
-\reponse@lxvi=\toks177
-\reponse@lxv=\toks178
-\reponse@lxiv=\toks179
-\reponse@lxiii=\toks180
-\reponse@lxii=\toks181
-\reponse@lxi=\toks182
-\reponse@lx=\toks183
-\reponse@lix=\toks184
-\reponse@lviii=\toks185
-\reponse@lvii=\toks186
-\reponse@lvi=\toks187
-\reponse@lv=\toks188
-\reponse@liv=\toks189
-\reponse@liii=\toks190
-\reponse@lii=\toks191
-\reponse@li=\toks192
-\reponse@l=\toks193
-\reponse@xlix=\toks194
-\reponse@xlviii=\toks195
-\reponse@xlvii=\toks196
-\reponse@xlvi=\toks197
-\reponse@xlv=\toks198
-\reponse@xliv=\toks199
-\reponse@xliii=\toks200
-\reponse@xlii=\toks201
-\reponse@xli=\toks202
-\reponse@xl=\toks203
-\reponse@xxxix=\toks204
-\reponse@xxxviii=\toks205
-\reponse@xxxvii=\toks206
-\reponse@xxxvi=\toks207
-\reponse@xxxv=\toks208
-\reponse@xxxiv=\toks209
-\reponse@xxxiii=\toks210
-\reponse@xxxii=\toks211
-\reponse@xxxi=\toks212
-\reponse@xxx=\toks213
-\reponse@xxix=\toks214
-\reponse@xxviii=\toks215
-\reponse@xxvii=\toks216
-\reponse@xxvi=\toks217
-\reponse@xxv=\toks218
-\reponse@xxiv=\toks219
-\reponse@xxiii=\toks220
-\reponse@xxii=\toks221
-\reponse@xxi=\toks222
-\reponse@xx=\toks223
-\reponse@xix=\toks224
-\reponse@xviii=\toks225
-\reponse@xvii=\toks226
-\reponse@xvi=\toks227
-\reponse@xv=\toks228
-\reponse@xiv=\toks229
-\reponse@xiii=\toks230
-\reponse@xii=\toks231
-\reponse@xi=\toks232
-\reponse@x=\toks233
-\reponse@ix=\toks234
-\reponse@viii=\toks235
-\reponse@vii=\toks236
-\reponse@vi=\toks237
-\reponse@v=\toks238
-\reponse@iv=\toks239
-\reponse@iii=\toks240
-\reponse@ii=\toks241
-\reponse@i=\toks242
-\AMCnum@questions=\count296
-\AMCrep@@count=\count297
-\amc_memory_elts_count=\count298
-\AMChorizAnswerSep=\skip69
-\AMChorizBoxSep=\skip70
-\AMC@mn@test=\skip71
-\AMC@mn@sep=\skip72
-\AMC@mn@leftmargin=\skip73
-\AMC@mn@rightmargin=\skip74
-\AMC@sz@width=\skip75
-\AMC@sz@height=\skip76
-\AMC@sz@depth=\skip77
-\AMC@sza@width=\skip78
-\AMC@sza@height=\skip79
-\AMC@sza@depth=\skip80
-\c@AMCquestionaff=\count299
-\ouverte@vs=\dimen274
-\AMC@chiffres=\count300
-\AMCcodeHspace=\dimen275
-\AMCcodeVspace=\dimen276
-\amc_code_digit_n_int=\count301
-\amc_num_exponent_int=\count302
-\amc_todigits_int=\count303
-\AMCnumeric@Hspace=\dimen277
-\AMCnumeric@Vspace=\dimen278
-\amc_num_ndigits_int=\count304
-\amc_num_decd_int=\count305
-\amc_num_expo_int=\count306
-\amc_num_base_int=\count307
-\amc_num_exact_int=\count308
-\amc_num_approx_int=\count309
-\amc_num_first_digit_int=\count310
-\amc_num_digit_int=\count311
-\amc_num_correct_expo_int=\count312
-\AMCopen@Hspace=\dimen279
-\AMCopen@LineHeight=\dimen280
-\AMCopen@Lines=\count313
-\AMCopen@boxmargin=\dimen281
-\AMCopen@boxframerule=\dimen282
-\AMCopen@framerule=\dimen283
-\AMC@addpages=\count314
+\AMC@smashbox=\box59
+\AMC@smashboxheight=\dimen193
+\c@AMC@ncase=\count272
+\AMC@boxedrule=\skip60
+\AMC@crossrule=\skip61
+\AMC@boxeddown=\skip62
+\AMC@boxedwidth=\skip63
+\AMC@boxedheight=\skip64
+\AMC@oval@radius=\skip65
+\AMC@outside@sep=\skip66
+\AMC@CBtaille=\skip67
+\AMCbin@sequence=\toks36
+\AMCbin@number=\count273
+\AMCbin@ndigits=\count274
+\AMCbin@id=\count275
+\AMCbin@digit=\count276
+\AMCtok@k=\count277
+\AMCtok@max=\count278
+\AMCtok@size=\count279
+\AMC@imax=\count280
+\AMCtok@ik=\count281
+\AMCloop@k=\count282
+\AMCrep@count=\count283
+\reponse@cxcix=\toks37
+\reponse@cxcviii=\toks38
+\reponse@cxcvii=\toks39
+\reponse@cxcvi=\toks40
+\reponse@cxcv=\toks41
+\reponse@cxciv=\toks42
+\reponse@cxciii=\toks43
+\reponse@cxcii=\toks44
+\reponse@cxci=\toks45
+\reponse@cxc=\toks46
+\reponse@clxxxix=\toks47
+\reponse@clxxxviii=\toks48
+\reponse@clxxxvii=\toks49
+\reponse@clxxxvi=\toks50
+\reponse@clxxxv=\toks51
+\reponse@clxxxiv=\toks52
+\reponse@clxxxiii=\toks53
+\reponse@clxxxii=\toks54
+\reponse@clxxxi=\toks55
+\reponse@clxxx=\toks56
+\reponse@clxxix=\toks57
+\reponse@clxxviii=\toks58
+\reponse@clxxvii=\toks59
+\reponse@clxxvi=\toks60
+\reponse@clxxv=\toks61
+\reponse@clxxiv=\toks62
+\reponse@clxxiii=\toks63
+\reponse@clxxii=\toks64
+\reponse@clxxi=\toks65
+\reponse@clxx=\toks66
+\reponse@clxix=\toks67
+\reponse@clxviii=\toks68
+\reponse@clxvii=\toks69
+\reponse@clxvi=\toks70
+\reponse@clxv=\toks71
+\reponse@clxiv=\toks72
+\reponse@clxiii=\toks73
+\reponse@clxii=\toks74
+\reponse@clxi=\toks75
+\reponse@clx=\toks76
+\reponse@clix=\toks77
+\reponse@clviii=\toks78
+\reponse@clvii=\toks79
+\reponse@clvi=\toks80
+\reponse@clv=\toks81
+\reponse@cliv=\toks82
+\reponse@cliii=\toks83
+\reponse@clii=\toks84
+\reponse@cli=\toks85
+\reponse@cl=\toks86
+\reponse@cxlix=\toks87
+\reponse@cxlviii=\toks88
+\reponse@cxlvii=\toks89
+\reponse@cxlvi=\toks90
+\reponse@cxlv=\toks91
+\reponse@cxliv=\toks92
+\reponse@cxliii=\toks93
+\reponse@cxlii=\toks94
+\reponse@cxli=\toks95
+\reponse@cxl=\toks96
+\reponse@cxxxix=\toks97
+\reponse@cxxxviii=\toks98
+\reponse@cxxxvii=\toks99
+\reponse@cxxxvi=\toks100
+\reponse@cxxxv=\toks101
+\reponse@cxxxiv=\toks102
+\reponse@cxxxiii=\toks103
+\reponse@cxxxii=\toks104
+\reponse@cxxxi=\toks105
+\reponse@cxxx=\toks106
+\reponse@cxxix=\toks107
+\reponse@cxxviii=\toks108
+\reponse@cxxvii=\toks109
+\reponse@cxxvi=\toks110
+\reponse@cxxv=\toks111
+\reponse@cxxiv=\toks112
+\reponse@cxxiii=\toks113
+\reponse@cxxii=\toks114
+\reponse@cxxi=\toks115
+\reponse@cxx=\toks116
+\reponse@cxix=\toks117
+\reponse@cxviii=\toks118
+\reponse@cxvii=\toks119
+\reponse@cxvi=\toks120
+\reponse@cxv=\toks121
+\reponse@cxiv=\toks122
+\reponse@cxiii=\toks123
+\reponse@cxii=\toks124
+\reponse@cxi=\toks125
+\reponse@cx=\toks126
+\reponse@cix=\toks127
+\reponse@cviii=\toks128
+\reponse@cvii=\toks129
+\reponse@cvi=\toks130
+\reponse@cv=\toks131
+\reponse@civ=\toks132
+\reponse@ciii=\toks133
+\reponse@cii=\toks134
+\reponse@ci=\toks135
+\reponse@c=\toks136
+\reponse@xcix=\toks137
+\reponse@xcviii=\toks138
+\reponse@xcvii=\toks139
+\reponse@xcvi=\toks140
+\reponse@xcv=\toks141
+\reponse@xciv=\toks142
+\reponse@xciii=\toks143
+\reponse@xcii=\toks144
+\reponse@xci=\toks145
+\reponse@xc=\toks146
+\reponse@lxxxix=\toks147
+\reponse@lxxxviii=\toks148
+\reponse@lxxxvii=\toks149
+\reponse@lxxxvi=\toks150
+\reponse@lxxxv=\toks151
+\reponse@lxxxiv=\toks152
+\reponse@lxxxiii=\toks153
+\reponse@lxxxii=\toks154
+\reponse@lxxxi=\toks155
+\reponse@lxxx=\toks156
+\reponse@lxxix=\toks157
+\reponse@lxxviii=\toks158
+\reponse@lxxvii=\toks159
+\reponse@lxxvi=\toks160
+\reponse@lxxv=\toks161
+\reponse@lxxiv=\toks162
+\reponse@lxxiii=\toks163
+\reponse@lxxii=\toks164
+\reponse@lxxi=\toks165
+\reponse@lxx=\toks166
+\reponse@lxix=\toks167
+\reponse@lxviii=\toks168
+\reponse@lxvii=\toks169
+\reponse@lxvi=\toks170
+\reponse@lxv=\toks171
+\reponse@lxiv=\toks172
+\reponse@lxiii=\toks173
+\reponse@lxii=\toks174
+\reponse@lxi=\toks175
+\reponse@lx=\toks176
+\reponse@lix=\toks177
+\reponse@lviii=\toks178
+\reponse@lvii=\toks179
+\reponse@lvi=\toks180
+\reponse@lv=\toks181
+\reponse@liv=\toks182
+\reponse@liii=\toks183
+\reponse@lii=\toks184
+\reponse@li=\toks185
+\reponse@l=\toks186
+\reponse@xlix=\toks187
+\reponse@xlviii=\toks188
+\reponse@xlvii=\toks189
+\reponse@xlvi=\toks190
+\reponse@xlv=\toks191
+\reponse@xliv=\toks192
+\reponse@xliii=\toks193
+\reponse@xlii=\toks194
+\reponse@xli=\toks195
+\reponse@xl=\toks196
+\reponse@xxxix=\toks197
+\reponse@xxxviii=\toks198
+\reponse@xxxvii=\toks199
+\reponse@xxxvi=\toks200
+\reponse@xxxv=\toks201
+\reponse@xxxiv=\toks202
+\reponse@xxxiii=\toks203
+\reponse@xxxii=\toks204
+\reponse@xxxi=\toks205
+\reponse@xxx=\toks206
+\reponse@xxix=\toks207
+\reponse@xxviii=\toks208
+\reponse@xxvii=\toks209
+\reponse@xxvi=\toks210
+\reponse@xxv=\toks211
+\reponse@xxiv=\toks212
+\reponse@xxiii=\toks213
+\reponse@xxii=\toks214
+\reponse@xxi=\toks215
+\reponse@xx=\toks216
+\reponse@xix=\toks217
+\reponse@xviii=\toks218
+\reponse@xvii=\toks219
+\reponse@xvi=\toks220
+\reponse@xv=\toks221
+\reponse@xiv=\toks222
+\reponse@xiii=\toks223
+\reponse@xii=\toks224
+\reponse@xi=\toks225
+\reponse@x=\toks226
+\reponse@ix=\toks227
+\reponse@viii=\toks228
+\reponse@vii=\toks229
+\reponse@vi=\toks230
+\reponse@v=\toks231
+\reponse@iv=\toks232
+\reponse@iii=\toks233
+\reponse@ii=\toks234
+\reponse@i=\toks235
+\AMCnum@questions=\count284
+\AMCrep@@count=\count285
+\amc_memory_elts_count=\count286
+\AMChorizAnswerSep=\skip68
+\AMChorizBoxSep=\skip69
+\AMC@mn@test=\skip70
+\AMC@mn@sep=\skip71
+\AMC@mn@leftmargin=\skip72
+\AMC@mn@rightmargin=\skip73
+\AMC@sz@width=\skip74
+\AMC@sz@height=\skip75
+\AMC@sz@depth=\skip76
+\AMC@sza@width=\skip77
+\AMC@sza@height=\skip78
+\AMC@sza@depth=\skip79
+\c@AMCquestionaff=\count287
+\ouverte@vs=\dimen194
+\AMC@chiffres=\count288
+\AMCcodeHspace=\dimen195
+\AMCcodeVspace=\dimen196
+\amc_code_digit_n_int=\count289
+\amc_num_exponent_int=\count290
+\amc_todigits_int=\count291
+\AMCnumeric@Hspace=\dimen197
+\AMCnumeric@Vspace=\dimen198
+\amc_num_ndigits_int=\count292
+\amc_num_decd_int=\count293
+\amc_num_expo_int=\count294
+\amc_num_base_int=\count295
+\amc_num_exact_int=\count296
+\amc_num_approx_int=\count297
+\amc_num_first_digit_int=\count298
+\amc_num_digit_int=\count299
+\amc_num_correct_expo_int=\count300
+\AMCopen@Hspace=\dimen199
+\AMCopen@LineHeight=\dimen256
+\AMCopen@Lines=\count301
+\AMCopen@boxmargin=\dimen257
+\AMCopen@boxframerule=\dimen258
+\AMCopen@framerule=\dimen259
+\AMC@addpages=\count302
 
 (/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
@@ -1185,7 +886,7 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 (/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
-\@envbody=\toks243
+\@envbody=\toks236
 )
 (/usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty
 Package: etex 2016/08/01 v2.7 eTeX basic definition package (PEB,DPC)
@@ -1201,6 +902,9 @@ Package etex Warning: Extended allocation already in use.
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2018/04/16 v5.8 Page Geometry
 
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
@@ -1208,18 +912,18 @@ Package ifvtex Info: VTeX not detected.
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count315
-\Gm@cntv=\count316
-\c@Gm@tempcnt=\count317
-\Gm@bindingoffset=\dimen284
-\Gm@wd@mp=\dimen285
-\Gm@odd@mp=\dimen286
-\Gm@even@mp=\dimen287
-\Gm@layoutwidth=\dimen288
-\Gm@layoutheight=\dimen289
-\Gm@layouthoffset=\dimen290
-\Gm@layoutvoffset=\dimen291
-\Gm@dimlist=\toks244
+\Gm@cnth=\count303
+\Gm@cntv=\count304
+\c@Gm@tempcnt=\count305
+\Gm@bindingoffset=\dimen260
+\Gm@wd@mp=\dimen261
+\Gm@odd@mp=\dimen262
+\Gm@even@mp=\dimen263
+\Gm@layoutwidth=\dimen264
+\Gm@layoutheight=\dimen265
+\Gm@layouthoffset=\dimen266
+\Gm@layoutvoffset=\dimen267
+\Gm@dimlist=\toks237
 ))
 (./amc-compiled.aux)
 \openout1 = amc-compiled.aux
@@ -1238,36 +942,35 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for JY3/mc/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for JT3/mc/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
- ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 10.
-
-ABD: EveryShipout initializing macros
+ ABD: EveryShipout initializing macros
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count318
-\scratchdimen=\dimen292
-\scratchbox=\box78
-\nofMPsegments=\count319
-\nofMParguments=\count320
-\everyMPshowfont=\toks245
-\MPscratchCnt=\count321
-\MPscratchDim=\dimen293
-\MPnumerator=\count322
-\makeMPintoPDFobject=\count323
-\everyMPtoPDFconversion=\toks246
+\scratchcounter=\count306
+\scratchdimen=\dimen268
+\scratchbox=\box60
+\nofMPsegments=\count307
+\nofMParguments=\count308
+\everyMPshowfont=\toks238
+\MPscratchCnt=\count309
+\MPscratchDim=\dimen269
+\MPnumerator=\count310
+\makeMPintoPDFobject=\count311
+\everyMPtoPDFconversion=\toks239
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-))
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
@@ -1277,6 +980,14 @@ Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 )))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO)
+
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+\pdftexcmds@toks=\toks240
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 43
 8.
 Package grfext Info: Graphics extension search list:
@@ -1288,10 +999,10 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 
 ))
-\AMC@ovalbox@R=\box79
-\AMC@ovalbox@RF=\box80
-\AMC@ovalbox@=\box81
-\AMC@ovalbox@F=\box82
+\AMC@ovalbox@R=\box61
+\AMC@ovalbox@RF=\box62
+\AMC@ovalbox@=\box63
+\AMC@ovalbox@F=\box64
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1312,12 +1023,12 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \topmargin=-38.12675pt
 * \headheight=56.9055pt
 * \headsep=8.5359pt
-* \topskip=12.76108pt
+* \topskip=10.0pt
 * \footskip=28.45274pt
-* \marginparwidth=18.49426pt
-* \marginparsep=18.49426pt
-* \columnsep=18.49426pt
-* \skip\footins=16.0pt plus 5.0pt minus 2.0pt
+* \marginparwidth=57.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -1327,37 +1038,12 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
-Class ltjsarticle Warning: deprecated old font command `\bf' used.
-(ltjsarticle)              You should note, that since 1994 LaTeX2e provides a
-(ltjsarticle)              new font selection scheme called NFSS2 with several
-(ltjsarticle)              new, combinable font commands. This ltjsarticle
-(ltjsarticle)              class has defined the old font commands like
-(ltjsarticle)              `\bf' only for compatibility on input line 202.
-
-LaTeX Font Info:    Font shape `JT3/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT3/gt/m/n' tried instead on input line 202.
-LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 9.24713pt on input line 202.
-LaTeX Font Info:    Font shape `JY3/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY3/gt/m/n' tried instead on input line 202.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 9.24713pt on input line 202.
-(load cache: /home/hamada/.texlive2018/texmf-var/luatexja/extra_ipaexgothic.luc)
-LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 8.32242pt on input line 202.
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 8.32242pt on input line 202.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 202.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 202.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 202.
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 5.54828pt on input line 202.
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 4.62357pt on input line 202.
 
 Overfull \hbox (0.65259pt too wide) in paragraph at lines 202--202
 [] []
@@ -1365,12 +1051,16 @@ Overfull \hbox (0.65259pt too wide) in paragraph at lines 202--202
 
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 202.
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 6.47299pt on input line 202.
-LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 9.24713pt on input line 202.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
 ]
 Overfull \hbox (0.65259pt too wide) in paragraph at lines 202--202
 [] []
@@ -1378,6 +1068,14 @@ Overfull \hbox (0.65259pt too wide) in paragraph at lines 202--202
 
 [1
 
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
 ]
 Overfull \hbox (0.65259pt too wide) in paragraph at lines 202--202
 [] []
@@ -1385,6 +1083,14 @@ Overfull \hbox (0.65259pt too wide) in paragraph at lines 202--202
 
 [1
 
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
 ]
 Overfull \hbox (0.65259pt too wide) in paragraph at lines 202--202
 [] []
@@ -1392,6 +1098,14 @@ Overfull \hbox (0.65259pt too wide) in paragraph at lines 202--202
 
 [1
 
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
 ]
 Overfull \hbox (0.65259pt too wide) in paragraph at lines 202--202
 [] []
@@ -1399,6 +1113,14 @@ Overfull \hbox (0.65259pt too wide) in paragraph at lines 202--202
 
 [1
 
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
 ]
 Overfull \hbox (0.65259pt too wide) in paragraph at lines 202--202
 [] []
@@ -1406,6 +1128,14 @@ Overfull \hbox (0.65259pt too wide) in paragraph at lines 202--202
 
 [1
 
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
 ]
 Overfull \hbox (0.65259pt too wide) in paragraph at lines 202--202
 [] []
@@ -1413,6 +1143,14 @@ Overfull \hbox (0.65259pt too wide) in paragraph at lines 202--202
 
 [1
 
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
 ]
 Overfull \hbox (0.65259pt too wide) in paragraph at lines 202--202
 [] []
@@ -1420,6 +1158,14 @@ Overfull \hbox (0.65259pt too wide) in paragraph at lines 202--202
 
 [1
 
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
 ]
 Overfull \hbox (0.65259pt too wide) in paragraph at lines 202--202
 [] []
@@ -1427,6 +1173,14 @@ Overfull \hbox (0.65259pt too wide) in paragraph at lines 202--202
 
 [1
 
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
 ]
 Overfull \hbox (0.65259pt too wide) in paragraph at lines 202--202
 [] []
@@ -1434,37 +1188,42 @@ Overfull \hbox (0.65259pt too wide) in paragraph at lines 202--202
 
 [1
 
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
+Missing character: There is no 問 (U+554F) in font [lmroman10-bold]:+tlig;!
 ] (./amc-compiled.aux))
 
 Here is how much of LuaTeX's memory you used:
- 24628 strings out of 494383
- 745107,552014 words of node,token memory allocated
- 31045 words of node memory still in use:
-   23 hlist, 1 vlist, 4 rule, 34 glue, 177 kern, 1 glyph, 7453 attribute, 2689 g
-lue_spec, 388 attribute_list, 2 write, 26 user_defined, 100 pdf_literal, 16 pdf_
-colorstack nodes
-   avail lists: 1:23,2:210763,3:7499,4:8587,5:1590,6:68,7:10332,8:1646,9:7598,10
-:9,11:28
- 28056 multiletter control sequences out of 65536+600000
- 53 fonts using 21172015 bytes
- 67i,23n,70p,4856b,977s stack positions out of 5000i,500n,10000p,200000b,100000s
-</usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/fon
-ts/opentype/ipaexfont-gothic/ipaexg.ttf></usr/share/texmf/fonts/opentype/public/
-lm/lmroman9-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-bol
-d.otf></usr/share/texmf/fonts/opentype/public/lm/lmmono10-regular.otf></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircl
-e1.pfb>
-Output written on amc-compiled.pdf (10 pages, 306273 bytes).
+ 23057 strings out of 494383
+ 125009,552014 words of node,token memory allocated
+ 1880 words of node memory still in use:
+   19 hlist, 1 vlist, 1 rule, 34 glue, 3 kern, 1 glyph, 154 attribute, 76 glue_s
+pec, 154 attribute_list, 2 write, 100 pdf_literal, 16 pdf_colorstack nodes
+   avail lists: 2:4956,3:3839,4:983,5:863,6:34,7:5150,8:817,9:3770,10:9,11:14
+ 26624 multiletter control sequences out of 65536+600000
+ 44 fonts using 6933815 bytes
+ 56i,23n,66p,561b,863s stack positions out of 5000i,500n,10000p,200000b,100000s
+</usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/tex
+mf/fonts/opentype/public/lm/lmroman9-regular.otf></usr/share/texmf/fonts/opentyp
+e/public/lm/lmroman10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmmono
+10-regular.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/latxfont/lcircle1.pfb>
+Output written on amc-compiled.pdf (10 pages, 154097 bytes).
 
-PDF statistics: 109 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
+PDF statistics: 102 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
