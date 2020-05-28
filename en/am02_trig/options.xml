@@ -51,7 +51,7 @@
   <modele_regroupement></modele_regroupement>
   <moteur_latex_b>lualatex</moteur_latex_b>
   <nom_examen></nom_examen>
-  <nombre_copies>30</nombre_copies>
+  <nombre_copies>10</nombre_copies>
   <note_arrondi>inf</note_arrondi>
   <note_grain>0.5</note_grain>
   <note_max>20</note_max>
