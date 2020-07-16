@@ -1,0 +1,222 @@
+\documentclass[a4paper]{article}
+\usepackage{tikz}
+\usepackage{luacode}
+\usepackage[box,completemulti]{automultiplechoice}
+\newcommand*{\var}[1]{\luadirect{tex.print(#1)}}
+%%% 
+\begin{document}
+\AMCboxDimensions{shape=oval,width=1.8ex,height=2.5ex}
+% 
+\luaexec{math.randomseed(190410)}
+\begin{luacode*}
+function execSage(command)
+  local sagecommand="sage -c 'print(latex("..command.."))'"
+  local handle = io.popen(sagecommand, "r")
+  local content=string.gsub(handle:read("*all"), "\n", "")
+  handle:close()
+  return content
+end
+function execMaxima(command)
+  local cascmd="echo 'tex1("..command..");'| maxima --very-quiet"
+  local handle = io.popen(cascmd, "r")
+  local content=string.gsub(handle:read("*all"), "\n", "")
+  handle:close()
+  return content
+end
+\end{luacode*}
+
+\onecopy{2}{
+
+%%% 
+
+\noindent{\bf Calculus ex14 \hfill 10, Jul, 2019}
+
+\vspace{3ex}
+
+{\small
+  \setlength{\parindent}{0pt}\hspace*{\fill}\AMCcodeGridInt{id.}{8}\hspace*{\fill}
+\begin{minipage}[b]{6.5cm}$\longleftarrow{}$\hspace{0ptplus1cm}
+Please encode your student number,
+and write your first and last names below.
+
+\vspace{3ex}
+
+\hfill\namefield{
+  \fbox{
+    \begin{minipage}{.9\linewidth}
+      First name and last name:\vspace*{.5cm}\dotfill\vspace*{.5cm}\dotfill
+      \vspace*{1mm}
+    \end{minipage}
+  }
+}
+\hfill\vspace{5ex}
+\end{minipage}
+\hspace*{\fill}
+}
+
+Questions with a \multiSymbole{} may have zero, one or more right answers.
+
+\vspace{1ex}
+\hrulefill
+\vspace{1ex}
+
+%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{pdiff01}
+\luadirect{
+  a=math.random(1, 9);
+  b=math.random(1, 9);
+  c=math.random(1, 9);
+  d=math.random(1, 9);
+  s=(-1)^(math.random(0, 1));
+  t=(-1)^(math.random(0,1));
+  u=(-1)^(math.random(0,1));
+  v=(-1)^(math.random(0,1));
+  g=s*a..'*x+'..t*b..'*y';
+  h=u*c..'*x+'..v*d..'*y';
+  f='x^2*('..g..')+y^2*('..h..')';
+  formula=execMaxima('expand('..f..')');
+  correct1=execMaxima('diff(expand('..f..'), x)');
+  wrong1=execMaxima('x*'..g..'+x^2*diff('..g..', x)+y^2*diff('..h..', x)');
+  wrong2=execMaxima('2*x*'..g..'+x^2*diff('..g..', x)+y*diff('..h..', x)');
+  wrong3=execMaxima('2*x*'..g..'-x^2*diff('..g..', x)+y^2*diff('..h..', x)');
+  wrong4=execMaxima('x*'..g..'-x^2*diff('..g..', x)+y^2*diff('..h..', x)');
+}
+Evaluate \(\displaystyle\frac{\partial z}{\partial x}\) of \(z=\var{formula}\).
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct1}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{pdiff02}
+\luadirect{
+  formula=execMaxima('expand('..f..')');
+  correct1=execMaxima('diff(expand('..f..'), y)');
+  wrong1=execMaxima('x^2*diff('..g..', y)+y^2*'..h..'+y^2*diff('..h..', y)');
+  wrong2=execMaxima('x*diff('..g..', y)+2*y*'..h..'+y^2*diff('..h..', y)');
+  wrong3=execMaxima('x^2*diff('..g..', y)-2*y*'..h..'+y^2*diff('..h..', y)');
+  wrong4=execMaxima('x^2*diff('..g..', y)+2*y*'..h..'+y*diff('..h..', y)');
+}
+
+Evaluate \(\displaystyle\frac{\partial z}{\partial y}\) of \(z=\var{formula}\).
+
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct1}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{7ex}
+
+\begin{question}{pdiff03}
+\luadirect{
+  a=math.random(2, 9);
+  b=math.random(2, 9);
+  s=(-1)^(math.random(0, 1));
+  t=(-1)^(math.random(0, 1));
+  g=s*a..'*x+'..t*b..'*y';
+  g1=s*(a-1)..'*x+'..t*b..'*y';
+  g2=s*a..'*x+'..t*(b-1)..'*y';
+  f='exp('..g..')';
+  f1='exp('..g1..')';
+  f2='exp('..g2..')';
+  formula=execMaxima(f);
+  correct1=execMaxima('diff('..f..', x)');
+  wrong1=execMaxima('diff('..f1..', x)');
+  wrong2=execMaxima('diff('..f2..', x)');
+  wrong3=execMaxima('diff('..f..', x)/'..a*s);
+  wrong4=execMaxima('diff('..f1..', x)/'..a*s);
+}
+
+Evaluate \(f_{x}\) of \(z=\var{formula}\).
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct1}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{pdiff04}
+\luadirect{
+  formula=execMaxima(f);
+  correct1=execMaxima('diff('..f..', y)');
+  wrong1=execMaxima('diff('..f1..', y)');
+  wrong2=execMaxima('diff('..f2..', y)');
+  wrong3=execMaxima('diff('..f..', y)/'..b*t);
+  wrong4=execMaxima('diff('..f1..', y)/'..b*t);
+}
+
+Evaluate \(f_{y}\) of \(z=\var{formula}\).
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct1}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{7ex}
+
+\begin{question}{pdiff05}
+\luadirect{
+  a=math.random(2, 9);
+  b=math.random(2, 9);
+  c=math.random(2, 9);
+  d=math.random(2, 9);
+  g=a..'*x-'..b..'*y';
+  h=c..'*x+'..d..'*y';
+  f='('..g..')/('..h..')';
+  formula=execMaxima(f);
+  correct1=execMaxima('('..a*d+b*c..')*y/('..c..'*x+'..d..'*y)^2');
+  wrong1=execMaxima('('..a*d-b*c..')*y/('..c..'*x+'..d..'*y)^2');
+  wrong2=execMaxima('('..a*d+b*c..')*y/('..c..'*x+'..d..'*y)');
+  wrong3=execMaxima('('..a*d+b*c..')*x/('..c..'*x+'..d..'*y)^2');
+  wrong4=execMaxima('('..a*d-b*c..')*x/('..c..'*x+'..d..'*y)');
+}
+
+Evaluate \(z_{x}\) of \(z=\var{formula}\).
+
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct1}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{pdiff06}
+\luadirect{
+  correct1=execMaxima('-('..a*d+b*c..')*x/('..c..'*x+'..d..'*y)^2');
+  wrong1=execMaxima('('..a*d+b*c..')*x/('..c..'*x+'..d..'*y)^2');
+  wrong2=execMaxima('-('..a*d+b*c..')*y/('..c..'*x+'..d..'*y)');
+  wrong3=execMaxima('('..a*d-b*c..')*x/('..c..'*x+'..d..'*y)^2');
+  wrong4=execMaxima('('..a*d+b*c..')*x/('..c..'*x+'..d..'*y)');
+}
+
+Evaluate \(z_{y}\) of \(z=\var{formula}\).
+
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct1}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+}
+
+\end{document}
