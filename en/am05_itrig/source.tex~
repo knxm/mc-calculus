@@ -1,0 +1,271 @@
+\documentclass[a4paper]{ltjsarticle}
+\usepackage{amsmath, amssymb}
+\usepackage{tikz}
+\usepackage{luacode}
+\usepackage[box,completemulti]{automultiplechoice}
+\newcommand*{\var}[1]{\luaexec{tex.print(#1)}}
+\begin{document}
+\AMCboxDimensions{shape=oval,width=1.8ex,height=2.5ex}
+\luadirect{math.randomseed(190508)} % \onecopy{} の外に配置
+
+\begin{luacode*}
+function execSage(command)
+  local sage_command="sage -c 'print(latex("..command.."))'"
+  local handle=io.popen(sage_command, "r")
+  local content=string.gsub(handle:read("*all"), "\n", "")
+  handle:close()
+  return content
+end
+function execMaxima(command)
+  local maxima_command="echo 'tex1("..command..");' | maxima --very-quiet "
+  local handle=io.popen(maxima_command, "r")
+  local content=string.gsub(handle:read("*all"), "\n", "")
+  handle:close()
+  return content
+end
+\end{luacode*}
+
+
+\onecopy{2}{
+
+%%% ヘッダー開始: %%%   
+\noindent{\bf 応用数学 演習05 \hfill 2019年5月8日}
+
+\vspace{3ex}
+
+{\small
+  \setlength{\parindent}{0pt}\hspace*{\fill}\AMCcodeGridInt{学生番号}{8}\hspace*{\fill}
+\begin{minipage}[b]{6.5cm}$\longleftarrow{}$\hspace{0ptplus1cm}
+学生番号を左にマークし、下に氏名を記入してください。
+
+\vspace{3ex}
+
+\hfill\namefield{
+  \fbox{
+    \begin{minipage}{.9\linewidth}
+      氏名\vspace*{.5cm}%\dotfill\vspace*{.5cm}\dotfill
+      \vspace*{1mm}
+    \end{minipage}
+  }
+}
+\hfill\vspace{5ex}
+\end{minipage}
+\hspace*{\fill}
+}
+
+\multiSymbole{}の記号のある設問の正解は1個とは限りません。 0個の場合や複数の場合があります。
+
+\vspace{1ex}
+\hrulefill
+\vspace{1ex}
+
+%%% ヘッダー終了 %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{questionmult}{itrig01}
+\luaexec{
+  table={'-2*\%pi', '-11*\%pi/6', '-7*\%pi/4', '-5*\%pi/3', '-3*\%pi/2', '-4*\%pi/3', '-5*\%pi/4', '-7*\%pi/6', '-\%pi', '-5*\%pi/6', '-3*\%pi/4', '-2*\%pi/3', '-\%pi/2', '-\%pi/3', '-\%pi/4', '-\%pi/6', '0', '\%pi/6', '\%pi/4', '\%pi/3', '\%pi/2', '2*\%pi/3', '3*\%pi/4', '5*\%pi/6', '\%pi', '7*\%pi/6', '5*\%pi/4', '4*\%pi/3', '3*\%pi/2', '5*\%pi/3', '7*\%pi/4', '11*\%pi/6', '2*\%pi'}
+  i=math.random(13, 21);
+  angle=table[i];
+  y=execMaxima('sin('..angle..')');
+  correct=execMaxima(angle);
+  wrong={}
+  if i>16 then for k=0, 7 do wrong[k+1]=execMaxima(table[math.fmod(i+k, 33)+1]) end;
+  else for k=0, 7 do wrong[k+1]=execMaxima(table[math.fmod(i-k, 33)-1]) end; end;
+}
+Evaluate primitive value of $\arcsin\left(\var{y}\right)$.
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct}\)}
+    \wrongchoice{\(\var{wrong[1]}\)}
+    \wrongchoice{\(\var{wrong[2]}\)}
+    \wrongchoice{\(\var{wrong[3]}\)}
+    \wrongchoice{\(\var{wrong[4]}\)}
+    \wrongchoice{\(\var{wrong[5]}\)}
+    \wrongchoice{\(\var{wrong[6]}\)}
+    \wrongchoice{\(\var{wrong[7]}\)}
+    \wrongchoice{\(\var{wrong[8]}\)}
+  \end{choiceshoriz}
+\end{questionmult}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{questionmult}{itrig02}
+\luaexec{
+  table={'-2*\%pi', '-11*\%pi/6', '-7*\%pi/4', '-5*\%pi/3', '-3*\%pi/2', '-4*\%pi/3', '-5*\%pi/4', '-7*\%pi/6', '-\%pi', '-5*\%pi/6', '-3*\%pi/4', '-2*\%pi/3', '-\%pi/2', '-\%pi/3', '-\%pi/4', '-\%pi/6', '0', '\%pi/6', '\%pi/4', '\%pi/3', '\%pi/2', '2*\%pi/3', '3*\%pi/4', '5*\%pi/6', '\%pi', '7*\%pi/6', '5*\%pi/4', '4*\%pi/3', '3*\%pi/2', '5*\%pi/3', '7*\%pi/4', '11*\%pi/6', '2*\%pi'}
+  i=math.random(17, 25); % 0 <= x <= pi
+  angle=table[i];
+  y=execMaxima('cos('..angle..')');
+  correct=execMaxima(angle);
+  wrong={}
+  if i>20 then for k=0, 7 do wrong[k+1]=execMaxima(table[math.fmod(i+k, 33)+1]) end;
+  else for k=0, 7 do wrong[k+1]=execMaxima(table[math.fmod(i-k, 33)-1]) end; end;
+}
+$\arccos(x)$は逆余弦函数とする．
+$\arccos\left(\var{y}\right)$の主値を求めなさい．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct}\)}
+    \wrongchoice{\(\var{wrong[1]}\)}
+    \wrongchoice{\(\var{wrong[2]}\)}
+    \wrongchoice{\(\var{wrong[3]}\)}
+    \wrongchoice{\(\var{wrong[4]}\)}
+    \wrongchoice{\(\var{wrong[5]}\)}
+    \wrongchoice{\(\var{wrong[6]}\)}
+    \wrongchoice{\(\var{wrong[7]}\)}
+    \wrongchoice{\(\var{wrong[8]}\)}
+  \end{choiceshoriz}
+\end{questionmult}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{questionmult}{itrig03}
+\luaexec{
+  table={'-2*\%pi', '-11*\%pi/6', '-7*\%pi/4', '-5*\%pi/3', '-3*\%pi/2', '-4*\%pi/3', '-5*\%pi/4', '-7*\%pi/6', '-\%pi', '-5*\%pi/6', '-3*\%pi/4', '-2*\%pi/3', '-\%pi/2', '-\%pi/3', '-\%pi/4', '-\%pi/6', '0', '\%pi/6', '\%pi/4', '\%pi/3', '\%pi/2', '2*\%pi/3', '3*\%pi/4', '5*\%pi/6', '\%pi', '7*\%pi/6', '5*\%pi/4', '4*\%pi/3', '3*\%pi/2', '5*\%pi/3', '7*\%pi/4', '11*\%pi/6', '2*\%pi'}
+  i=math.random(14, 20);
+  angle=table[i];
+  y=execMaxima('tan('..angle..')');
+  correct=execMaxima(angle);
+  wrong={}
+  if i>16 then for k=0, 7 do wrong[k+1]=execMaxima(table[math.fmod(i+k, 33)+1]) end;
+  else for k=0, 7 do wrong[k+1]=execMaxima(table[math.fmod(i-k, 33)-1]) end; end;
+}
+$\arctan(x)$は逆正接函数とする．
+$\arctan\left(\var{y}\right)$の主値を求めなさい．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct}\)}
+    \wrongchoice{\(\var{wrong[1]}\)}
+    \wrongchoice{\(\var{wrong[2]}\)}
+    \wrongchoice{\(\var{wrong[3]}\)}
+    \wrongchoice{\(\var{wrong[4]}\)}
+    \wrongchoice{\(\var{wrong[5]}\)}
+    \wrongchoice{\(\var{wrong[6]}\)}
+    \wrongchoice{\(\var{wrong[7]}\)}
+    \wrongchoice{\(\var{wrong[8]}\)}
+  \end{choiceshoriz}
+\end{questionmult}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{questionmult}{diff16}
+\luaexec{
+  a=math.random(2, 7);
+  g='x/sqrt('..a..')';
+  f='asin('..g..')';
+  h='acos('..g..')';
+  formula=execMaxima(f);
+  correct1=execMaxima('ratsimp(diff('..f..', x))');
+  correct2=execMaxima('diff('..f..', x)');
+  wrong1=execMaxima(h);
+  wrong2=execMaxima(h..'/sqrt('..a..')');
+  wrong3=execMaxima('diff('..f..', x)*sqrt('..a..')');
+}
+函数 \(f(x)=\var{formula}\)の導函数\(f'(x)\)を求めなさい．
+  \begin{choiceshoriz}
+   \correctchoice{\(\var{correct1}\)}
+   \correctchoice{\(\var{correct2}\)}
+   \wrongchoice{\(\var{wrong1}\)}
+   \wrongchoice{\(\var{wrong2}\)}
+   \wrongchoice{\(\var{wrong3}\)}
+  \end{choiceshoriz}
+
+\end{questionmult}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{questionmult}{diff17}
+\luaexec{
+  a=math.random(2, 7);
+  g='x/sqrt('..a..')';
+  f='acos('..g..')';
+  h='-asin('..g..')';
+  formula=execMaxima(f);
+  correct1=execMaxima('ratsimp(diff('..f..', x))');
+  correct2=execMaxima('diff('..f..', x)');
+  wrong1=execMaxima(h);
+  wrong2=execMaxima(h..'/sqrt('..a..')');
+  wrong3=execMaxima('diff('..f..', x)*sqrt('..a..')');
+}
+函数 \(f(x)=\var{formula}\)の導函数\(f'(x)\)を求めなさい．
+  \begin{choiceshoriz}
+   \correctchoice{\(\var{correct1}\)}
+   \correctchoice{\(\var{correct2}\)}
+   \wrongchoice{\(\var{wrong1}\)}
+   \wrongchoice{\(\var{wrong2}\)}
+   \wrongchoice{\(\var{wrong3}\)}
+  \end{choiceshoriz}
+
+\end{questionmult}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{questionmult}{diff18}
+\luaexec{
+  a=math.random(2, 7);
+  g='x/'..a;
+  f='atan('..g..')';
+  h='1/cos('..g..')^2';
+  formula=execMaxima(f);
+  correct1=execMaxima('ratsimp(diff('..f..', x))');
+  correct2=execMaxima('diff('..f..', x)');
+  wrong1=execMaxima(h);
+  wrong2=execMaxima(h..'/'..a);
+  wrong3=execMaxima('diff('..f..', x)*'..a);
+}
+函数 \(f(x)=\var{formula}\)の導函数\(f'(x)\)を求めなさい．
+  \begin{choiceshoriz}
+   \correctchoice{\(\var{correct1}\)}
+   \correctchoice{\(\var{correct2}\)}
+   \wrongchoice{\(\var{wrong1}\)}
+   \wrongchoice{\(\var{wrong2}\)}
+   \wrongchoice{\(\var{wrong3}\)}
+  \end{choiceshoriz}
+
+\end{questionmult}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+} % end of \onecopy
+
+\end{document}
+
+  wangle={}
+  for k=1,8 do j=i+k; wangle[k]=yarray[(i+k)%9+1]; end;
+  wrong1=execMaxima('asin('..wangle[1]..')');
+    \wrongchoice{\(\var{wrong[1]}\)}
+
+  wangle={};
+  for k=0,7 do; wrong[k]=execMaxima('asin('..yarray[(i+k)%9+1]..')'); end;
+
+
+  wrong1=execMaxima(angle_array[math.fmod(i+1, 9)+1]);
+  wrong2=execMaxima(angle_array[math.fmod(i+2, 9)+1]);
+  wrong3=execMaxima(angle_array[math.fmod(i+3, 9)+1]);
+  wrong4=execMaxima(angle_array[math.fmod(i+4, 9)+1]);
+  wrong5=execMaxima(angle_array[math.fmod(i+5, 9)+1]);
+  wrong6=execMaxima(angle_array[math.fmod(i+6, 9)+1]);
+  wrong7=execMaxima(angle_array[math.fmod(i+7, 9)+1]);
+  wrong8=execMaxima(angle_array[math.fmod(i+8, 9)+1]);
+
+
+\begin{question}{itrig01}
+\luaexec{
+  yarray={'-1', '-sqrt(3)/2', '-1/sqrt(2)', '-1/2', 0, '1/2', '1/sqrt(2)', 'sqrt(3)/2', '1'};
+  i=math.random(1, 9);
+  angle=yarray[i];
+  y=execMaxima(angle);
+  correct=execMaxima('asin('..angle..')');
+  wrong1=execMaxima('asin('..yarray[math.fmod(i+1, 9)+1]..')');
+  wrong2=execMaxima('asin('..yarray[math.fmod(i+2, 9)+1]..')');
+  wrong3=execMaxima('asin('..yarray[math.fmod(i+3, 9)+1]..')');
+  wrong4=execMaxima('asin('..yarray[math.fmod(i+4, 9)+1]..')');
+  wrong5=execMaxima('asin('..yarray[math.fmod(i+5, 9)+1]..')');
+  wrong6=execMaxima('asin('..yarray[math.fmod(i+6, 9)+1]..')');
+  wrong7=execMaxima('asin('..yarray[math.fmod(i+7, 9)+1]..')');
+  wrong8=execMaxima('asin('..yarray[math.fmod(i+8, 9)+1]..')');
+}
+$\arcsin(x)$は逆正弦函数とする．
+方程式 $\arcsin(x)=\var{y} \,(-1\leqq x\leqq 1)$の解を全て選択しなさい．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+    \wrongchoice{\(\var{wrong5}\)}
+    \wrongchoice{\(\var{wrong6}\)}
+    \wrongchoice{\(\var{wrong7}\)}
+    \wrongchoice{\(\var{wrong8}\)}
+  \end{choiceshoriz}
+\end{question}
