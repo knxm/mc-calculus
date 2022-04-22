@@ -1,19 +1,17 @@
 \documentclass[a4paper]{ltjsarticle}
-\usepackage{tikz}
-\usepackage{luacode}
+\usepackage{amsmath, amssymb}
+\usepackage{tikz, luacode}
 \usepackage[box,completemulti,lang=JA]{automultiplechoice}
 \newcommand*{\var}[1]{\luadirect{tex.print(#1)}}
 %%% document開始:
 \begin{document}
 \AMCboxDimensions{shape=oval,width=1.8ex,height=2.5ex}
+\AMCcodeVspace=0em
 % 乱数の種を設定する必要あり
-\luaexec{math.randomseed(190410)}
-
+\luaexec{math.randomseed(220413)}
 \onecopy{2}{
-
 %%% 試験問題用紙ヘッダー開始:    
-
-\noindent{\bf 応用数学 演習01 \hfill 2019年4月10日}
+\noindent{\bf 応用数学 演習01 \hfill 2022年4月13日}
 
 \vspace{3ex}
 
@@ -92,7 +90,7 @@
     \correctchoice{\(\sqrt{\var{a}}\)}
     \wrongchoice{\(-\var{a}\)}
     \wrongchoice{\(\frac{1}{\var{a+1}}\)}
-    \wrongchoice{\(-\var{a+1}\)}
+    \wrongchoice{\(\pm\sqrt{\var{a}}\)}
     \wrongchoice{\(\frac{1}{\var{a}}\)}
   \end{choiceshoriz}
 \end{question}
@@ -135,8 +133,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{question}{log01}
   \luaexec{
-    a=math.random(4, 7);
-    b=math.random(2, 3);
+    a=math.random(4, 8);
+    b=3;
     correct=a;
     wrong1=b;
     wrong2=a+b;

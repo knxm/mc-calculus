@@ -2,6 +2,12 @@
 <project>
   <after_export>file</after_export>
   <allocate_ids></allocate_ids>
+  <annotatedemail>
+    <email_subject>試験結果</email_subject>
+    <email_text>答案の採点結果を添付ファイルで送付します。
+採点ミスなどがないか確認してください。</email_text>
+    <email_use_html></email_use_html>
+  </annotatedemail>
   <annote_position>marges</annote_position>
   <annote_rtl></annote_rtl>
   <assoc_code>å­¦ççªå·</assoc_code>
@@ -15,16 +21,6 @@
   <doc_setting>DOC-calage.xy</doc_setting>
   <doc_solution>DOC-corrige.pdf</doc_solution>
   <email_col>email</email_col>
-  <email_subject>試験結果</email_subject>
-  <email_text>答案の採点結果を添付ファイルで送付します．
-採点ミスなどがないか確認してください．
-
-2次方程式を間違えている方が何名かいました．
-うろ覚えの解の公式を使うよりは，平方完成を覚えておいたほうが良いと思います．
-練習しておいてください．
-
-https://ja.wikipedia.org/wiki/%E5%B9%B3%E6%96%B9%E5%AE%8C%E6%88%90</email_text>
-  <email_use_html></email_use_html>
   <encodage_csv>UTF-8</encodage_csv>
   <encodage_liste>UTF-8</encodage_liste>
   <export_csv_columns>student.copy,student.key,student.name</export_csv_columns>
@@ -47,6 +43,7 @@ https://ja.wikipedia.org/wiki/%E5%B9%B3%E6%96%B9%E5%AE%8C%E6%88%90</email_text>
   <maj_bareme>1</maj_bareme>
   <modele_regroupement></modele_regroupement>
   <moteur_latex_b>lualatex --shell-escape</moteur_latex_b>
+  <name_field_type></name_field_type>
   <nom_examen></nom_examen>
   <nombre_copies>4</nombre_copies>
   <note_arrondi>inf</note_arrondi>
@@ -56,6 +53,9 @@ https://ja.wikipedia.org/wiki/%E5%B9%B3%E6%96%B9%E5%AE%8C%E6%88%90</email_text>
   <note_min></note_min>
   <note_null>0</note_null>
   <notes>notes.xml</notes>
+  <pdf_password></pdf_password>
+  <pdf_password_key></pdf_password_key>
+  <pdf_password_use></pdf_password_use>
   <pdfform>0</pdfform>
   <postcorrect_copy>0</postcorrect_copy>
   <postcorrect_set_multiple></postcorrect_set_multiple>
@@ -65,6 +65,12 @@ https://ja.wikipedia.org/wiki/%E5%B9%B3%E6%96%B9%E5%AE%8C%E6%88%90</email_text>
   <regroupement_type>ALL</regroupement_type>
   <seuil>0.5</seuil>
   <seuil_up>1</seuil_up>
+  <subjectemail>
+    <email_subject>Exam question</email_subject>
+    <email_text>Please find enclosed your question sheet.
+Regards.</email_text>
+    <email_use_html></email_use_html>
+  </subjectemail>
   <texsrc>source.tex</texsrc>
   <verdict>%(ID)
 得点: %s/%m (素点: %S/%M)</verdict>

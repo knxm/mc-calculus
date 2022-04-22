@@ -2,6 +2,12 @@
 <project>
   <after_export>file</after_export>
   <allocate_ids></allocate_ids>
+  <annotatedemail>
+    <email_subject>試験結果</email_subject>
+    <email_text>答案の採点結果を添付ファイルで送付します。
+採点ミスなどがないか確認してください。</email_text>
+    <email_use_html></email_use_html>
+  </annotatedemail>
   <annote_position>marges</annote_position>
   <annote_rtl></annote_rtl>
   <assoc_code>å­¦ççªå·</assoc_code>
@@ -15,11 +21,6 @@
   <doc_setting>DOC-calage.xy</doc_setting>
   <doc_solution>DOC-corrige.pdf</doc_solution>
   <email_col>email</email_col>
-  <email_subject>試験結果</email_subject>
-  <email_text>答案の採点結果を添付ファイルで送付します。
-
-なお，先程送信したメールで説明したように，二重にミスがありましたので，今回，受験した方は全員20点とします．</email_text>
-  <email_use_html></email_use_html>
   <encodage_csv>UTF-8</encodage_csv>
   <encodage_liste>UTF-8</encodage_liste>
   <export_csv_columns>student.copy,student.key,student.name</export_csv_columns>
@@ -42,8 +43,9 @@
   <maj_bareme>1</maj_bareme>
   <modele_regroupement></modele_regroupement>
   <moteur_latex_b>lualatex --shell-escape</moteur_latex_b>
+  <name_field_type></name_field_type>
   <nom_examen></nom_examen>
-  <nombre_copies>20</nombre_copies>
+  <nombre_copies>1</nombre_copies>
   <note_arrondi>inf</note_arrondi>
   <note_grain>0.5</note_grain>
   <note_max>20</note_max>
@@ -51,6 +53,9 @@
   <note_min></note_min>
   <note_null>0</note_null>
   <notes>notes.xml</notes>
+  <pdf_password></pdf_password>
+  <pdf_password_key></pdf_password_key>
+  <pdf_password_use></pdf_password_use>
   <pdfform>0</pdfform>
   <postcorrect_copy>0</postcorrect_copy>
   <postcorrect_set_multiple></postcorrect_set_multiple>
@@ -60,6 +65,12 @@
   <regroupement_type>ALL</regroupement_type>
   <seuil>0.15</seuil>
   <seuil_up>1</seuil_up>
+  <subjectemail>
+    <email_subject>Exam question</email_subject>
+    <email_text>Please find enclosed your question sheet.
+Regards.</email_text>
+    <email_use_html></email_use_html>
+  </subjectemail>
   <texsrc>source.tex</texsrc>
   <verdict>%(ID)
 得点: %s/%m (素点: %S/%M)</verdict>

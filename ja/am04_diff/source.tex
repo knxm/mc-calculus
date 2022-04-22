@@ -7,7 +7,8 @@
 \newcommand*{\var}[1]{\luadirect{tex.print(#1)}}
 \begin{document}
 \AMCboxDimensions{shape=oval,width=1.8ex,height=2.5ex}
-\directlua{math.randomseed(19424)} % \onecopy{} の外に配置
+\AMCcodeVspace=0em
+\directlua{math.randomseed(220511)} % \onecopy{} の外に配置
 
 \begin{luacode*}
 function execSage(command)
@@ -29,21 +30,21 @@ end
 \onecopy{2}{
 %%% 試験問題用紙ヘッダー開始:    
 
-\noindent{\bf 応用数学 演習04 \hfill 2019年4月24日}
+\noindent{\bf 応用数学 演習04 \hfill 2022年5月11日}
 
 \vspace{3ex}
 
 {\small
   \setlength{\parindent}{0pt}\hspace*{\fill}\AMCcodeGridInt{学生番号}{8}\hspace*{\fill}
 \begin{minipage}[b]{6.5cm}$\longleftarrow{}$\hspace{0ptplus1cm}
-学生番号を左にマークし、氏名を下に記入してください。
+学生番号を左にマークし、下に氏名を記入してください。
 
 \vspace{3ex}
 
 \hfill\namefield{
   \fbox{
     \begin{minipage}{.9\linewidth}
-      氏名\vspace*{.5cm}%\dotfill\vspace*{.5cm}\dotfill
+      氏名:\vspace*{.5cm}\dotfill\vspace*{.5cm}\dotfill
       \vspace*{1mm}
     \end{minipage}
   }
@@ -66,7 +67,7 @@ end
   b=math.random(5, 9);
   c=math.random(2, 9);
   s=-1
-  t=(-1)^(math.random(0,1));
+  t=math.tointeger((-1)^(math.random(0,1)));
   g='('..a..'*'..s..'*x^2+'..t..'*'..b..')';
   f=g..'^'..c;
   h='diff(g, x)^'..c
@@ -90,12 +91,12 @@ end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{question}{diff10}
 \luadirect{
-  s=(-1)^(math.random(0,1));
+  s=math.tointeger((-1)^(math.random(0,1)));
   f="sqrt(x^2+"..s..")";
-  formula=execSage(f);
-  correct1=execSage("diff("..f..", x)");
-  wrong1=execSage("diff(2*"..f..", x)");
-  wrong2=execSage("diff((-2)*"..f..", x)");
+  formula=execMaxima(f);
+  correct1=execMaxima("diff("..f..", x)");
+  wrong1=execMaxima("diff(2*"..f..", x)");
+  wrong2=execMaxima("diff((-2)*"..f..", x)");
 }
 函数 \(f(x)=\var{formula}\)の導函数\(f'(x)\)を求めなさい．
   \begin{choiceshoriz}
@@ -114,15 +115,15 @@ end
   b=math.random(2, 9);
   trig={'sin', 'cos'};
   t=math.random(1, 2);
-  s=(-1)^(math.random(0,1));
+  s=math.tointeger((-1)^(math.random(0,1)));
   g=a..'*x+'..s..'*'..b;
   f=trig[t]..'('..g..')';
-  formula=execSage(f);
-  correct1=execSage('diff('..f..', x)');
-  wrong1=execSage('diff((-1)*'..f..', x)');
-  wrong2=execSage('diff(2*'..f..', x)');
-  wrong3=execSage('diff((-2)*'..f..', x)');
-  wrong4=execSage('diff('..f..', x)/diff('..g..', x)');
+  formula=execMaxima(f);
+  correct1=execMaxima('diff('..f..', x)');
+  wrong1=execMaxima('diff((-1)*'..f..', x)');
+  wrong2=execMaxima('diff(2*'..f..', x)');
+  wrong3=execMaxima('diff((-2)*'..f..', x)');
+  wrong4=execMaxima('diff('..f..', x)/diff('..g..', x)');
 }
 函数 \(f(x)=\var{formula}\)の導函数\(f'(x)\)を求めなさい．
   \begin{choiceshoriz}
@@ -138,10 +139,10 @@ end
 \luadirect{
   a=math.random(2, 9);
   b=math.random(2, 9);
-  s=(-1)^(math.random(0,1));
+  s=math.tointeger((-1)^(math.random(0,1)));
   g=a..'*x+'..s..'*'..b;
   f='tan('..g..')';
-  formula=execSage(f);
+  formula=execMaxima(f);
   correct1=execMaxima('trigsimp(diff('..f..', x))');
   wrong1=execMaxima('trigsimp(diff((-1)*'..f..', x))');
   wrong2=execMaxima('trigsimp(diff(2*'..f..', x))');
@@ -166,12 +167,12 @@ end
   g='sin('..a..'*x)';
   h='cos('..b..'*x)';
   f=g..'*'..h;
-  formula=execSage(f);
+  formula=execMaxima(f);
   correct=execSage('diff('..f..', x)');
   wrong1=execSage('diff('..g..', x)*diff('..h..', x)');
   wrong2=execSage('diff('..g..', x)*'..h..'-'..g..'*diff('..h..', x)');
   wrong3=execSage('-diff('..g..', x)*'..h..'+'..g..'*diff('..h..', x)');
-  wrong4=execSage('-diff('..g..', x)*diff('..h..', x)');
+  wrong4=execMaxima('-diff('..g..', x)*diff('..h..', x)');
 }
 函数 \(f(x)=\var{formula}\)の導函数\(f'(x)\)を求めなさい．
   \begin{choices}
@@ -189,11 +190,11 @@ end
   a=math.random(2, 5);
   b=math.random(2, 9);
   f='exp('..a..'*x+'..b..')';
-  formula=execSage(f);
-  correct=execSage('diff('..f..', x)');
-  wrong1=execSage('('..a..'*x+'..b..')*exp('..a..'*x+'..b..'-1)');
-  wrong2=execSage('('..a..'*x+'..b..')*exp('..a..'*x+'..b..')');
-  wrong3=execSage(f);
+  formula=execMaxima(f);
+  correct=execMaxima('diff('..f..', x)');
+  wrong1=execMaxima('('..a..'*x+'..b..')*exp('..a..'*x+'..b..'-1)');
+  wrong2=execMaxima('('..a..'*x+'..b..')*exp('..a..'*x+'..b..')');
+  wrong3=execMaxima(f);
 }
 函数 \(f(x)=\var{formula}\)の導函数\(f'(x)\)を求めなさい．
   \begin{choiceshoriz}
@@ -211,11 +212,11 @@ end
   b=math.random(6, 9);
   g=a..'*x+'..b;
   f='log('..g..')';
-  formula=execSage(f);
-  correct=execSage('diff('..f..', x)');
-  wrong1=execSage('('..a..'*x+'..b..')*log('..a..'*x+'..b..'-1)');
-  wrong2=execSage('1/('..g..')');
-  wrong3=execSage(f);
+  formula=execMaxima(f);
+  correct=execMaxima('diff('..f..', x)');
+  wrong1=execMaxima('('..a..'*x+'..b..')*log('..a..'*x+'..b..'-1)');
+  wrong2=execMaxima('1/('..g..')');
+  wrong3=execMaxima(f);
 }
 函数 \(f(x)=\var{formula}\)の導函数\(f'(x)\)を求めなさい．
   \begin{choiceshoriz}

@@ -1,14 +1,15 @@
 \documentclass[a4paper]{ltjsarticle}
-\usepackage{luacode,amsmath,amssymb}
-%\usepackage{sagetex}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz,luacode}
 \usepackage[box,completemulti,lang=JA,noshuffle]{automultiplechoice}
-%\AMCboxStyle{size=3ex,down=.2ex}    
 % 乱数の種を設定する必要あり
 \begin{luacode}
-  math.randomseed(190410)
+math.randomseed(220420)
 \end{luacode}
 \newcommand*{\myluatexd}[1]{\luadirect{tex.print(#1)}}
 \begin{document}
+\AMCboxDimensions{shape=oval,width=1.8ex,height=2.5ex}
+\AMCcodeVspace=0em
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \element{sinp}{
@@ -608,7 +609,7 @@
 
 %%% 試験問題用紙ヘッダー開始:    
 
-\noindent{\bf 応用数学 演習02 \hfill 2019年4月10日}
+\noindent{\bf 応用数学 演習02 \hfill 2022年4月20日}
 
 \vspace{3ex}
 

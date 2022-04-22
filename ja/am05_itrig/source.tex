@@ -6,7 +6,7 @@
 \newcommand*{\var}[1]{\luaexec{tex.print(#1)}}
 \begin{document}
 \AMCboxDimensions{shape=oval,width=1.8ex,height=2.5ex}
-\luadirect{math.randomseed(190508)} % \onecopy{} の外に配置
+\luadirect{math.randomseed(220518)} % \onecopy{} の外に配置
 
 \begin{luacode*}
 function execSage(command)
@@ -29,7 +29,7 @@ end
 \onecopy{2}{
 
 %%% ヘッダー開始: %%%   
-\noindent{\bf 応用数学 演習05 \hfill 2019年5月8日}
+\noindent{\bf 応用数学 演習05 \hfill 2022年5月18日}
 
 \vspace{3ex}
 
@@ -240,7 +240,7 @@ $\arctan\left(\var{y}\right)$の主値を求めなさい．
   wrong8=execMaxima(angle_array[math.fmod(i+8, 9)+1]);
 
 
-\begin{question}{itrig01}
+\begin{questionmult}{itrig01}
 \luaexec{
   yarray={'-1', '-sqrt(3)/2', '-1/sqrt(2)', '-1/2', 0, '1/2', '1/sqrt(2)', 'sqrt(3)/2', '1'};
   i=math.random(1, 9);
@@ -269,4 +269,4 @@ $\arcsin(x)$は逆正弦函数とする．
     \wrongchoice{\(\var{wrong7}\)}
     \wrongchoice{\(\var{wrong8}\)}
   \end{choiceshoriz}
-\end{question}
+\end{questionmult}

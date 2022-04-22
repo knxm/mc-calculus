@@ -1,0 +1,1807 @@
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2022.4.11)  21 APR 2022 11:38
+ restricted system commands enabled.
+**source.tex
+(./source.tex
+LaTeX2e <2020-10-01> patch level 4
+Lua module: luaotfload 2021-01-08 3.17 Lua based OpenType font support
+Lua module: lualibs 2020-12-30 2.73 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2020-12-30 2.73 ConTeXt Lua libraries -- extended c
+ollection.
+luaotfload | conf : Root cache directory is "/home/hamada/.texlive2020/texmf-var
+/luatex-cache/generic/names".
+luaotfload | init : Loading fontloader "fontloader-2021-01-07.lua" from kpse-res
+olved path "/usr/share/texlive/texmf-dist/tex/luatex/luaotfload/fontloader-2021-
+01-07.lua".
+Lua-only attribute luaotfload@noligature = 1
+Lua-only attribute luaotfload@syllabe = 2
+luaotfload | init : Context OpenType loader version 0x1.8e76c8b439581p+1
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Inserting `luaotfload.glyph_stream' at position 1 in `glyph_stream_provider'.
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 3
+luaotfload | conf : Root cache directory is "/home/hamada/.texlive2020/texmf-var
+/luatex-cache/generic/names".
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_opentype_file'.
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_truetype_file'.
+Inserting `luaotfload.harf.finalize_vlist' at position 1 in `post_linebreak_filt
+er'.
+Inserting `luaotfload.harf.finalize_hlist' at position 2 in `hpack_filter'.
+Inserting `luaotfload.cleanup_files' at position 1 in `wrapup_run'.
+Inserting `luaotfload.harf.finalize_unicode' at position 1 in `finish_pdffile'.
+Inserting `luaotfload.glyphinfo' at position 1 in `glyph_info'.
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.set_font_index' at position 2 in `luaotfload.patch_fon
+t'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 3 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
+t_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 4 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
+Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'
+. L3 programming layer <2021-01-09> xparse <2020-03-03>
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/ltjsarticle.cls
+Document Class: ltjsarticle 2020/12/23 ltjsclasses 
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/luatexja.sty
+Package: luatexja 2021-01-03 Japanese Typesetting with Lua(La)TeX
+
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/luatexja-core.sty
+Package: luatexja-core 2021-01-02 Core of LuaTeX-ja
+
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexbase/luatexbase.sty
+Package: luatexbase 2015/10/04 v1.3 luatexbase interface to LuaTeX 
+
+(/usr/share/texlive/texmf-dist/tex/luatex/ctablestack/ctablestack.sty
+Package: ctablestack 2015/10/01 v1.0 Catcode table stable support
+\@catcodetablestackcnt=\count173
+)
+\CatcodeTableOther=\catcodetable12
+\CatcodeTableExpl=\catcodetable13
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+\pdftexcmds@toks=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks16
+\XKV@tempa@toks=\toks17
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/keyval.tex))
+\XKV@depth=\count174
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count175
+)
+(/usr/share/texlive/texmf-dist/tex/latex/everyhook/everyhook.sty
+(/usr/share/texlive/texmf-dist/tex/latex/svn-prov/svn-prov.sty
+Package: svn-prov 2010/04/24 v3.1862 Package Date/Version from SVN Keywords
+)
+Package: everyhook 2014/11/26 v1.2 (SVN Rev: 12)\ Hooks for low level TeX everyX
+ primitives.
+\everypar=\toks18
+\frozen@everymath=\toks19
+\frozen@everydisplay=\toks20
+\everyhbox=\toks21
+\everyvbox=\toks22
+\everycr=\toks23
+)
+\ltjlineendcomment=\count176
+\ltj@dimen@zw=\dimen138
+\ltj@dimen@zh=\dimen139
+\ltj@dimen@jQ=\dimen140
+\ltj@icflag=\attribute4
+\ltj@curjfnt=\attribute5
+\ltj@curtfnt=\attribute6
+\ltj@charclass=\attribute7
+\ltj@charcode=\attribute8
+\ltj@autospc=\attribute9
+\ltj@autoxspc=\attribute10
+\ltj@yablshift=\attribute11
+\ltj@ykblshift=\attribute12
+\ltj@tablshift=\attribute13
+\ltj@tkblshift=\attribute14
+\jfam=\attribute15
+\ltj@vert@ori=\attribute16
+\ltj@dir=\attribute17
+\ltj@@japanese=\language2
+\ltj@tempcnta=\count177
+\ltj@kcat0=\attribute18
+\ltj@kcat1=\attribute19
+\ltj@kcat2=\attribute20
+\ltj@kcat3=\attribute21
+\ltj@kcat4=\attribute22
+\ltj@kcat5=\attribute23
+\ltj@kcat6=\attribute24
+Custom whatsit inhibitglue = 1
+Custom whatsit stack_marker = 2
+Custom whatsit begin_par = 3
+Custom whatsit direction = 4
+Custom whatsit box_boundary = 5
+Custom whatsit ja_al_boundary = 6(load cache: ltj-cid-auto-adobe-japan1.luc)
+Lua module: luatexja.charrange 2020-07-30 Handling the range of Japanese charact
+ers
+Lua module: luatexja.stack 2020-07-30 LuaTeX-ja stack system
+Inserting `ltj.create_dir_whatsit' at position 3 in `hpack_filter'.
+Inserting `ltj.create_dir_whatsit' at position 2 in `post_linebreak_filter'.
+Inserting `ltj.direction' at position 1 in `vpack_filter'.
+Inserting `ltj.direction' at position 1 in `pre_output_filter'.
+Inserting `ltj.lineskip' at position 3 in `post_linebreak_filter'.
+Inserting `ltj.lineskip' at position 1 in `append_to_vlist_filter'.
+Lua module: luatexja.jfont 2020-10-05 Loader for Japanese fonts
+Removing  `luaotfload.define_font' from `define_font'.
+Inserting `luatexja.font_callback' at position 1 in `define_font'.
+Removing  `luaotfload.aux.set_sscale_dimens' from `luaotfload.patch_font'.
+Removing  `luaotfload.aux.set_font_index' from `luaotfload.patch_font'.
+Removing  `luaotfload.aux.patch_cambria_domh' from `luaotfload.patch_font'.
+Removing  `luaotfload.aux.set_capheight' from `luaotfload.patch_font'.
+Removing  `luaotfload.aux.set_xheight' from `luaotfload.patch_font'.
+Removing  `luaotfload.rewrite_fontname' from `luaotfload.patch_font'.
+Inserting `ltj.prepare_extra_data' at position 1 in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_sscale_dimens' at position 2 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.set_font_index' at position 3 in `luaotfload.patch_fon
+t'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 4 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.set_capheight' at position 5 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.aux.set_xheight' at position 6 in `luaotfload.patch_font'.
+Inserting `luaotfload.rewrite_fontname' at position 7 in `luaotfload.patch_font'
+.
+Inserting `ltj.prepare_extra_data' at position 1 in `luatexja.define_font'.
+Inserting `ltj.get_vert_form' at position 1 in `luatexja.define_jfont'.
+Removing  `ltj.prepare_extra_data' from `luaotfload.patch_font'.
+Removing  `luaotfload.aux.set_sscale_dimens' from `luaotfload.patch_font'.
+Removing  `luaotfload.aux.set_font_index' from `luaotfload.patch_font'.
+Removing  `luaotfload.aux.patch_cambria_domh' from `luaotfload.patch_font'.
+Removing  `luaotfload.aux.set_capheight' from `luaotfload.patch_font'.
+Removing  `luaotfload.aux.set_xheight' from `luaotfload.patch_font'.
+Removing  `luaotfload.rewrite_fontname' from `luaotfload.patch_font'.
+Inserting `ltj.supply_tounicode' at position 1 in `luaotfload.patch_font'.
+Inserting `ltj.prepare_extra_data' at position 2 in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_sscale_dimens' at position 3 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.set_font_index' at position 4 in `luaotfload.patch_fon
+t'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 5 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.set_capheight' at position 6 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.aux.set_xheight' at position 7 in `luaotfload.patch_font'.
+Inserting `luaotfload.rewrite_fontname' at position 8 in `luaotfload.patch_font'
+.
+Inserting `ltj.process_input_buffer' at position 1 in `process_input_buffer'.
+Inserting `ltj.hyphenate' at position 1 in `hyphenate'.
+Removing  `luaotfload.node_processor' from `hpack_filter'.
+Removing  `luaotfload.harf.finalize_hlist' from `hpack_filter'.
+Removing  `ltj.create_dir_whatsit' from `hpack_filter'.
+Inserting `ltj.set_stack_level' at position 1 in `hpack_filter'.
+Inserting `luaotfload.node_processor' at position 2 in `hpack_filter'.
+Inserting `luaotfload.harf.finalize_hlist' at position 3 in `hpack_filter'.
+Inserting `ltj.create_dir_whatsit' at position 4 in `hpack_filter'.
+Removing  `luaotfload.node_processor' from `pre_linebreak_filter'.
+Inserting `ltj.set_stack_level' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 2 in `pre_linebreak_filter'.
+Lua module: luatexja.jfmglue 2020-12-22 Insertion process of JFM glues, [x]kanji
+skip and others
+Inserting `luatexja.beginpar.np_info' at position 1 in `luatexja.jfmglue.whatsit
+_getinfo'.
+Inserting `luatexja.beginpar.np_info_after' at position 1 in `luatexja.jfmglue.w
+hatsit_after'.
+Inserting `ltj.mlist_to_hlist_pre' at position 1 in `pre_mlist_to_hlist_filter'.
+Inserting `ltj.main' at position 3 in `pre_linebreak_filter'.
+Removing  `luaotfload.harf.finalize_hlist' from `hpack_filter'.
+Removing  `ltj.create_dir_whatsit' from `hpack_filter'.
+Inserting `ltj.main' at position 3 in `hpack_filter'.
+Inserting `luaotfload.harf.finalize_hlist' at position 4 in `hpack_filter'.
+Inserting `ltj.create_dir_whatsit' at position 5 in `hpack_filter'.
+Removing  `ltj.set_stack_level' from `pre_linebreak_filter'.
+Removing  `luaotfload.node_processor' from `pre_linebreak_filter'.
+Removing  `ltj.main' from `pre_linebreak_filter'.
+Inserting `ltj.adjust_icflag' at position 1 in `pre_linebreak_filter'.
+Inserting `ltj.set_stack_level' at position 2 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 3 in `pre_linebreak_filter'.
+Inserting `ltj.main' at position 4 in `pre_linebreak_filter'.
+Removing  `ltj.set_stack_level' from `hpack_filter'.
+Removing  `luaotfload.node_processor' from `hpack_filter'.
+Removing  `ltj.main' from `hpack_filter'.
+Removing  `luaotfload.harf.finalize_hlist' from `hpack_filter'.
+Removing  `ltj.create_dir_whatsit' from `hpack_filter'.
+Inserting `ltj.adjust_icflag' at position 1 in `hpack_filter'.
+Inserting `ltj.set_stack_level' at position 2 in `hpack_filter'.
+Inserting `luaotfload.node_processor' at position 3 in `hpack_filter'.
+Inserting `ltj.main' at position 4 in `hpack_filter'.
+Inserting `luaotfload.harf.finalize_hlist' at position 5 in `hpack_filter'.
+Inserting `ltj.create_dir_whatsit' at position 6 in `hpack_filter'.
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/ltj-base.sty
+Package: ltj-base 2020-08-04
+\ltj@tempcntb=\count178
+\ltj@tempcntc=\count179
+\ltj@tempdima=\dimen141
+\ltj@afbox=\box47
+)
+\ltj@@italic@inner=\luafunction11
+\ltj@@start@time@measure@inner=\luafunction12
+\ltj@@stop@time@measure@inner=\luafunction13
+\ltj@@jfont@inner=\luafunction14
+\ltj@zw@inner=\luafunction15
+\ltj@zh@inner=\luafunction16
+\ltj@reset@globaldefs@inner=\luafunction17
+\ltj@restore@globaldefs@inner=\luafunction18
+\ltj@@disihb@inner=\luafunction19
+\ltj@@ihb@inner=\luafunction20
+\ltj@@fakeparbegin@inner=\luafunction21
+\ltj@@fakeboxbdd@inner=\luafunction22
+\ltj@@ins@xk@inner=\luafunction23
+\ltj@@ins@k@inner=\luafunction24
+\ltj@@stack=\count180
+\ltj@@group@level=\count181
+\ltjsetkanjiskip@inner=\luafunction25
+\ltjsetxkanjiskip@inner=\luafunction26
+\ltj@@getparam@one@inner=\luafunction27
+\ltj@alljachar@inner=\luafunction28
+\ltj@@lua@populate@insertwhatsit@inner=\luafunction29
+\ltj@@box@dirhook@inner=\luafunction30
+\ltj@@reset@badness@inner=\luafunction31
+\ltj@@lua@raisebox@inner=\luafunction32
+\ltj@@lua@shipout@inner=\luafunction33
+\ltj@@lua@unboxcheckdir@inner=\luafunction34
+(load cache: ltj-kinsoku_default.luc)
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/ltj-latex.sty
+Package: ltj-latex 2020-12-29 LaTeX support of LuaTeX-ja
+
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/patches/lltjfont.sty
+Package: lltjfont 2020-12-29 Patch to NFSS2 for LuaTeX-ja
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/tuenc.def
+File: tuenc.def 2020/08/10 v2.0s Standard LaTeX file
+\@remove@tlig@@@@=\luafunction35
+LaTeX Font Info:    Redeclaring font encoding TU on input line 106.
+)
+\Cht=\dimen142
+\cht=\dimen143
+\Cdp=\dimen144
+\cdp=\dimen145
+\Cwd=\dimen146
+\cwd=\dimen147
+\Cvs=\dimen148
+\cvs=\dimen149
+\Chs=\dimen150
+\chs=\dimen151
+\cHT=\dimen152
+\dstrutbox=\box48
+\tstrutbox=\box49
+\zstrutbox=\box50
+LaTeX Info: Redefining \strut on input line 67.
+\ltj@@add@fenc@@inner=\luafunction36
+\ltj@@add@kyenc@@inner=\luafunction37
+\ltj@@add@ktenc@@inner=\luafunction38
+\ltj@@is@kyenc@@inner=\luafunction39
+\ltj@@is@ktenc@@inner=\luafunction40
+\ltj@@is@kenc@@inner=\luafunction41
+\ltj@@is@ffam@@inner=\luafunction42
+\ltj@@add@ffam@@inner=\luafunction43
+\ltj@@add@kfam@@inner=\luafunction44
+
+(/usr/share/texlive/texmf-dist/tex/latex/everysel/everysel.sty
+Package: everysel 2021/01/20 v2.1 EverySelectfont Package (MS)
+
+(/usr/share/texlive/texmf-dist/tex/latex/everysel/everysel-2011-10-28.sty))
+ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 358.
+\ltj@@adjust@baseline@inner=\luafunction45
+LaTeX Info: Redefining \fontencoding on input line 558.
+LaTeX Info: Redefining \fontfamily on input line 601.
+\ltj@@latex@plv=\count182
+LaTeX Info: Redefining \fontseries on input line 755.
+LaTeX Info: Redefining \fontseriesforce on input line 759.
+LaTeX Info: Redefining \fontshape on input line 764.
+LaTeX Info: Redefining \fontshapeforce on input line 771.
+\ltj@@jfont@@jfmonly@@inner=\luafunction46
+\ltj@@does@alt@set@@inner=\luafunction47
+)
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/patches/lltjdefs.sty
+Package: lltjdefs 2020-10-05 Default font settings of LuaTeX-ja
+luaotfload | db : Font names database loaded from /home/hamada/.texlive2020/texm
+f-var/luatex-cache/generic/names/luaotfload-names.luc(load cache: extra_lmroman1
+0-regular.luc)
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 9.24713pt on input line 70.
+
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/jfm-ujisv.lua)
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 9.24713pt on input line 70.
+(load cache: extra_haranoajimincho-regular.luc)
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/jfm-ujis.lua)
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY3/mc/m/n --> JY3/gt/m/n on input line 79.
+)
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/patches/lltjcore.sty
+Package: lltjcore 2020-09-28 Patch to LaTeX2e Kernel for LuaTeX-ja
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2021-01-09 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
+File: l3backend-luatex.def 2020-01-29 L3 backend support: PDF output (LuaTeX)
+\l__color_backend_stack_int=\count183
+\l__pdf_internal_box=\box51
+))
+\@tombowwidth=\dimen153
+\@TL=\box52
+\@Tl=\box53
+\@TC=\box54
+\@TR=\box55
+\@Tr=\box56
+\@BL=\box57
+\@Bl=\box58
+\@BC=\box59
+\@BR=\box60
+\@Br=\box61
+\@CL=\box62
+\@CR=\box63
+\@bannertoken=\toks24
+\@@paperheight=\dimen154
+\@@paperwidth=\dimen155
+\@@topmargin=\dimen156
+LaTeX Info: Redefining \underline on input line 293.
+)
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/patches/lltjp-atbegshi.sty
+Package: lltjp-atbegshi 2020-09-30 Patching \shipout hooks for LuaTeX-ja
+\l__platex_shipout_dummy_box=\box64
+)
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/patches/lltjp-geometry.sty
+Package: lltjp-geometry 2020-12-29 Patch to geometry for LuaTeX-ja with vertical
+ writing mode
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)))
+\ltj@temp@cctb=\catcodetable14
+)
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/luatexja-compat.sty
+Package: luatexja-compat 2020-08-08 Compatibility with pTeX
+(load cache: ltj-jisx0208.luc)
+\hour=\count184
+\minute=\count185
+))
+\jsc@mpt=\dimen157
+\jsc@mmm=\dimen158
+\jsc@smallskipamount=\skip47
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 9.24713pt on input line 414.
+\fullwidth=\dimen159
+(load cache: extra_lmroman8-regular.luc)
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 7.3977pt on input line 555.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 7.3977pt on input line 555.
+\c@part=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\@abstractbox=\box65
+\c@figure=\count192
+\c@table=\count193
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+LaTeX Info: Redefining \mc on input line 1208.
+LaTeX Info: Redefining \gt on input line 1209.
+\jsc@tocl@width=\dimen160
+\@lnumwidth=\dimen161
+\bibindent=\dimen162
+
+(/usr/share/texlive/texmf-dist/tex/platex/jsclasses/jslogo.sty
+Package: jslogo 2019/07/25 okumura, texjporg
+LaTeX Info: Redefining \TeX on input line 82.
+LaTeX Info: Redefining \LaTeX on input line 135.
+LaTeX Info: Redefining \LaTeXe on input line 188.
+)
+\heisei=\count194
+
+(/usr/share/texlive/texmf-dist/tex/latex/sttools/stfloats.sty
+Package: stfloats 2017/03/27 v3.3 Improve float mechanism and baselineskip setti
+ngs
+\@dblbotnum=\count195
+\c@dblbotnumber=\count196
+)
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexja/patches/lltjp-stfloats.sty)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks25
+\ex@=\dimen163
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen164
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count197
+LaTeX Info: Redefining \frac on input line 236.
+\uproot@=\count198
+\leftroot@=\count199
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count266
+\DOTSCASE@=\count267
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box66
+\strutbox@=\box67
+\big@size=\dimen165
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count268
+\c@MaxMatrixCols=\count269
+\dotsspace@=\muskip16
+\c@parentequation=\count270
+\dspbrk@lvl=\count271
+\tag@help=\toks26
+\row@=\count272
+\column@=\count273
+\maxfields@=\count274
+\andhelp@=\toks27
+\eqnshift@=\dimen166
+\alignsep@=\dimen167
+\tagshift@=\dimen168
+\tagwidth@=\dimen169
+\totwidth@=\dimen170
+\lineht@=\dimen171
+\@envbody=\toks28
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks29
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks30
+\pgfutil@tempdima=\dimen172
+\pgfutil@tempdimb=\dimen173
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
+ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box68
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2020/12/27 v3.1.8b (3.1.8b)
+))
+Package: pgf 2020/12/27 v3.1.8b (3.1.8b)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: luatex.def on input line 105.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/luatex.def
+File: luatex.def 2020/10/05 v1.2a Graphics/color driver for luatex
+))
+\Gin@req@height=\dimen174
+\Gin@req@width=\dimen175
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks31
+\pgfkeys@temptoks=\toks32
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
+ex
+\pgfkeys@tmptoks=\toks33
+))
+\pgf@x=\dimen176
+\pgf@y=\dimen177
+\pgf@xa=\dimen178
+\pgf@ya=\dimen179
+\pgf@xb=\dimen180
+\pgf@yb=\dimen181
+\pgf@xc=\dimen182
+\pgf@yc=\dimen183
+\pgf@xd=\dimen184
+\pgf@yd=\dimen185
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count275
+\c@pgf@countb=\count276
+\c@pgf@countc=\count277
+\c@pgf@countd=\count278
+\t@pgf@toka=\toks34
+\t@pgf@tokb=\toks35
+\t@pgf@tokc=\toks36
+\pgf@sys@id@count=\count279
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2020/12/27 v3.1.8b (3.1.8b)
+)
+Driver file for pgf: pgfsys-luatex.def
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-luatex.def
+File: pgfsys-luatex.def 2020/12/27 v3.1.8b (3.1.8b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f
+File: pgfsys-common-pdf.def 2020/12/27 v3.1.8b (3.1.8b)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex
+File: pgfsyssoftpath.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfsyssoftpath@smallbuffer@items=\count280
+\pgfsyssoftpath@bigbuffer@items=\count281
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex
+File: pgfsysprotocol.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: luatex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2020/12/27 v3.1.8b (3.1.8b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen186
+\pgfmath@count=\count282
+\pgfmath@box=\box69
+\pgfmath@toks=\toks37
+\pgfmath@stack@operand=\toks38
+\pgfmath@stack@operation=\toks39
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count283
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x
+File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@picminx=\dimen187
+\pgf@picmaxx=\dimen188
+\pgf@picminy=\dimen189
+\pgf@picmaxy=\dimen190
+\pgf@pathminx=\dimen191
+\pgf@pathmaxx=\dimen192
+\pgf@pathminy=\dimen193
+\pgf@pathmaxy=\dimen194
+\pgf@xx=\dimen195
+\pgf@xy=\dimen196
+\pgf@yx=\dimen197
+\pgf@yy=\dimen198
+\pgf@zx=\dimen199
+\pgf@zy=\dimen256
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex
+File: pgfcorepathconstruct.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@path@lastx=\dimen257
+\pgf@path@lasty=\dimen258
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex
+File: pgfcorepathusage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@shorten@end@additional=\dimen259
+\pgf@shorten@start@additional=\dimen260
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x
+File: pgfcorescopes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfpic=\box70
+\pgf@hbox=\box71
+\pgf@layerbox@main=\box72
+\pgf@picture@serial@count=\count284
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex
+File: pgfcoregraphicstate.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgflinewidth=\dimen261
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex
+File: pgfcoretransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@pt@x=\dimen262
+\pgf@pt@y=\dimen263
+\pgf@pt@temp=\dimen264
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex
+File: pgfcoreobjects.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex
+File: pgfcorepathprocessing.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x
+File: pgfcorearrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfarrowsep=\dimen265
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@max=\dimen266
+\pgf@sys@shading@range@num=\count285
+\pgf@shadingcount=\count286
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex
+File: pgfcoreexternal.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfexternal@startupbox=\box73
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x
+File: pgfcorelayers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex
+File: pgfcoretransparency.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex
+File: pgfcorepatterns.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfnodeparttextbox=\box74
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
+Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@nodesepstart=\dimen267
+\pgf@nodesepend=\dimen268
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
+Package: pgfcomp-version-1-18 2020/12/27 v3.1.8b (3.1.8b)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen269
+\pgffor@skip=\dimen270
+\pgffor@stack=\toks40
+\pgffor@toks=\toks41
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex
+File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@plot@mark@count=\count287
+\pgfplotmarksize=\dimen271
+)
+\tikz@lastx=\dimen272
+\tikz@lasty=\dimen273
+\tikz@lastxsaved=\dimen274
+\tikz@lastysaved=\dimen275
+\tikz@lastmovetox=\dimen276
+\tikz@lastmovetoy=\dimen277
+\tikzleveldistance=\dimen278
+\tikzsiblingdistance=\dimen279
+\tikz@figbox=\box75
+\tikz@figbox@bg=\box76
+\tikz@tempbox=\box77
+\tikz@tempbox@bg=\box78
+\tikztreelevel=\count288
+\tikznumberofchildren=\count289
+\tikznumberofcurrentchild=\count290
+\tikz@fig@count=\count291
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfmatrixcurrentrow=\count292
+\pgfmatrixcurrentcolumn=\count293
+\pgf@matrix@numberofcolumns=\count294
+)
+\tikz@expandcount=\count295
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)))
+(/usr/share/texlive/texmf-dist/tex/lualatex/luacode/luacode.sty
+Package: luacode 2012/01/23 v1.2a lua-in-tex helpers (mpg)
+\luacode@lines=\toks42
+\luacode@table@soft=\catcodetable15
+)
+(/usr/share/texmf/tex/latex/AMC/automultiplechoice.sty
+AMC version: 2021/02/12 v1.5.0~rc2 r:c71170c9
+Package: automultiplechoice 2021/02/12 v1.5.0~rc2 r:c71170c9
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2021/01/04 v4.0 Extensive control of page headers and footers
+\f@nch@headwidth=\skip53
+\f@nch@O@elh=\skip54
+\f@nch@O@erh=\skip55
+\f@nch@O@olh=\skip56
+\f@nch@O@orh=\skip57
+\f@nch@O@elf=\skip58
+\f@nch@O@erf=\skip59
+\f@nch@O@olf=\skip60
+\f@nch@O@orf=\skip61
+)
+(/usr/share/texlive/texmf-dist/tex/latex/bophook/bophook.sty
+Package: bophook 2001/03/29 v0.02 beginning-of-page hook, K. Tinnefeld
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count296
+\rotFPtop=\skip62
+\rotFPbot=\skip63
+\rot@float@box=\box79
+\rot@mess@toks=\toks43
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancybox/fancybox.sty
+Package: fancybox 2010/05/15 1.4
+
+Style option: `fancybox' v1.4 <2010/05/15> (tvz)
+\@fancybox=\box80
+\shadowsize=\dimen280
+\@Sbox=\box81
+\do@VerbBox=\toks44
+\the@fancyput=\toks45
+\this@fancyput=\toks46
+\EndVerbatimTokens=\toks47
+\Verbatim@Outfile=\write4
+\Verbatim@Infile=\read3
+) (/usr/share/texlive/texmf-dist/tex/latex/csvsimple/csvsimple.sty
+Package: csvsimple 2019/04/09 version 1.21 LaTeX CSV file processing
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+)
+\csv@file=\read4
+\c@csvinputline=\count297
+\c@csvrow=\count298
+\c@csvcol=\count299
+\csv@out=\write5
+)
+(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+Loading configuration file...
+(./amc-compiled-config.tex)
+\AMC@logfile=\write6
+
+\openout6 = amc-compiled.amc
+\AMCload@counter=\count300
+\AMCid@quest=\count301
+\AMCid@check=\count302
+\AMCid@etud=\count303
+\AMCid@etudstart=\count304
+\AMCid@etudfin=\count305
+\AMCnum@copies=\count306
+\AMCformVSpace=\dimen281
+\AMCformHSpace=\dimen282
+\AMCinterIrep=\dimen283
+\AMCinterBrep=\dimen284
+\AMCinterIquest=\dimen285
+\AMCinterBquest=\dimen286
+\AMCpostOquest=\dimen287
+\AMCids@width=\dimen288
+\AMCids@height=\dimen289
+\AMC@SR=\count307
+\AMC@SR@count=\count308
+\AMC@SRnum=\count309
+\AMC@sti=\count310
+\AMC@stil=\count311
+\AMCsw@p@=\toks48
+\AMC@numerotation=\count312
+\AMC@XYspecial=\write7
+\AMC@tmpXY=\write8
+\AMC@smashbox=\box82
+\AMC@smashboxheight=\dimen290
+\c@AMC@ncase=\count313
+\AMC@boxedrule=\skip64
+\AMC@crossrule=\skip65
+\AMC@boxeddown=\skip66
+\AMC@boxedwidth=\skip67
+\AMC@boxedheight=\skip68
+\AMC@oval@radius=\skip69
+\AMC@outside@sep=\skip70
+\AMC@CBtaille=\skip71
+\AMCbin@sequence=\toks49
+\AMCbin@number=\count314
+\AMCbin@ndigits=\count315
+\AMCbin@id=\count316
+\AMCbin@digit=\count317
+\AMCtok@k=\count318
+\AMCtok@max=\count319
+\AMCtok@size=\count320
+\AMC@imax=\count321
+\AMCtok@ik=\count322
+\AMCloop@k=\count323
+\AMCrep@count=\count324
+\reponse@cxcix=\toks50
+\reponse@cxcviii=\toks51
+\reponse@cxcvii=\toks52
+\reponse@cxcvi=\toks53
+\reponse@cxcv=\toks54
+\reponse@cxciv=\toks55
+\reponse@cxciii=\toks56
+\reponse@cxcii=\toks57
+\reponse@cxci=\toks58
+\reponse@cxc=\toks59
+\reponse@clxxxix=\toks60
+\reponse@clxxxviii=\toks61
+\reponse@clxxxvii=\toks62
+\reponse@clxxxvi=\toks63
+\reponse@clxxxv=\toks64
+\reponse@clxxxiv=\toks65
+\reponse@clxxxiii=\toks66
+\reponse@clxxxii=\toks67
+\reponse@clxxxi=\toks68
+\reponse@clxxx=\toks69
+\reponse@clxxix=\toks70
+\reponse@clxxviii=\toks71
+\reponse@clxxvii=\toks72
+\reponse@clxxvi=\toks73
+\reponse@clxxv=\toks74
+\reponse@clxxiv=\toks75
+\reponse@clxxiii=\toks76
+\reponse@clxxii=\toks77
+\reponse@clxxi=\toks78
+\reponse@clxx=\toks79
+\reponse@clxix=\toks80
+\reponse@clxviii=\toks81
+\reponse@clxvii=\toks82
+\reponse@clxvi=\toks83
+\reponse@clxv=\toks84
+\reponse@clxiv=\toks85
+\reponse@clxiii=\toks86
+\reponse@clxii=\toks87
+\reponse@clxi=\toks88
+\reponse@clx=\toks89
+\reponse@clix=\toks90
+\reponse@clviii=\toks91
+\reponse@clvii=\toks92
+\reponse@clvi=\toks93
+\reponse@clv=\toks94
+\reponse@cliv=\toks95
+\reponse@cliii=\toks96
+\reponse@clii=\toks97
+\reponse@cli=\toks98
+\reponse@cl=\toks99
+\reponse@cxlix=\toks100
+\reponse@cxlviii=\toks101
+\reponse@cxlvii=\toks102
+\reponse@cxlvi=\toks103
+\reponse@cxlv=\toks104
+\reponse@cxliv=\toks105
+\reponse@cxliii=\toks106
+\reponse@cxlii=\toks107
+\reponse@cxli=\toks108
+\reponse@cxl=\toks109
+\reponse@cxxxix=\toks110
+\reponse@cxxxviii=\toks111
+\reponse@cxxxvii=\toks112
+\reponse@cxxxvi=\toks113
+\reponse@cxxxv=\toks114
+\reponse@cxxxiv=\toks115
+\reponse@cxxxiii=\toks116
+\reponse@cxxxii=\toks117
+\reponse@cxxxi=\toks118
+\reponse@cxxx=\toks119
+\reponse@cxxix=\toks120
+\reponse@cxxviii=\toks121
+\reponse@cxxvii=\toks122
+\reponse@cxxvi=\toks123
+\reponse@cxxv=\toks124
+\reponse@cxxiv=\toks125
+\reponse@cxxiii=\toks126
+\reponse@cxxii=\toks127
+\reponse@cxxi=\toks128
+\reponse@cxx=\toks129
+\reponse@cxix=\toks130
+\reponse@cxviii=\toks131
+\reponse@cxvii=\toks132
+\reponse@cxvi=\toks133
+\reponse@cxv=\toks134
+\reponse@cxiv=\toks135
+\reponse@cxiii=\toks136
+\reponse@cxii=\toks137
+\reponse@cxi=\toks138
+\reponse@cx=\toks139
+\reponse@cix=\toks140
+\reponse@cviii=\toks141
+\reponse@cvii=\toks142
+\reponse@cvi=\toks143
+\reponse@cv=\toks144
+\reponse@civ=\toks145
+\reponse@ciii=\toks146
+\reponse@cii=\toks147
+\reponse@ci=\toks148
+\reponse@c=\toks149
+\reponse@xcix=\toks150
+\reponse@xcviii=\toks151
+\reponse@xcvii=\toks152
+\reponse@xcvi=\toks153
+\reponse@xcv=\toks154
+\reponse@xciv=\toks155
+\reponse@xciii=\toks156
+\reponse@xcii=\toks157
+\reponse@xci=\toks158
+\reponse@xc=\toks159
+\reponse@lxxxix=\toks160
+\reponse@lxxxviii=\toks161
+\reponse@lxxxvii=\toks162
+\reponse@lxxxvi=\toks163
+\reponse@lxxxv=\toks164
+\reponse@lxxxiv=\toks165
+\reponse@lxxxiii=\toks166
+\reponse@lxxxii=\toks167
+\reponse@lxxxi=\toks168
+\reponse@lxxx=\toks169
+\reponse@lxxix=\toks170
+\reponse@lxxviii=\toks171
+\reponse@lxxvii=\toks172
+\reponse@lxxvi=\toks173
+\reponse@lxxv=\toks174
+\reponse@lxxiv=\toks175
+\reponse@lxxiii=\toks176
+\reponse@lxxii=\toks177
+\reponse@lxxi=\toks178
+\reponse@lxx=\toks179
+\reponse@lxix=\toks180
+\reponse@lxviii=\toks181
+\reponse@lxvii=\toks182
+\reponse@lxvi=\toks183
+\reponse@lxv=\toks184
+\reponse@lxiv=\toks185
+\reponse@lxiii=\toks186
+\reponse@lxii=\toks187
+\reponse@lxi=\toks188
+\reponse@lx=\toks189
+\reponse@lix=\toks190
+\reponse@lviii=\toks191
+\reponse@lvii=\toks192
+\reponse@lvi=\toks193
+\reponse@lv=\toks194
+\reponse@liv=\toks195
+\reponse@liii=\toks196
+\reponse@lii=\toks197
+\reponse@li=\toks198
+\reponse@l=\toks199
+\reponse@xlix=\toks200
+\reponse@xlviii=\toks201
+\reponse@xlvii=\toks202
+\reponse@xlvi=\toks203
+\reponse@xlv=\toks204
+\reponse@xliv=\toks205
+\reponse@xliii=\toks206
+\reponse@xlii=\toks207
+\reponse@xli=\toks208
+\reponse@xl=\toks209
+\reponse@xxxix=\toks210
+\reponse@xxxviii=\toks211
+\reponse@xxxvii=\toks212
+\reponse@xxxvi=\toks213
+\reponse@xxxv=\toks214
+\reponse@xxxiv=\toks215
+\reponse@xxxiii=\toks216
+\reponse@xxxii=\toks217
+\reponse@xxxi=\toks218
+\reponse@xxx=\toks219
+\reponse@xxix=\toks220
+\reponse@xxviii=\toks221
+\reponse@xxvii=\toks222
+\reponse@xxvi=\toks223
+\reponse@xxv=\toks224
+\reponse@xxiv=\toks225
+\reponse@xxiii=\toks226
+\reponse@xxii=\toks227
+\reponse@xxi=\toks228
+\reponse@xx=\toks229
+\reponse@xix=\toks230
+\reponse@xviii=\toks231
+\reponse@xvii=\toks232
+\reponse@xvi=\toks233
+\reponse@xv=\toks234
+\reponse@xiv=\toks235
+\reponse@xiii=\toks236
+\reponse@xii=\toks237
+\reponse@xi=\toks238
+\reponse@x=\toks239
+\reponse@ix=\toks240
+\reponse@viii=\toks241
+\reponse@vii=\toks242
+\reponse@vi=\toks243
+\reponse@v=\toks244
+\reponse@iv=\toks245
+\reponse@iii=\toks246
+\reponse@ii=\toks247
+\reponse@i=\toks248
+\AMCnum@questions=\count325
+\AMCrep@@count=\count326
+\amc_memory_elts_count=\count327
+\AMChorizAnswerSep=\skip72
+\AMChorizBoxSep=\skip73
+\AMC@mn@test=\skip74
+\AMC@mn@sep=\skip75
+\AMC@mn@leftmargin=\skip76
+\AMC@mn@rightmargin=\skip77
+\AMC@sz@width=\skip78
+\AMC@sz@height=\skip79
+\AMC@sz@depth=\skip80
+\AMC@sza@width=\skip81
+\AMC@sza@height=\skip82
+\AMC@sza@depth=\skip83
+\c@AMCquestionaff=\count328
+\ouverte@vs=\dimen291
+\AMC@chiffres=\count329
+\AMCcodeHspace=\dimen292
+\AMCcodeVspace=\dimen293
+\amc_code_digit_n_int=\count330
+\amc_num_exponent_int=\count331
+\amc_todigits_int=\count332
+\AMCnumeric@Hspace=\dimen294
+\AMCnumeric@Vspace=\dimen295
+\amc_num_ndigits_int=\count333
+\amc_num_decd_int=\count334
+\amc_num_expo_int=\count335
+\amc_num_base_int=\count336
+\amc_num_exact_int=\count337
+\amc_num_approx_int=\count338
+\amc_num_digit_value_int=\count339
+\amc_num_first_digit_int=\count340
+\amc_num_digit_int=\count341
+\amc_num_sign_int=\count342
+\amc_num_expo_sign_int=\count343
+\amc_num_correct_expo_int=\count344
+\AMCopen@Hspace=\dimen296
+\AMCopen@LineHeight=\dimen297
+\AMCopen@Lines=\count345
+\AMCopen@boxmargin=\dimen298
+\AMCopen@boxframerule=\dimen299
+\AMCopen@framerule=\dimen300
+\AMC@addpages=\count346
+
+(/usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty
+Package: etex 2016/08/01 v2.7 eTeX basic definition package (PEB,DPC)
+
+
+Package etex Warning: Extended allocation already in use.
+(etex)                etex.sty code will not be used.
+(etex)                To force etex package to load, add
+(etex)                \RequirePackage{etex}
+(etex)                at the start of the document.
+
+) ***SCORING***
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count347
+\Gm@cntv=\count348
+\c@Gm@tempcnt=\count349
+\Gm@bindingoffset=\dimen301
+\Gm@wd@mp=\dimen302
+\Gm@odd@mp=\dimen303
+\Gm@even@mp=\dimen304
+\Gm@layoutwidth=\dimen305
+\Gm@layoutheight=\dimen306
+\Gm@layouthoffset=\dimen307
+\Gm@layoutvoffset=\dimen308
+\Gm@dimlist=\toks249
+)
+\AMC@XYFILE=\write9
+
+\openout9 = amc-compiled.xy
+)
+(./amc-compiled.aux)
+\openout1 = amc-compiled.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 10
+.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for JY3/mc/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for JT3/mc/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+
+ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 10.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count350
+\scratchdimen=\dimen309
+\scratchbox=\box83
+\nofMPsegments=\count351
+\nofMParguments=\count352
+\everyMPshowfont=\toks250
+\MPscratchCnt=\count353
+\MPscratchDim=\dimen310
+\MPnumerator=\count354
+\makeMPintoPDFobject=\count355
+\everyMPtoPDFconversion=\toks251
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
+5.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+
+))
+\AMC@ovalbox@R=\box84
+\AMC@ovalbox@RF=\box85
+\AMC@ovalbox@=\box86
+\AMC@ovalbox@F=\box87
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: luatex
+*geometry* verbose mode - [ preamble ] result:
+* driver: luatex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(99.58464pt, 674.33032pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=674.33032pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-38.12675pt
+* \headheight=56.9055pt
+* \headsep=8.5359pt
+* \topskip=12.76108pt
+* \footskip=28.45274pt
+* \marginparwidth=18.49426pt
+* \marginparsep=18.49426pt
+* \columnsep=18.49426pt
+* \skip\footins=16.0pt plus 5.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\sinp@k=\count356
+\AMCsinp@j=\count357
+\sinp@i=\toks252
+\sinp@ii=\toks253
+\sinp@iii=\toks254
+\sinp@iv=\toks255
+\sinp@v=\toks256
+\sinm@k=\count358
+\AMCsinm@j=\count359
+\sinm@i=\toks257
+\sinm@ii=\toks258
+\sinm@iii=\toks259
+\sinm@iv=\toks260
+\cosp@k=\count360
+\AMCcosp@j=\count361
+\cosp@i=\toks261
+\cosp@ii=\toks262
+\cosp@iii=\toks263
+\cosp@iv=\toks264
+\cosp@v=\toks265
+\cosm@k=\count362
+\AMCcosm@j=\count363
+\cosm@i=\toks266
+\cosm@ii=\toks267
+\cosm@iii=\toks268
+\tan@k=\count364
+\AMCtan@j=\count365
+\tan@i=\toks269
+\tan@ii=\toks270
+\tan@iii=\toks271
+\tan@iv=\toks272
+\tan@v=\toks273
+\tan@vi=\toks274
+\tan@vii=\toks275
+
+Class ltjsarticle Warning: deprecated old font command `\bf' used.
+(ltjsarticle)              You should note, that since 1994 LaTeX2e provides a
+(ltjsarticle)              new font selection scheme called NFSS2 with several
+(ltjsarticle)              new, combinable font commands. This ltjsarticle
+(ltjsarticle)              class has defined the old font commands like
+(ltjsarticle)              `\bf' only for compatibility on input line 657.
+
+(load cache: extra_lmroman10-bold.luc)
+LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <10> not available
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 657.
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 9.24713pt on input line 657.
+LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <10> not available
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 657.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 9.24713pt on input line 657.
+(load cache: extra_haranoajigothic-medium.luc)(load cache: extra_lmroman9-regula
+r.luc)
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 8.32242pt on input line 657.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 8.32242pt on input line 657.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 5.54828pt on input line 657.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 4.62357pt on input line 657.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 657.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 657.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+\all@k=\count366
+\AMCall@j=\count367
+\all@i=\toks276
+\all@ii=\toks277
+\all@iii=\toks278
+\all@iv=\toks279
+\all@v=\toks280
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 6.47299pt on input line 657.
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 9.24713pt on input line 657.
+(load cache: extra_lmroman10-italic.luc)
+LaTeX Font Info:    Font shape `JT3/gt/m/it' in size <10> not available
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 657.
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 9.24713pt on input line 657.
+LaTeX Font Info:    Font shape `JY3/gt/m/it' in size <10> not available
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 657.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 9.24713pt on input line 657.
+(load cache: extra_lmmono10-regular.luc) [1{/var/lib/texmf/fonts/map/pdftex/updm
+ap/pdftex.map}
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+]
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 657--657
+[] []
+ []
+
+[1
+
+] (./amc-compiled.aux))
+
+Here is how much of LuaTeX's memory you used:
+ 18211 strings out of 478824
+ 477796,1373583 words of node,token memory allocated
+ 167847 words of node memory still in use:
+   10 hlist, 2 vlist, 5 rule, 2 glue, 568 kern, 1 glyph, 40002 attribute, 14714 
+glue_spec, 2258 attribute_list, 3 write, 1667 user_defined nodes
+   avail lists: 1:31,2:82689,3:1504,4:1615,5:731,6:81,7:7492,8:19,9:4285,10:9
+ 36990 multiletter control sequences out of 65536+600000
+ 66 fonts using 31680687 bytes
+ 127i,16n,124p,1219b,635s stack positions out of 5000i,500n,10000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-R
+egular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman9-regular.otf></usr
+/share/texmf/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texlive/tex
+mf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf></usr/share/t
+exmf/fonts/opentype/public/lm/lmmono10-regular.otf></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on amc-compiled.pdf (55 pages, 283363 bytes).
+
+PDF statistics: 251 PDF objects out of 1000 (max. 8388607)
+ 168 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 131072)
+ 16 words of extra memory for PDF output out of 10000 (max. 100000000)
+
