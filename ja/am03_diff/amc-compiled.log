@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2022.4.11)  21 APR 2022 15:06
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2022.4.11)  28 APR 2022 12:07
  restricted system commands enabled.
 **source.tex
 (./source.tex
@@ -1112,7 +1112,7 @@ Package etex Warning: Extended allocation already in use.
 (etex)                \RequirePackage{etex}
 (etex)                at the start of the document.
 
-) ***CORRIGE***
+) ***SCORING***
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
@@ -1131,7 +1131,11 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen298
 \Gm@layoutvoffset=\dimen299
 \Gm@dimlist=\toks245
-))
+)
+\AMC@XYFILE=\write9
+
+\openout9 = amc-compiled.xy
+)
 (./amc-compiled.aux)
 \openout1 = amc-compiled.aux
 
@@ -1231,420 +1235,420 @@ Class ltjsarticle Warning: deprecated old font command `\bf' used.
 (ltjsarticle)              new font selection scheme called NFSS2 with several
 (ltjsarticle)              new, combinable font commands. This ltjsarticle
 (ltjsarticle)              class has defined the old font commands like
-(ltjsarticle)              `\bf' only for compatibility on input line 201.
+(ltjsarticle)              `\bf' only for compatibility on input line 200.
 
 (load cache: extra_lmroman10-bold.luc)
 LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <10> not available
-(Font)              Font shape `JT3/gt/m/n' tried instead on input line 201.
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 200.
 LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 9.24713pt on input line 201.
+(Font)              scaled to size 9.24713pt on input line 200.
 LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <10> not available
-(Font)              Font shape `JY3/gt/m/n' tried instead on input line 201.
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 200.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 9.24713pt on input line 201.
+(Font)              scaled to size 9.24713pt on input line 200.
 (load cache: extra_haranoajigothic-medium.luc)(load cache: extra_lmroman9-regula
 r.luc)
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 8.32242pt on input line 201.
+(Font)              scaled to size 8.32242pt on input line 200.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 8.32242pt on input line 201.
+(Font)              scaled to size 8.32242pt on input line 200.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 201.
+(Font)              <9> on input line 200.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 201.
+(Font)              <6> on input line 200.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 201.
+(Font)              <5> on input line 200.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 5.54828pt on input line 201.
+(Font)              scaled to size 5.54828pt on input line 200.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 4.62357pt on input line 201.
+(Font)              scaled to size 4.62357pt on input line 200.
 
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 201.
+(Font)              <7> on input line 200.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 6.47299pt on input line 201.
+(Font)              scaled to size 6.47299pt on input line 200.
 (load cache: extra_lmmono10-regular.luc)
 LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 9.24713pt on input line 201.
+(Font)              scaled to size 9.24713pt on input line 200.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 [1
 
 ]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
+Overfull \hbox (0.65259pt too wide) in paragraph at lines 200--200
 [] []
  []
 
@@ -1653,17 +1657,15 @@ Overfull \hbox (0.65259pt too wide) in paragraph at lines 201--201
 ] (./amc-compiled.aux))
 
 Here is how much of LuaTeX's memory you used:
- 17016 strings out of 478824
- 1166493,794899 words of node,token memory allocated
- 201930 words of node memory still in use:
-   23 hlist, 1 vlist, 4 rule, 34 glue, 732 kern, 1 glyph, 55138 attribute, 14436
- glue_spec, 3091 attribute_list, 3 write, 2174 user_defined, 100 pdf_literal, 16
- pdf_colorstack nodes
-   avail lists: 1:36,2:235252,3:11320,4:12889,5:2324,6:102,7:15598,8:24,9:14335,
-10:18
- 35874 multiletter control sequences out of 65536+600000
+ 16968 strings out of 478824
+ 477815,1144653 words of node,token memory allocated
+ 193670 words of node memory still in use:
+   7 hlist, 1 vlist, 4 rule, 2 glue, 732 kern, 1 glyph, 51586 attribute, 14436 g
+lue_spec, 2911 attribute_list, 3 write, 2158 user_defined nodes
+   avail lists: 1:25,2:73231,3:1248,4:1375,5:464,6:102,7:7636,8:25,9:3574,10:9
+ 35824 multiletter control sequences out of 65536+600000
  51 fonts using 30682887 bytes
- 127i,23n,124p,1216b,1019s stack positions out of 5000i,500n,10000p,200000b,200000s
+ 127i,16n,124p,1216b,609s stack positions out of 5000i,500n,10000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-R
 egular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman9-regular.otf></usr
 /share/texmf/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texlive/tex
@@ -1677,7 +1679,7 @@ sfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb>
-Output written on amc-compiled.pdf (55 pages, 505147 bytes).
+Output written on amc-compiled.pdf (55 pages, 358951 bytes).
 
 PDF statistics: 251 PDF objects out of 1000 (max. 8388607)
  168 compressed objects within 2 object streams

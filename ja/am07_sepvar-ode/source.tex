@@ -1,0 +1,82 @@
+\documentclass[a4paper]{ltjsarticle}
+\usepackage{amsmath, amssymb}
+\usepackage{tikz, luacode}
+\usepackage[box,completemulti,lang=JA]{automultiplechoice}
+\newcommand*{\var}[1]{\luaexec{tex.print(#1)}}
+\begin{document}
+\AMCboxDimensions{shape=oval,width=1.8ex,height=2.5ex}
+\AMCcodeVspace=0em
+\luaexec{math.randomseed(190612)} % \onecopy{} の外に配置
+
+\begin{luacode*}
+function execMaxima(command)
+  local maxima_command="echo 'tex1("..command..");' | maxima --very-quiet "
+  local handle=io.popen(maxima_command, "r")
+  local content=string.gsub(handle:read("*all"), "\n", "")
+  handle:close()
+  return content
+end
+\end{luacode*}
+
+\input{sepvar_ode}
+\onecopy{2}{
+%%% ヘッダー開始: %%%   
+\noindent{\textbf{応用数学 演習07 \hfill 2022年6月1日}}
+
+\vspace{3ex}
+
+{\small
+  \setlength{\parindent}{0pt}\hspace*{\fill}\AMCcodeGridInt{学生番号}{8}\hspace*{\fill}
+\begin{minipage}[b]{6.5cm}$\longleftarrow{}$\hspace{0ptplus1cm}
+学生番号を左にマークし、下に氏名を記入してください。
+
+\vspace{3ex}
+
+\hfill\namefield{
+  \fbox{
+    \begin{minipage}{.9\linewidth}
+      氏名\vspace*{.5cm}%\dotfill\vspace*{.5cm}\dotfill
+      \vspace*{1mm}
+    \end{minipage}
+  }
+}
+\hfill\vspace{5ex}
+\end{minipage}
+\hspace*{\fill}
+}
+% \multiSymbole{}の記号のある設問の正解は1個とは限りません。 0個の場合や複数の場合があります。
+
+解答欄上部の「誤部正」は採点欄ですので，決して記入しないでください．
+
+\vspace{1ex}
+\hrulefill
+\vspace{1ex}
+
+%%% ヘッダー終了 %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{svode01}
+\luaexec{
+  a=math.random(2, 9);
+  f='t^'..a..'*x*('..a..'+1)';
+  formula=execMaxima(f);
+}
+微分方程式 \(\displaystyle\frac{dx}{dt} = \var{formula}\) の一般解を求めなさい．
+
+\AMCOpen{lines=4, dots=false, framerule=0pt}{\wrongchoice[W]{誤}\scoring{0}\wrongchoice[P]{部}\scoring{1}\correctchoice[C]{正}\scoring{2}}
+\end{question}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{svode02}
+\luaexec{
+  a=math.random(2, 9);
+  f='(t+'..a..')*x^2';
+  formula=execMaxima(f);
+}
+微分方程式 \(\displaystyle\frac{dx}{dt} = \var{formula}\) の一般解を求めなさい．
+
+\AMCOpen{lines=4, dots=false, framerule=0pt}{\wrongchoice[W]{誤}\scoring{0}\wrongchoice[P]{部}\scoring{1}\correctchoice[C]{正}\scoring{2}}
+\end{question}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+} % End of \onecopy{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

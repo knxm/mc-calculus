@@ -10,7 +10,7 @@
   </annotatedemail>
   <annote_position>marges</annote_position>
   <annote_rtl></annote_rtl>
-  <assoc_code></assoc_code>
+  <assoc_code>å­¦ççªå·</assoc_code>
   <auto_capture_mode>1</auto_capture_mode>
   <code_examen></code_examen>
   <cr>cr</cr>
@@ -39,7 +39,7 @@
   <filtered_source>DOC-filtered.tex</filtered_source>
   <format_export>ods</format_export>
   <liste_key>id</liste_key>
-  <listeetudiants>%PROJETS/ap2019.csv</listeetudiants>
+  <listeetudiants>%HOME/amath2022.csv</listeetudiants>
   <maj_bareme>1</maj_bareme>
   <modele_regroupement></modele_regroupement>
   <moteur_latex_b>lualatex</moteur_latex_b>

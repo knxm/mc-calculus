@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2022.4.11)  22 APR 2022 14:13
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2022.4.11)  12 MAY 2022 11:37
  system commands enabled.
 **source.tex
 (./source.tex
@@ -1112,7 +1112,7 @@ Package etex Warning: Extended allocation already in use.
 (etex)                \RequirePackage{etex}
 (etex)                at the start of the document.
 
-) ***CORRIGE***
+) ***SCORING***
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
@@ -1131,7 +1131,11 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen298
 \Gm@layoutvoffset=\dimen299
 \Gm@dimlist=\toks245
-))
+)
+\AMC@XYFILE=\write9
+
+\openout9 = amc-compiled.xy
+)
 (./amc-compiled.aux)
 \openout1 = amc-compiled.aux
 
@@ -1636,34 +1640,18 @@ Overfull \hbox (0.65259pt too wide) in paragraph at lines 233--233
 
 [1
 
-]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 233--233
-[] []
- []
-
-[1
-
-]
-Overfull \hbox (0.65259pt too wide) in paragraph at lines 233--233
-[] []
- []
-
-[1
-
 ] (./amc-compiled.aux))
 
 Here is how much of LuaTeX's memory you used:
- 17015 strings out of 478824
- 1166505,794899 words of node,token memory allocated
- 205120 words of node memory still in use:
-   23 hlist, 1 vlist, 4 rule, 34 glue, 677 kern, 1 glyph, 54973 attribute, 15151
- glue_spec, 3091 attribute_list, 3 write, 2229 user_defined, 100 pdf_literal, 16
- pdf_colorstack nodes
-   avail lists: 1:38,2:224131,3:10850,4:12514,5:2032,6:120,7:14992,8:40,9:13213,
-10:9
- 35873 multiletter control sequences out of 65536+600000
+ 16967 strings out of 478824
+ 477814,1144653 words of node,token memory allocated
+ 190168 words of node memory still in use:
+   7 hlist, 1 vlist, 4 rule, 2 glue, 661 kern, 1 glyph, 49741 attribute, 14603 g
+lue_spec, 2815 attribute_list, 3 write, 2133 user_defined nodes
+   avail lists: 1:34,2:67261,3:1195,4:1375,5:202,6:120,7:7399,8:40,9:2824,10:9
+ 35823 multiletter control sequences out of 65536+600000
  51 fonts using 30682887 bytes
- 127i,23n,124p,1208b,1019s stack positions out of 5000i,500n,10000p,200000b,200000s
+ 127i,16n,124p,1208b,609s stack positions out of 5000i,500n,10000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-R
 egular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman9-regular.otf></usr
 /share/texmf/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texlive/tex
@@ -1678,10 +1666,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb>
-Output written on amc-compiled.pdf (55 pages, 455414 bytes).
+Output written on amc-compiled.pdf (53 pages, 310267 bytes).
 
-PDF statistics: 255 PDF objects out of 1000 (max. 8388607)
- 171 compressed objects within 2 object streams
+PDF statistics: 249 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

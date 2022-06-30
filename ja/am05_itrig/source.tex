@@ -1,11 +1,11 @@
 \documentclass[a4paper]{ltjsarticle}
 \usepackage{amsmath, amssymb}
-\usepackage{tikz}
-\usepackage{luacode}
+\usepackage{tikz, luacode}
 \usepackage[box,completemulti,lang=JA]{automultiplechoice}
 \newcommand*{\var}[1]{\luaexec{tex.print(#1)}}
 \begin{document}
 \AMCboxDimensions{shape=oval,width=1.8ex,height=2.5ex}
+\AMCcodeVspace=0em
 \luadirect{math.randomseed(220518)} % \onecopy{} の外に配置
 
 \begin{luacode*}
@@ -25,9 +25,7 @@ function execMaxima(command)
 end
 \end{luacode*}
 
-
 \onecopy{2}{
-
 %%% ヘッダー開始: %%%   
 \noindent{\bf 応用数学 演習05 \hfill 2022年5月18日}
 
@@ -61,7 +59,7 @@ end
 
 %%% ヘッダー終了 %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{questionmult}{itrig01}
+\begin{question}{itrig01}
 \luaexec{
   table={'-2*\%pi', '-11*\%pi/6', '-7*\%pi/4', '-5*\%pi/3', '-3*\%pi/2', '-4*\%pi/3', '-5*\%pi/4', '-7*\%pi/6', '-\%pi', '-5*\%pi/6', '-3*\%pi/4', '-2*\%pi/3', '-\%pi/2', '-\%pi/3', '-\%pi/4', '-\%pi/6', '0', '\%pi/6', '\%pi/4', '\%pi/3', '\%pi/2', '2*\%pi/3', '3*\%pi/4', '5*\%pi/6', '\%pi', '7*\%pi/6', '5*\%pi/4', '4*\%pi/3', '3*\%pi/2', '5*\%pi/3', '7*\%pi/4', '11*\%pi/6', '2*\%pi'}
   i=math.random(13, 21);
@@ -85,9 +83,9 @@ $\arcsin\left(\var{y}\right)$の主値を求めなさい．
     \wrongchoice{\(\var{wrong[7]}\)}
     \wrongchoice{\(\var{wrong[8]}\)}
   \end{choiceshoriz}
-\end{questionmult}
+\end{question}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{questionmult}{itrig02}
+\begin{question}{itrig02}
 \luaexec{
   table={'-2*\%pi', '-11*\%pi/6', '-7*\%pi/4', '-5*\%pi/3', '-3*\%pi/2', '-4*\%pi/3', '-5*\%pi/4', '-7*\%pi/6', '-\%pi', '-5*\%pi/6', '-3*\%pi/4', '-2*\%pi/3', '-\%pi/2', '-\%pi/3', '-\%pi/4', '-\%pi/6', '0', '\%pi/6', '\%pi/4', '\%pi/3', '\%pi/2', '2*\%pi/3', '3*\%pi/4', '5*\%pi/6', '\%pi', '7*\%pi/6', '5*\%pi/4', '4*\%pi/3', '3*\%pi/2', '5*\%pi/3', '7*\%pi/4', '11*\%pi/6', '2*\%pi'}
   i=math.random(17, 25); % 0 <= x <= pi
@@ -111,9 +109,9 @@ $\arccos\left(\var{y}\right)$の主値を求めなさい．
     \wrongchoice{\(\var{wrong[7]}\)}
     \wrongchoice{\(\var{wrong[8]}\)}
   \end{choiceshoriz}
-\end{questionmult}
+\end{question}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{questionmult}{itrig03}
+\begin{question}{itrig03}
 \luaexec{
   table={'-2*\%pi', '-11*\%pi/6', '-7*\%pi/4', '-5*\%pi/3', '-3*\%pi/2', '-4*\%pi/3', '-5*\%pi/4', '-7*\%pi/6', '-\%pi', '-5*\%pi/6', '-3*\%pi/4', '-2*\%pi/3', '-\%pi/2', '-\%pi/3', '-\%pi/4', '-\%pi/6', '0', '\%pi/6', '\%pi/4', '\%pi/3', '\%pi/2', '2*\%pi/3', '3*\%pi/4', '5*\%pi/6', '\%pi', '7*\%pi/6', '5*\%pi/4', '4*\%pi/3', '3*\%pi/2', '5*\%pi/3', '7*\%pi/4', '11*\%pi/6', '2*\%pi'}
   i=math.random(14, 20);
@@ -137,7 +135,7 @@ $\arctan\left(\var{y}\right)$の主値を求めなさい．
     \wrongchoice{\(\var{wrong[7]}\)}
     \wrongchoice{\(\var{wrong[8]}\)}
   \end{choiceshoriz}
-\end{questionmult}
+\end{question}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{questionmult}{diff16}
@@ -240,7 +238,7 @@ $\arctan\left(\var{y}\right)$の主値を求めなさい．
   wrong8=execMaxima(angle_array[math.fmod(i+8, 9)+1]);
 
 
-\begin{questionmult}{itrig01}
+\begin{question}{itrig01}
 \luaexec{
   yarray={'-1', '-sqrt(3)/2', '-1/sqrt(2)', '-1/2', 0, '1/2', '1/sqrt(2)', 'sqrt(3)/2', '1'};
   i=math.random(1, 9);
@@ -269,4 +267,5 @@ $\arcsin(x)$は逆正弦函数とする．
     \wrongchoice{\(\var{wrong7}\)}
     \wrongchoice{\(\var{wrong8}\)}
   \end{choiceshoriz}
-\end{questionmult}
+
+\end{question}

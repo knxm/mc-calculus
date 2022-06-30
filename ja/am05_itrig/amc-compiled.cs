@@ -87,7 +87,6 @@
 \answer{1/1:case:itrig01:9,7}{}
 \answer{1/1:case:itrig01:9,8}{}
 \answer{1/1:case:itrig01:9,9}{}
-\answer{1/1:case:itrig01:9,0}{}
 \answer{1/1:case:itrig02:10,1}{}
 \answer{1/1:case:itrig02:10,2}{}
 \answer{1/1:case:itrig02:10,3}{}
@@ -97,7 +96,6 @@
 \answer{1/1:case:itrig02:10,7}{}
 \answer{1/1:case:itrig02:10,8}{}
 \answer{1/1:case:itrig02:10,9}{}
-\answer{1/1:case:itrig02:10,0}{}
 \answer{1/1:case:itrig03:11,1}{}
 \answer{1/1:case:itrig03:11,2}{}
 \answer{1/1:case:itrig03:11,3}{}
@@ -107,7 +105,6 @@
 \answer{1/1:case:itrig03:11,7}{}
 \answer{1/1:case:itrig03:11,8}{}
 \answer{1/1:case:itrig03:11,9}{}
-\answer{1/1:case:itrig03:11,0}{}
 \answer{1/1:case:diff16:12,1}{}
 \answer{1/1:case:diff16:12,2}{}
 \answer{1/1:case:diff16:12,3}{}
