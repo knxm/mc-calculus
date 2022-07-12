@@ -1,0 +1,209 @@
+\documentclass[a4paper]{ltjsarticle}
+%\usepackage[utf8x]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage{luacode}
+\usepackage[box,completemulti,lang=JA]{automultiplechoice}
+\newcommand*{\var}[1]{\luadirect{tex.print(#1)}}
+\begin{document}
+\AMCboxDimensions{shape=oval,width=1.8ex,height=2.5ex}
+\AMCcodeVspace=0em
+\directlua{math.randomseed(220713)} % \onecopy{} の外に配置
+
+\begin{luacode*}
+function execSage(command)
+  local sagecommand="sage -c 'print(latex("..command.."))'"
+  local handle = io.popen(sagecommand, "r")
+  local content=string.gsub(handle:read("*all"), "\n", "")
+  handle:close()
+  return content
+end
+function execMaxima(command)
+  local maximacommand="echo 'tex1("..command..");'| maxima --very-quiet"
+  local handle = io.popen(maximacommand, "r")
+  local content=string.gsub(handle:read("*all"), "\n", "")
+  handle:close()
+  return content
+end
+\end{luacode*}
+
+\onecopy{2}{
+%%% 試験問題用紙ヘッダー開始:    
+
+\noindent{\bf 応用数学 演習13 \hfill 2022年7月13日}
+
+\vspace{3ex}
+
+{\small
+  \setlength{\parindent}{0pt}\hspace*{\fill}\AMCcodeGridInt{学生番号}{8}\hspace*{\fill}
+\begin{minipage}[b]{6.5cm}$\longleftarrow{}$\hspace{0ptplus1cm}
+学生番号を左にマークし、氏名を下に記入してください。
+
+\vspace{3ex}
+
+\hfill\namefield{
+  \fbox{
+    \begin{minipage}{.9\linewidth}
+      氏名\vspace*{.5cm}%\dotfill\vspace*{.5cm}\dotfill
+      \vspace*{1mm}
+    \end{minipage}
+  }
+}
+\hfill\vspace{5ex}
+\end{minipage}
+\hspace*{\fill}
+}
+
+\vspace{1ex}
+\hrulefill
+\vspace{1ex}
+
+%%% ヘッダー終了
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{pdiff11}
+\luadirect{
+  a=math.random(1, 9);
+  b=math.random(1, 9);
+  c=math.random(1, 9);
+  d=math.random(1, 9);
+  s=math.tointeger((-1)^(math.random(0, 1)));
+  t=math.tointeger((-1)^(math.random(0,1)));
+  u=math.tointeger((-1)^(math.random(0,1)));
+  v=math.tointeger((-1)^(math.random(0,1)));
+  g=s*a..'*x+'..t*b..'*y';
+  h=u*c..'*x+'..v*d..'*y';
+  f='(x^2)*('..g..')+(y^2)*('..h..')';
+  formula=execMaxima('expand('..f..')');
+  correct1=execMaxima('diff(expand('..f..'), x, 2)');
+  wrong1=execMaxima('diff('..h..', x, 2)*y^2+diff('..g..', x, 2)*x^2+diff('..g..', x)*4*x+'..g);
+  wrong2=execMaxima('diff(diff(expand('..f..'), x),  y)');
+  wrong3=execMaxima('diff(expand('..f..'), y, 2)');;
+  wrong4=execMaxima('diff('..h..', x, 2)*y^2+diff('..g..', x, 2)*x^2+diff('..g..', x)*x+2*'..g);
+}
+函数 \(z=\var{formula}\)の2階偏導函数\(\displaystyle\frac{\partial^{2}z}{\partial x^{2}}\)を求めなさい．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct1}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{pdiff12}
+\luadirect{
+  formula=execMaxima('expand('..f..')');
+  correct1=execMaxima('diff(expand('..f..'), y, 2)');
+  wrong1=execMaxima('diff('..h..', x, 2)*y^2+diff('..g..', x, 2)*x^2+diff('..g..', x)*4*x+'..g);
+  wrong2=execMaxima('diff(diff(expand('..f..'), x),  y)');
+  wrong3=execMaxima('diff(expand('..f..'), x, 2)');;
+  wrong4=execMaxima('diff('..h..', x, 2)*y^2+diff('..g..', x, 2)*x^2+diff('..g..', x)*x+2*'..g);
+}
+函数 \(z=\var{formula}\)の2階偏導函数\(\displaystyle\frac{\partial^{2} z}{\partial y^{2}}\)を求めなさい．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct1}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{pdiff13}
+\luadirect{
+  formula=execMaxima('expand('..f..')');
+  correct1=execMaxima('diff(diff(expand('..f..'), x), y)');
+  wrong1=execMaxima('diff('..h..', x, 2)*y^2+diff('..g..', x, 2)*x^2+diff('..g..', x)*4*x+'..g);
+  wrong2=execMaxima('diff(expand('..f..'), x, 2)');;
+  wrong3=execMaxima('diff(expand('..f..'), y, 2)');;
+  wrong4=execMaxima('diff('..h..', x, 2)*y^2+diff('..g..', x, 2)*x^2+diff('..g..', x)*x+2*'..g);
+}
+函数 \(z=\var{formula}\)の2階偏導函数\(\displaystyle\frac{\partial^{2}z}{\partial y \partial x}\)を求めなさい．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct1}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+
+\vspace{1cm}
+
+\begin{question}{pdiff21}
+\luadirect{
+  a=math.random(2, 9);
+  b=math.random(2, 9);
+  c=math.random(2, 9);
+  d=math.random(2, 9);
+  g=a..'*x-'..b..'*y';
+  h=c..'*x+'..d..'*y';
+  f='('..g..')/('..h..')';
+  formula=execMaxima(f);
+  correct1=execMaxima('('..a*d+b*c..')*y/('..c..'*x+'..d..'*y)^2');
+//  correct1=execMaxima('diff('..f..', x, 2)');
+  wrong1 = 1;
+  wrong2 = 2;
+  wrong3 = 3;
+  wrong4 = 4;
+//  wrong1=execMaxima('('..a*d-b*c..')*y/('..c..'*x+'..d..'*y)^2');
+//  wrong2=execMaxima('('..a*d+b*c..')*y/('..c..'*x+'..d..'*y)');
+//  wrong3=execMaxima('('..a*d+b*c..')*x/('..c..'*x+'..d..'*y)^2');
+//  wrong4=execMaxima('('..a*d-b*c..')*x/('..c..'*x+'..d..'*y)');
+}
+函数 \(\displaystyle z=\var{formula}\)の2階偏導函数\(z_{xx}\)を求めなさい．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct1}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{pdiff22}
+\luadirect{
+  correct1=execMaxima('-('..a*d+b*c..')*x/('..c..'*x+'..d..'*y)^2');
+  wrong1=execMaxima('('..a*d+b*c..')*x/('..c..'*x+'..d..'*y)^2');
+  wrong2=execMaxima('-('..a*d+b*c..')*y/('..c..'*x+'..d..'*y)');
+  wrong3=execMaxima('('..a*d-b*c..')*x/('..c..'*x+'..d..'*y)^2');
+  wrong4=execMaxima('('..a*d+b*c..')*x/('..c..'*x+'..d..'*y)');
+}
+函数 \(\displaystyle z=\var{formula}\)の2階偏導函数\(z_{xy}\)を求めなさい．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct1}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{pdiff23}
+\luadirect{
+  correct1=execMaxima('-('..a*d+b*c..')*x/('..c..'*x+'..d..'*y)^2');
+  wrong1=execMaxima('('..a*d+b*c..')*x/('..c..'*x+'..d..'*y)^2');
+  wrong2=execMaxima('-('..a*d+b*c..')*y/('..c..'*x+'..d..'*y)');
+  wrong3=execMaxima('('..a*d-b*c..')*x/('..c..'*x+'..d..'*y)^2');
+  wrong4=execMaxima('('..a*d+b*c..')*x/('..c..'*x+'..d..'*y)');
+}
+函数 \(\displaystyle z=\var{formula}\)の2階偏導函数\(z_{yy}\)を求めなさい．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct1}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 問終了 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+}
+\end{document}
+
+
+
