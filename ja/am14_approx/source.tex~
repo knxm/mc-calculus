@@ -1,0 +1,197 @@
+\documentclass[a4paper]{ltjsarticle}
+%\usepackage[utf8x]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage{luacode}
+\usepackage[box,completemulti,lang=JA]{automultiplechoice}
+\newcommand*{\var}[1]{\luadirect{tex.print(#1)}}
+\begin{document}
+\AMCboxDimensions{shape=oval,width=1.8ex,height=2.5ex}
+\AMCcodeVspace=0em
+\directlua{math.randomseed(220720)} % \onecopy{} の外に配置
+
+\begin{luacode*}
+function execSage(command)
+  local sagecommand="sage -c 'print(latex("..command.."))'"
+  local handle = io.popen(sagecommand, "r")
+  local content=string.gsub(handle:read("*all"), "\n", "")
+  handle:close()
+  return content
+end
+function execMaxima(command)
+  local maximacommand="echo 'tex1("..command..");'| maxima --very-quiet"
+  local handle = io.popen(maximacommand, "r")
+  local content=string.gsub(handle:read("*all"), "\n", "")
+  handle:close()
+  return content
+end
+\end{luacode*}
+
+\onecopy{2}{
+%%% 試験問題用紙ヘッダー開始:    
+
+\noindent{\bf 応用数学 演習14 \hfill 2022年7月20日}
+
+\vspace{3ex}
+
+{\small
+  \setlength{\parindent}{0pt}\hspace*{\fill}\AMCcodeGridInt{学生番号}{8}\hspace*{\fill}
+\begin{minipage}[b]{6.5cm}$\longleftarrow{}$\hspace{0ptplus1cm}
+学生番号を左にマークし、氏名を下に記入してください。
+
+\vspace{3ex}
+
+\hfill\namefield{
+  \fbox{
+    \begin{minipage}{.9\linewidth}
+      氏名\vspace*{.5cm}%\dotfill\vspace*{.5cm}\dotfill
+      \vspace*{1mm}
+    \end{minipage}
+  }
+}
+\hfill\vspace{5ex}
+\end{minipage}
+\hspace*{\fill}
+}
+
+\vspace{1ex}
+\hrulefill
+\vspace{1ex}
+
+%%% ヘッダー終了
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{approx11}
+\luadirect{
+  a=math.random(1, 4);
+  b=math.random(1, 4);
+  f='cos(2*'..a..'*x+2*'..b..'*y)';
+  formula=execMaxima('expand('..f..')');
+  correct1=execMaxima('1+(-2*'..a..'^2*x^2)-4*'..b..'*'..a..'*x*y-2*'..b..'^2*y^2');
+  wrong1=execMaxima('1+(-2*'..a..'^2*x^2)-2*'..b..'*'..a..'*x*y-2*'..b..'^2*y^2');
+  wrong2=execMaxima('1+(-1*'..a..'^2*x^2)-2*'..b..'*'..a..'*x*y-2*'..b..'^2*y^2');
+  wrong3=execMaxima('1+(-1*'..a..'^2*x^2)-4*'..b..'*'..a..'*x*y-2*'..b..'^2*y^2');
+  wrong4=execMaxima('1+(-2*'..a..'^2*x^2)-2*'..b..'*'..a..'*x*y-'..b..'^2*y^2');
+}
+函数 \(z=\var{formula}\)の$(0, 0)$における2次近似式を求めよ．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct1}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+\vspace{2ex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{approx12}
+\luadirect{
+  a=math.random(1, 4);
+  b=math.random(1, 4);
+  f='log(2*'..a..'*x+2*'..b..'*y+1)';
+  formula=execMaxima('expand('..f..')');
+  correct1=execMaxima('2*'..b..'*y+2*'..a..'*x+(-2)*'..a..'^2*x^2-4*'..b..'*'..a..'*y*x-2*'..b..'^2*y^2');
+  wrong1=execMaxima('2*'..b..'*y+2*'..a..'*x+(-2)*'..a..'^2*x^2-2*'..b..'*'..a..'*y*x-2*'..b..'^2*y^2');
+  wrong2=execMaxima('2*'..b..'*y+2*'..a..'*x+(-1)*'..a..'^2*x^2-4*'..b..'*'..a..'*y*x-2*'..b..'^2*y^2');
+  wrong3=execMaxima('2*'..b..'*y+2*'..a..'*x+(-1)*'..a..'^2*x^2-2*'..b..'*'..a..'*y*x-2*'..b..'^2*y^2');
+  wrong4=execMaxima('2*'..b..'*y+2*'..a..'*x+(-2)*'..a..'^2*x^2-4*'..b..'*'..a..'*y*x-'..b..'^2*y^2');
+}
+函数 \(z=\var{formula}\)の$(0, 0)$における2次近似式を求めよ．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct1}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+\vspace{2ex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{approx13}
+\luadirect{
+  a=math.random(1, 4);
+  b=math.random(1, 4);
+  f='exp(2*'..a..'*x+2*'..b..'*y)';
+  formula=execMaxima('expand('..f..')');
+  correct1=execMaxima('1+2*'..a..'*x+2*'..b..'*y+2*'..a..'^2*x^2+4*'..b..'*'..a..'*y*x+2*'..b..'^2*y^2');
+  wrong1=execMaxima('1+2*'..a..'*x+2*'..b..'*y+'..a..'^2*x^2+4*'..b..'*'..a..'*y*x+2*'..b..'^2*y^2');
+  wrong2=execMaxima('1+2*'..a..'*x+2*'..b..'*y+2*'..a..'^2*x^2+2*'..b..'*'..a..'*y*x+2*'..b..'^2*y^2');
+  wrong3=execMaxima('1+2*'..a..'*x+2*'..b..'*y+2*'..a..'^2*x^2+4*'..b..'*'..a..'*y*x+'..b..'^2*y^2');
+  wrong4=execMaxima('2*'..a..'*x+2*'..b..'*y+2*'..a..'^2*x^2+2*'..b..'*'..a..'*y*x+2*'..b..'^2*y^2');
+}
+函数 \(z=\var{formula}\)の$(0, 0)$における2次近似式を求めよ．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct1}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+\vspace{2ex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{extremum11}
+\luadirect{
+  a=math.random(1, 4);
+  b=math.random(5, 9);
+  f='x^2+x*y+y^2-'..a..'*x-'..b..'*y';
+  formula=execMaxima('expand('..f..')');
+  x=execMaxima('(2*'..a..'-'..b..')/3');
+  y=execMaxima('(2*'..b..'-'..a..')/3');
+  s=execMaxima('(-2*'..a..'+'..b..')/3');
+  t=execMaxima('(-2*'..b..'+'..a..')/3');
+  u=execMaxima('(-2*'..b..'+'..a..')/3');
+  correct1='('..x..', '..y..')';
+  wrong1='('..s..', '..y..')';
+  wrong2='('..y..', '..x..')';
+  wrong3='('..s..', '..t..')';
+  wrong4='('..t..', '..s..')';
+}
+函数 \(z=\var{formula}\)について，極値をとり得る点を求めよ．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct1}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+\vspace{2ex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{extremum12}
+\luadirect{
+  a=math.random(1, 4);
+  b=math.random(5, 9);
+  f='('..a..'*x+'..b..'*y^2)*exp(x)';
+  formula=execMaxima('expand('..f..')');
+  s=execMaxima(a..'/'..b);
+  correct1='(-1, 0)';
+  wrong1='(-'..b..', 0)';
+  wrong2='(0, 0)';
+  wrong3='('..b..', 0)';
+  wrong4='('..s..', 0)';
+}
+函数 \(z=\var{formula}\)について，極値をとり得る点を求めよ．
+  \begin{choiceshoriz}
+    \correctchoice{\(\var{correct1}\)}
+    \wrongchoice{\(\var{wrong1}\)}
+    \wrongchoice{\(\var{wrong2}\)}
+    \wrongchoice{\(\var{wrong3}\)}
+    \wrongchoice{\(\var{wrong4}\)}
+  \end{choiceshoriz}
+\end{question}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 問終了 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+}
+\end{document}
+
+
+
